@@ -1,17 +1,12 @@
-<table>
-  <tr>
-    <td><img src="https://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=4geeks,32"></td>
-    <td>
-      <h1> Templates and Boilerplates</h1>
-      <p>By <a href="https://twitter.com/alesanchezr">@alesanchezr</a> and <a href="https://github.com/4GeeksAcademy/Templates-Boilerplates/graphs/contributors">other contributors</a> at <a href="http://4geeksacademy.co/">4Geeks Academy</a></p>
-      <img src="https://img.shields.io/github/last-commit/4geeksacademy/Templates-Boilerplates" />
-      <a href="https://breatheco.de"><img src="https://img.shields.io/badge/build_by-Developers-blue" /></a>
-      <a href="https://twitter.com/4geeksacademy"><img src="https://img.shields.io/twitter/follow/4geeksacademy?style=social&logo=twitter" alt="follow on Twitter"></a>
-    </td>
-  </tr>
-</table>
+<img align="right" src="https://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=4geeks,32">
 
-<br />
+# 4Geeks Academy's Templates and Boilerplates
+
+> By [@alesanchezr](https://twitter.com/alesanchezr) and [other contributors](https://github.com/4GeeksAcademy/Interactive-Tutorials/graphs/contributors) at [4Geeks Academy](http://4geeksacademy.co/)
+
+![last commit](https://img.shields.io/github/last-commit/4geeksacademy/Templates-Boilerplates)
+[![build by developers](https://img.shields.io/badge/build_by-Developers-blue)](https://breatheco.de)
+[![build by developers](https://img.shields.io/twitter/follow/4geeksacademy?style=social&logo=twitter)](https://twitter.com/4geeksacademy)
 
 - **Empty project**: Ideal for beginners, lightweight server.py to run HTML projects. Ideal for beginners.  
 [Open Repository](https://github.com/4GeeksAcademy/html-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/html-hello.git)
