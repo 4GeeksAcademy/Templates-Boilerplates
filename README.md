@@ -31,6 +31,6 @@
 - **Django Rest**: Smallest possible approach for building API's with django, one click deploy to heroku (free hosting), documentation and video tutorials.  
 [Open Repository](https://github.com/4GeeksAcademy/django-rest-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/django-rest-hello.git)
 
-- **Headless Wordpress for Developers**: Heavy developer oriented boilerplate for WP, create API's similar to modern frameworks like Flask, Express, etc. MVC Implementation and bare minimum theme implementation. 100% command line integration and installation. No need for the wordpress admin.
+- **Headless Wordpress for Developers**: Heavy developer oriented boilerplate for WP, create API's similar to modern frameworks like Flask, Express, etc. MVC Implementation and bare minimum theme implementation. 100% command line integration and installation. No need for the wordpress admin.  
 [Open Repository](https://github.com/4GeeksAcademy/wordpress-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/wordpress-hello.git)
 
