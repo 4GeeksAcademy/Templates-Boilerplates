@@ -23,6 +23,9 @@
 - **Flask API**: Ideal for professional development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Autentication, SQL ALchemy Integratoin, Pipenv, .env, One-Click deploy to heroku (free hosting).  
 [Open Repository](https://github.com/4GeeksAcademy/flask-rest-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/flask-rest-hello.git)
 
+- **Flask API + VanillaJS**: The Flask boilerplate merged with the VanillaJS boilerplate, for anyone interested in publishing front-end and backe-end in the same hosting ad one single project.
+[Open Repository](https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate)
+
 - **Django Rest**: Smallest possible approach for building API's with django, one click deploy to heroku (free hosting), documentation and video tutorials.  
 [Open Repository](https://github.com/4GeeksAcademy/django-rest-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/django-rest-hello.git)
 
