@@ -33,7 +33,7 @@
 [Open Repository](https://github.com/4GeeksAcademy/wordpress-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/wordpress-hello.git)
 
 
-## Other deprecated templates (⚠️ Not Maintned anymore):
+## Other deprecated templates (⚠️ Unmaintained):
 
 - **React.js Advanced**: Ideal for professional development, Minimum version for Flux + Context API implemented. One click deploy to several hostings free, documentation and video tutorials. Just a little boilerplated.  
 [Open Repository](https://github.com/4GeeksAcademy/react-hello-webapp) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
