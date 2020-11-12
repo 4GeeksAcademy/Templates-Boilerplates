@@ -17,7 +17,7 @@
 - **React.js**: Create React App comes with too many files and almost no utilities. With documentation and video tutorials, deploy to different servers in just one command. Ideal for anyone.  
 [Open Repository](https://github.com/4GeeksAcademy/react-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello.git)
 
-- **Full Stack: React + Flask API**: React Front-End and Python/Flask API backend, one click deploy to heroku.
+- **Full Stack: React + Flask API**: React Front-End and Python/Flask API backend, one click deploy to heroku.  
 [Open Repository](https://github.com/4GeeksAcademy/react-flask-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello)
 
 - **Flask API**: Ideal for professional development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Autentication, SQL ALchemy Integratoin, Pipenv, .env, One-Click deploy to heroku (free hosting).  
