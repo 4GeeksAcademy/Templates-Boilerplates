@@ -20,14 +20,8 @@
 - **Full Stack: React + Flask API**: React Front-End and Python/Flask API backend, one click deploy to heroku.  
 [Open Repository](https://github.com/4GeeksAcademy/react-flask-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello)
 
-- **Flask API**: Ideal for professional development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Autentication, SQL ALchemy Integratoin, Pipenv, .env, One-Click deploy to heroku (free hosting).  
+- **Flask API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Autentication, SQL ALchemy Integratoin, Pipenv, .env, One-Click deploy to heroku (free hosting).  
 [Open Repository](https://github.com/4GeeksAcademy/flask-rest-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/flask-rest-hello.git)
-
-- **Flask API + VanillaJS**: The Flask boilerplate merged with the VanillaJS boilerplate, for anyone interested in publishing front-end and backe-end in the same hosting and one unified project.  
-[Open Repository](https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate)
-
-- **Django Rest**: Smallest possible approach for building API's with django, one click deploy to heroku (free hosting), documentation and video tutorials.  
-[Open Repository](https://github.com/4GeeksAcademy/django-rest-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/django-rest-hello.git)
 
 - **Headless Wordpress for Developers**: Heavy developer oriented boilerplate for WP, create API's similar to modern frameworks like Flask, Express, etc. MVC Implementation and bare minimum theme implementation. 100% command line integration and installation. No need for the wordpress admin.  
 [Open Repository](https://github.com/4GeeksAcademy/wordpress-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/wordpress-hello.git)
@@ -38,3 +32,8 @@
 - **React.js Advanced**: Ideal for professional development, Minimum version for Flux + Context API implemented. One click deploy to several hostings free, documentation and video tutorials. Just a little boilerplated.  
 [Open Repository](https://github.com/4GeeksAcademy/react-hello-webapp) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
 
+- **Flask API + VanillaJS**: The Flask boilerplate merged with the VanillaJS boilerplate, for anyone interested in publishing front-end and backe-end in the same hosting and one unified project.  
+[Open Repository](https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate)
+
+- **Django Rest**: Smallest possible approach for building API's with django, one click deploy to heroku (free hosting), documentation and video tutorials.  
+[Open Repository](https://github.com/4GeeksAcademy/django-rest-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/django-rest-hello.git)
