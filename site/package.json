@@ -16,6 +16,7 @@
     "gatsby-plugin-offline": "^3.2.30",
     "gatsby-plugin-remove-trailing-slashes": "^2.3.13",
     "gatsby-plugin-sitemap": "^2.4.14",
+    "netlify-cms": "^2.10.96",
     "netlify-cms-app": "^2.14.26",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
