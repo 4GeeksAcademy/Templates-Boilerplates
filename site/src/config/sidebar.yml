@@ -1,0 +1,34 @@
+# Sidebar navigation
+
+- label: 'Introduction'
+  link: '/'
+- label: 'Getting started'
+  link: '/getting-started'
+- label: Pick a starter
+  items:
+    - label: Simple HTML
+      link: /starters/html
+    - label: Vanilla.js
+      link: /starters/vanillajs
+    - label: React.js
+      link: /starters/react
+    - label: Flask API
+      link: /starters/flask
+    - label: Full-Stack
+      link: /starters/full-stack
+    - label: WordPress PHP
+      link: /starters/wordpress
+- label: Common
+  items:
+    - label: How to upload images
+      link: /tutorials/upload-images
+    - label: How to deploy to heroku
+      link: /tutorials/heroku
+- label: Other
+  items:
+    - label: FAQ
+      link: /other/faq
+    - label: Changelog
+      link: /other/changelog
+    - label: 'Github'
+      link: https://github.com/4GeeksAcademy/Templates-Boilerplates
