@@ -9,7 +9,6 @@ collections:
   - name: 'docs'
     label: 'Docs'
     folder: 'src/docs'
-    extension: 'mdx'
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
