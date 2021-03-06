@@ -8,7 +8,7 @@ public_folder: /img
 collections:
   - name: 'docs'
     label: 'Docs'
-    folder: 'src/docs'
+    folder: 'site/src/docs'
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
