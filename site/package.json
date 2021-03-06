@@ -12,7 +12,7 @@
     "gatsby-plugin-canonical-urls": "^2.3.12",
     "gatsby-plugin-google-analytics": "^2.3.15",
     "gatsby-plugin-manifest": "^2.4.33",
-    "gatsby-plugin-netlify-cms": "^5.0.0",
+    "gatsby-plugin-netlify-cms": "^3.0.18",
     "gatsby-plugin-offline": "^3.2.30",
     "gatsby-plugin-remove-trailing-slashes": "^2.3.13",
     "gatsby-plugin-sitemap": "^2.4.14",

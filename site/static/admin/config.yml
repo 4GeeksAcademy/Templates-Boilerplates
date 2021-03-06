@@ -1,3 +1,18 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'docs'
+    label: 'Docs'
+    folder: 'src/docs'
+    extension: 'mdx'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      # - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      # - { label: 'Body', name: 'body', widget: 'markdown' }
