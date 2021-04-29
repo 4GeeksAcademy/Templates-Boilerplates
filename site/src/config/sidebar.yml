@@ -23,9 +23,9 @@
     - label: How to upload images
       link: /tutorials/upload-images
     - label: Deploy to heroku with Posgres
-      link: /tutorials/heroku-posgres
+      link: /backend/deploy-heroku-posgres
     - label: Deploy to heroku with MySQL
-      link: /tutorials/heroku-mysql
+      link: /backend/deploy-heroku-mysql
 - label: Other
   items:
     - label: FAQ
