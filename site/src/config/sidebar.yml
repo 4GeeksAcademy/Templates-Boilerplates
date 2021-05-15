@@ -12,9 +12,11 @@
       link: /starters/vanillajs
     - label: React.js
       link: /starters/react
-    - label: Flask API
+    - label: Flask API (Python)
       link: /starters/flask
-    - label: Full-Stack
+    - label: Express API (Node)
+      link: /starters/express
+    - label: React + Flask (Full Stack)
       link: /starters/full-stack
     - label: WordPress PHP
       link: /starters/wordpress
