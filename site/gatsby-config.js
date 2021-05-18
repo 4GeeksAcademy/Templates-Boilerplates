@@ -15,10 +15,10 @@ module.exports = {
     {
       resolve: `@rocketseat/gatsby-theme-docs`,
       options: {
-        configPath: `src/config`,
-        docsPath: `src/docs`,
-        githubUrl: `https://github.com/rocketseat/gatsby-themes`,
-        baseDir: `examples/gatsby-theme-docs`,
+        configPath: `site/src/config`,
+        docsPath: `site/src/docs`,
+        githubUrl: `https://github.com/4GeeksAcademy/Templates-Boilerplates`,
+        baseDir: `site`,
       },
     },
     {
