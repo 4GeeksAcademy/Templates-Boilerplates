@@ -4,7 +4,7 @@
   link: '/'
 - label: 'Getting started'
   link: '/getting-started'
-- label: Pick a starter
+- label: Frontend
   items:
     - label: Simple HTML
       link: /starters/html
@@ -12,22 +12,32 @@
       link: /starters/vanillajs
     - label: React.js
       link: /starters/react
-    - label: Flask API (Python)
+
+- label: Backend in Python
+  items:
+    - label: Flask API Starter
       link: /starters/flask
+    - label: The database
+      link: /backend/database
+    - label: API Validations
+      link: /backend/api-validations
+
+- label: Backend in Node
+  items:
     - label: Express API (Node)
       link: /starters/express
+
+- label: Full Stack
+  items:  
     - label: React + Flask (Full Stack)
       link: /starters/full-stack
-    - label: WordPress PHP
-      link: /starters/wordpress
-- label: Common
-  items:
-    - label: How to upload images
+    - label: How to work with images in your database
       link: /tutorials/upload-images
     - label: Deploy to heroku with Posgres
       link: /backend/deploy-heroku-posgres
     - label: Deploy to heroku with MySQL
       link: /backend/deploy-heroku-mysql
+      
 - label: Other
   items:
     - label: FAQ
