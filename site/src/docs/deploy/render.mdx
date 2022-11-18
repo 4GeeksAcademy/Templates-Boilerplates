@@ -1,0 +1,53 @@
+---
+title: 'Deploy to Render.com'
+description: 'Publish your website to Render.com for free'
+---
+
+> Deploying to Render.com (takes 7 minutes). This template is 100% compatible with heroku, just make sure to understand and execute the following steps
+
+## 1) Create account
+
+[Create an account on Render.com using Github connect](https://dashboard.render.com/register?next=/). Please don't do anything else.
+
+## 2) Create blueprint
+
+Create a blueprint from your Github connection. [Click here](https://dashboard.render.com/select-repo?type=blueprint) and look for your project repository.
+
+> Important: Please make sure your project contains a `render.yml` file on the root. The [4Geeks Flask + React boilerplate](https://github.com/4GeeksAcademy/react-flask-hello) comes with it.
+
+After choosing your repository you should see a screen similar to this:
+
+![new blueprint](../img/new-blueprint.png)
+
+## 3) Fill the form for the blueprint
+
+Now you should see a small form with 3 questions:
+
+3.1. Choose a `Service Group Name`, for example: `My First Project`; 
+3.2. Choose a `branch`, usually the `main` branch should sufice.
+3.3. Click the `apply` blue button.
+
+You will see a loading animation with the status of the Postress database and the web service being built.
+
+![loading blueprint](../img/loading-blueprint.gif)
+
+It takes several minutes to load both services, please be patient and wait until both checkmarks show up.
+
+## Your website is ready!
+
+Once the deploy is finished you can go ahead and open your website:
+
+![open your website](../img/open-website.png)
+
+## Errors? How to Troubleshoot
+
+If you encountered an error while deploying the web service, [you can check the server logs here](../img/blueprint-error.gif). 
+
+Some times the deploy service has errors for no particular reason, if you believe that is your case try [re-deplying again using a manual deploy](../img/manual-deploy.gif). 
+
+## Check your deploy logs
+
+It is always recomended to check your deploy logs for errors or any other important messages, this is how a successfull deploy should look like.
+
+![success log](../img/success-log.png)
+

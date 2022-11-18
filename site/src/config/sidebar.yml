@@ -2,8 +2,6 @@
 
 - label: 'Introduction'
   link: '/'
-- label: 'Getting started'
-  link: '/getting-started'
 - label: Frontend
   items:
     - label: Simple HTML
@@ -13,33 +11,32 @@
     - label: React.js
       link: /starters/react
 
-- label: Backend in Python
+- label: Backend
   items:
-    - label: Flask API Starter
+    - label: Python Flask
       link: /starters/flask
-    - label: The database
-      link: /backend/database
-    - label: API Validations
-      link: /backend/api-validations
-
-- label: Backend in Node
-  items:
-    - label: Express API (Node)
+    - label: Express (Node)
       link: /starters/express
-
-- label: Full Stack
-  items:  
-    - label: React + Flask (Full Stack)
+    - label: React & Flask (Full-Stack)
       link: /starters/full-stack
-    - label: How to work with images in your database
-      link: /tutorials/upload-images
-    - label: Deploy to heroku with Posgres
-      link: /backend/deploy-heroku-posgres
-    - label: Deploy to heroku with MySQL
-      link: /backend/deploy-heroku-mysql
+    - label: Postgress DB
+      link: /backend/database
+
+- label: Delpoy
+  items:  
+    - label: To Render.com
+      link: /deploy/render
+    - label: To Heroku + Postgress
+      link: /deploy/heroku-postgress
+    - label: To Heroku + MySQL
+      link: /deploy/heroku-mysql
       
 - label: Other
   items:
+    - label: Upload user images
+      link: /tutorials/upload-images
+    - label: API Validations in Flask
+      link: /backend/api-validations
     - label: FAQ
       link: /other/faq
     - label: Changelog
