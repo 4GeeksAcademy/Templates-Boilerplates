@@ -18,7 +18,7 @@
     - label: Express (Node)
       link: /starters/express
     - label: React & Flask (Full-Stack)
-      link: /starters/full-stack
+      link: /starters/react-flask
     - label: Postgress DB
       link: /backend/database
 
