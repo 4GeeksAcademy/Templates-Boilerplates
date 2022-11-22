@@ -3,12 +3,10 @@ title: 'Database Configuration'
 description: 'Setup your Postgres or MySQL database engine'
 ---
 
-# Database configuration
-
 In this boilerplate, you can use either postgres or sqlite as database engine. Verify your .env file to specify which one you would like to use.
 You can use the env var `DATABASE_URL` for this purpose.
 
-# Creating and/or Accessing the Postgres Database
+## Creating and/or Accessing the Postgres Database
 
 1. Log in to postgres terminal:
 ```sh
@@ -52,7 +50,11 @@ Note: Type `exit` if you want to exit from the postgres terminal.
 
 More commands, you can check this [amazing summary](https://www.postgresqltutorial.com/postgresql-cheat-sheet/).
 
-# Querying data using Python and SQL Alchemy (SELECT)
+## CRUD Operations
+
+There are many ways to manipulate but we decided to use Python and SQLAlchemy to do so. This means there you need no SQL Knowledge but we strongly recomend you still practice and master SQL for debugging purposes (most of the errors are shown in SQL language)
+
+### Querying (SELECT) data
 
 Assuming you have a Person object in your models.py file.
 
@@ -70,7 +72,7 @@ all_people = list(map(lambda x: x.serialize(), people_query))
 user1 = Person.query.get(person_id)
  ```
 
-## Inserting data
+### Inserting data
 
 Assuming you have a Person object in your models.py file.
 
@@ -94,7 +96,7 @@ if "email" in body:
 db.session.commit()
 ```
  
- ### Delete data
+### Delete data
  
  ```py
  user1 = Person.query.get(person_id)
