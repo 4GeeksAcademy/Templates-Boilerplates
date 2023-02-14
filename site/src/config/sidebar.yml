@@ -11,7 +11,7 @@
     - label: Basic React.js
       link: /starters/react
     - label: React App
-      link: /starters/react
+      link: /starters/react-flask
 
 - label: Backend
   items:
