@@ -44,3 +44,9 @@
 
 - **Django Rest**: Smallest possible approach for building API's with django, one click deploy to heroku (free hosting), documentation and video tutorials.  
 [Open Repository](https://github.com/4GeeksAcademy/django-rest-hello) or [Start GitPod Now](https://gitpod.io#https://github.com/4GeeksAcademy/django-rest-hello.git)
+
+### Contributors
+
+This templates were built as part of the [Full Stack Developer course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer) at [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors.
+
+You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
