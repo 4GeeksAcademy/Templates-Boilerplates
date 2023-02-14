@@ -46,7 +46,7 @@ You can update the `styles/index.css` or create new `.css` files inside `styles/
 For example, if you would want to create a class `background-blue` that makes the home background blue you need to do something like this:
 
 - Add the class `.background-blue` into the `styles/home.css`.
-- Use your class by adding the <div className="background-blue">` into your page html at `js/pages/home.js`.
+- Use your class by adding the `<div className="background-blue">` into your page html at `js/pages/home.js`.
 
 ### Creating your first component
 
@@ -54,7 +54,7 @@ Usually you want most of your application html to be split into components that 
 	
 All the components are meant to be created into the `js/components` and then you can import them into the pages that will use them.
 
-> We are using functional components (instead of class oriented components) since it's the best practice in the industry.
+> 📝 We are using functional components (instead of class oriented components) since it's the best practice in the industry.
 	
 For example, if we want to add a new `<Card>` component that replicates the [classic boostrap card](https://getbootstrap.com/docs/5.0/components/card/), we can create a `js/components/Card.js` with the following people:
 
@@ -71,24 +71,50 @@ export const Card = () => (
 );
 ```
 
-### Adding components to our views
+### Adding components to our pages
 
+Now that we have the `Card` component we can incorporated to our `Home.js` page with the following steps:
 
+1. Import the component at the top of the page.
+2. Use the component `<Card>` tag inside the HTML that your page returns, for example:
 
-### Context
-This boilerplate comes with a centralized general Context API. The file `./src/js/store/flux.js` has a base structure for the store, we encourage you to change it and adapt it to your needs.
+```js
+import { Card } from "../component/Card.js";
+
+export const Home = () => {
+	const { store, actions } = useContext(Context);
+
+	return (
+		<div className="text-center mt-5">
+			<h1>Hello Rigo!!</h1>
+			<Card />
+		</div>
+	);
+};
+```
+
+**Important notes**
+
+- It's important to use the curly brackets `{` when importing the component like this: `{ Card }`.
+- Notice the `<Card>` tag being used in line 9 of the `Home.js` file.
+
+### Using the Context
+
+This boilerplate comes with a centralized general Context API. The file `js/store/flux.js` has a base structure for the store, we encourage you to change it and adapt it to your needs.
 
 React Context [docs](https://reactjs.org/docs/context.html)
-BreathCode Lesson [view](https://content.breatheco.de/lesson/react-hooks-explained)
+4Geeks Lesson about [react hooks](https://content.breatheco.de/lesson/react-hooks-explained)
 
 The `Provider` is already set. You can consume from any component using the useContext hook to get the `store` and `actions` from the Context. Check `/views/demo.js` to see a demo.
 
 ```jsx
 import { Context } from "../store/appContext";
-const MyComponentSuper = () => {
+
+const MySuperPage = () => {
   //here you use useContext to get store and actions
   const { store, actions } = useContext(Context);
-  return <div>{/* you can use your actions or store inside the html */}</div>
+
+return <div>{/* you can use your actions or store inside the html */}</div>
 }
 ```
 
