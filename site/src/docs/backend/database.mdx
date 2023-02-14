@@ -50,6 +50,118 @@ Note: Type `exit` if you want to exit from the postgres terminal.
 
 More commands, you can check this [amazing summary](https://www.postgresqltutorial.com/postgresql-cheat-sheet/).
 
+## Creating the Models
+
+Most of the 4Geeks Academy templates use the SQLAlchemy library to build models, creating a model is very simple:
+
+```py
+class Artist(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), nullable=False)
+
+    # This is how the artist will print in the console, just the name
+    def __repr__(self):
+        return self.name
+
+    # This is how the artist will look inside the API JSON responses 
+    def serialize(self):
+        return {
+            "id": self.id,
+            "name": self.name
+        }
+```
+
+Here is a few examples on the different types of relationships
+
+### ONE to MANY relationship
+
+A one to many relationship places a foreign key on the child table referencing the parent. 
+
+`db.relationship()` is then specified on the parent, as referencing a collection of items represented by the child:
+
+```py
+class Artist(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), nullable=False)
+    
+    # One artist can have many records, and we will call this list "records"
+    # this is a foreign key that points to the Record.id
+    records = db.relationship('Record', backref='parent',lazy=True)
+
+    def __repr__(self):
+        return self.name
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "records": list(map(lambda x: x.serialize(), self.records))
+        }
+
+class Record(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), nullable=False)
+    
+    # one record can only have one artist, this points to the Artist.id
+    artist_id = db.Column(db.Integer, db.ForeignKey("parent.id"), nullable=False)
+    
+    def __repr__(self):
+        return self.name
+        
+    def serialize(self):
+        return {
+            "id": self.id,
+            "name": self.name
+        }
+```
+
+### MANY to MANY relationship
+
+Many to Many adds an association table between two classes. The association table is indicated by the secondary argument to `db.relationship()`. 
+
+Usually, the Table uses the MetaData object associated with the declarative base class, so that the ForeignKey directives can locate the remote tables with which to link:
+
+```py
+association_table = db.Table('association',
+    db.Column("sister_id", db.Integer, ForeignKey("sister.id"), primary_key=True),
+    db.Column("brother_id", db.Integer, ForeignKey("brother.id"), primary_key=True)
+)
+
+class Sister(db.Model):
+    id = db.Column(Integer, primary_key=True)
+    name = db.Column(String(80), nullable=False)
+    brothers = db.relationship("Brother",
+                    secondary=association_table
+                    back_populates="sisters") # this line is so it updates the field when Sister is updated
+                    
+    def __ref__(self):
+        return f'<Sister {self.name}>'
+        
+    def serialize(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "brothers": list(map(lambda x: x.serialize(), self.brothers))
+        }
+
+class Brother(db.Model):
+    id = db.Column(Integer, primary_key=True)
+    name = db.Column(String(80), nullable=False)
+    sisters = db.relationship("Sister",
+                    secondary=association_table
+                    back_populates="brothers")
+                    
+    def __ref__(self):
+        return f'<Brother {self.name}>'
+        
+    def serialize(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "sisters": list(map(lambda x: x.serialize(), self.sisters))
+        }
+```
+
 ## CRUD Operations
 
 There are many ways to manipulate but we decided to use Python and SQLAlchemy to do so. This means there you need no SQL Knowledge but we strongly recomend you still practice and master SQL for debugging purposes (most of the errors are shown in SQL language)
@@ -106,84 +218,6 @@ db.session.delete(user1)
 db.session.commit()
  ```
 
-## ONE to MANY relationship
-A one to many relationship places a foreign key on the child table referencing the parent. 
-Relationship() is then specified on the parent, as referencing a collection of items represented by the child:
-
-```py
-class Parent(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80), nullable=False)
-    children = db.relationship('Child', backref='parent',lazy=True)
-
-    def __repr__(self):
-        return f'<Parent {self.name}>'
-
-    def serialize(self):
-        return {
-            "id": self.id,
-            "name": self.name,
-            "children": list(map(lambda x: x.serialize(), self.children))
-        }
-
-class Child(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80), nullable=False)
-    parent_id = db.Column(db.Integer, db.ForeignKey("parent.id"), nullable=False)
-    
-    def __repr__(self):
-        return '<Child {self.name}>
-        
-    def serialize(self):
-        return {
-            "id": self.id,
-            "name": self.name
-        }
-```
-
-## MANY to MANY relationship
-Many to Many adds an association table between two classes. The association table is indicated by the secondary argument to relationship(). Usually, the Table uses the MetaData object associated with the declarative base class, so that the ForeignKey directives can locate the remote tables with which to link:
-
-```py
-association_table = db.Table('association',
-    db.Column("sister_id", db.Integer, ForeignKey("sister.id"), primary_key=True),
-    db.Column("brother_id", db.Integer, ForeignKey("brother.id"), primary_key=True)
-)
-
-class Sister(db.Model):
-    id = db.Column(Integer, primary_key=True)
-    name = db.Column(String(80), nullable=False)
-    brothers = db.relationship("Brother",
-                    secondary=association_table
-                    back_populates="sisters") # this line is so it updates the field when Sister is updated
-                    
-    def __ref__(self):
-        return f'<Sister {self.name}>'
-        
-    def serialize(self):
-        return {
-            "id": self.id,
-            "name": self.name,
-            "brothers": list(map(lambda x: x.serialize(), self.brothers))
-        }
-
-class Brother(db.Model):
-    id = db.Column(Integer, primary_key=True)
-    name = db.Column(String(80), nullable=False)
-    sisters = db.relationship("Sister",
-                    secondary=association_table
-                    back_populates="brothers")
-                    
-    def __ref__(self):
-        return f'<Brother {self.name}>'
-        
-    def serialize(self):
-        return {
-            "id": self.id,
-            "name": self.name,
-            "sisters": list(map(lambda x: x.serialize(), self.sisters))
-        }
-```
 
 # OFFICAL DOCUMENTATION FOR MODELS FLASK Alchemy
 
