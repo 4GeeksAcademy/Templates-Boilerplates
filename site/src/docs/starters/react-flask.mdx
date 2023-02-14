@@ -3,34 +3,18 @@ title: 'Start a React + Flask (Full-Stack) Project'
 description: 'Use Javascript, React.js, Python and Flask to build an entire full-stack application'
 ---
 
-### Styles
-You can update the `styles/index.css` or create new `.css` files inside `styles/` and import them into your current css or js files depending on your needs.
+This template has `backend files` and `front end files` together, its the perfect combination from the React Flux and the Flask API templates so that you can create a Full Stack application applying all the concepts used in the professional world.
 
-### Components
+## Front end
 
-Add more files into your `./src/js/components` or styles folder as you need them and import them into your current files as needed.
+You can find a thorough explanation on how to create new pages, components, adding styles and using the context, inside [this previous documentation we create for the React Flux template](/starters/flux). This is because the Full-Stack Template was created under the same structure and concepts as that one.
 
-💡Note: There is an example using the Context API inside `views/demo.js`;
+## Backend
 
-### Views (Components)
-Add more files into your `./src/js/views` and import them in `./src/js/layout.jsx`.
+You can find a thorough explanation on creating your Flask API endpoints, creating new models, database migrations and using the flask admin [on this documentation](/starters/flask), this is because this template was created with the same structure and concepts as the Flask API Template.
 
-### Context
-This boilerplate comes with a centralized general Context API. The file `./src/js/store/flux.js` has a base structure for the store, we encourage you to change it and adapt it to your needs.
 
-React Context [docs](https://reactjs.org/docs/context.html)
-BreathCode Lesson [view](https://content.breatheco.de/lesson/react-hooks-explained)
-
-The `Provider` is already set. You can consume from any component using the useContext hook to get the `store` and `actions` from the Context. Check `/views/demo.js` to see a demo.
-
-```jsx
-import { Context } from "../store/appContext";
-const MyComponentSuper = () => {
-  //here you use useContext to get store and actions
-  const { store, actions } = useContext(Context);
-  return <div>{/* you can use your actions or store inside the html */}</div>
-}
-```
+## Manual Installation (only if needed)
 
 ### Back-End Manual Installation:
 
