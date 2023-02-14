@@ -8,7 +8,9 @@
       link: /starters/html
     - label: Vanilla.js
       link: /starters/vanillajs
-    - label: React.js
+    - label: Basic React.js
+      link: /starters/react
+    - label: React App
       link: /starters/react
 
 - label: Backend
