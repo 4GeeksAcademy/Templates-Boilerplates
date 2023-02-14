@@ -10,8 +10,8 @@
       link: /starters/vanillajs
     - label: Basic React.js
       link: /starters/react
-    - label: React App
-      link: /starters/react-flask
+    - label: React with Routing
+      link: /starters/flux
 
 - label: Backend
   items:
