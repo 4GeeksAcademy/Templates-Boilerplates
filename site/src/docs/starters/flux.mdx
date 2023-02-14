@@ -3,66 +3,77 @@ title: 'Start Flux Project'
 description: 'Use the FLUX practices to build professional apps using React.js'
 ---
 
-# Build applications with React and Flux
+# Build advanced applications with React
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
+This tutorial explains the 
 
-<p align="center">
-<a href="https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b"><img src="https://github.com/4GeeksAcademy/react-hello-webapp/blob/master/src/img/how-to.png?raw=true" /></a>
-</p>
+> 🎥 You can watch a full video tutorial on [how to create your react application with Context.API and Flux following this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b).
 
+## Quick Start
 
-### Requirements:
-- Make sure you are using node version 10
+### Installation 
 
-1. Install the packages:
+Make sure to follow the steps on [running the project](Running the project) first, then come back to this list, if you are using Gitpod or Codespaces it is possible that the project is already running.
+
+### Add your first view
+
+It's time to add some code: Everything starts at the application layout (`js/layout.js`), this file is like a table of contents were all of your applications pages will be added before they can be rendered by react and the browser, you can [read more about React Router here](https://4geeks.com/lesson/routing-our-views-with-react-router).
+
+We already added a few routes that will like `Home`, `Demo` and `Single`, this views are useful examples of the most frequent things you usually need in a project.
+
+All of you application pages will be added into the `js/pages` folder, each of them will be a separate react component.
+
+Let's open the `<Home>` view at `js/pages/home.js`.
+
+### Code your first view HTML
+
+As you can see, the `Home.js` page is just a react component, here is a additional things to notice:
+
+- The component returns HTML.
+- At the of the component file (Home.js) there are two imports: The `AppContext` that will be used for dealing with any global information needed form other views or the application; And the `home.css` that will be used to add any CSS classes and styles used on this view in particular.
+- It's also important to mention that the AppContext is declared inside the compoent, on the very first couple of lines:
+
+```js
+const { store, actions } = useContext(Context);
 ```
-$ npm install
-```
-2. Create a .env file:
-```
-$ cp .env.example .env
-```
-3. Start coding! and the webpack dev server with live reload, for windows, mac, linux or Gitpod:
 
-```bash
-$ npm run start
-```
+### Adding styles to views or components
 
-### Styles
-You can update the `styles/index.scss` or create new `.scss` files inside `styles/` and import them into your current scss or js files depending on your needs.
+All the application styles are saved inside the `styles` folder, we usually have a separate style for each component.
 
-### Components
-Add more files into your `./src/js/components` or styles folder as you need them and import them into your current files as needed.
+You can update the `styles/index.css` or create new `.css` files inside `styles/` and import them into your current css or js files depending on your needs.
 
-**Note (New changes)**: Components have been converted into functions to support the use of hooks:
-* Instead of a class component, we're using a `const` function.
-* Class `constructor` and `state` have been replaced by `useState()` hooks.
-* `componentDidMount()` was replaced by `useEffect({}, [])` - It runs at mount thanks to the second parameter (`[]`).
-* `Actions` and `Store` still work the same way.
+For example, if you would want to create a class `background-blue` that makes the home background blue you need to do something like this:
+
+- Add the class `.background-blue` into the `styles/home.css`.
+- Use your class by adding the <div className="background-blue">` into your page html at `js/pages/home.js`.
+
+### Creating your first component
+
+Usually you want most of your application html to be split into components that can be re-used.
+	
+All the components are meant to be created into the `js/components` and then you can import them into the pages that will use them.
+
+> We are using functional components (instead of class oriented components) since it's the best practice in the industry.
+	
+For example, if we want to add a new `<Card>` component that replicates the [classic boostrap card](https://getbootstrap.com/docs/5.0/components/card/), we can create a `js/components/Card.js` with the following people:
 
 ```jsx
-// Previous "Class Oriented"
-export class Demo extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.state = getState('code here');
-	}
-}
-
-// New "Functional Oriented"
-export const Demo = () => (
+export const Card = () => (
 	const [state, setState] = getState('code here'); //using the state (if needed)
-  const { store, actions } = useContext(Context); // using the context (if needed)
-
+	return <div className="card">
+	  <div className="card-body">
+	    <h5 className="card-title">Card title</h5>
+	    <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+	    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+	  </div>
+	</div>
 );
 ```
 
-💡Note: There is an example using the Context API inside `views/demo.js`;
+### Adding components to our views
 
-### Views (Components)
-Add more files into your `./src/js/views` and import them in `./src/js/layout.jsx`.
+
 
 ### Context
 This boilerplate comes with a centralized general Context API. The file `./src/js/store/flux.js` has a base structure for the store, we encourage you to change it and adapt it to your needs.
@@ -103,3 +114,21 @@ To publish your website you need to push your code to your github repository and
 $ npm run deploy
 ```
 Note: You will need to [configure github pages for the branch gh-pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
+
+## Running the project:
+
+> Note: Make sure you are using node version 14+
+
+1. Install the packages:
+```
+$ npm install
+```
+2. Create a .env file:
+```
+$ cp .env.example .env
+```
+3. Start coding! and the webpack dev server with live reload, for windows, mac, linux or Gitpod:
+
+```bash
+$ npm run start
+```
