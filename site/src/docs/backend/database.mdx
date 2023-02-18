@@ -123,8 +123,8 @@ Usually, the Table uses the MetaData object associated with the declarative base
 
 ```py
 association_table = db.Table('association',
-    db.Column("sister_id", db.Integer, ForeignKey("sister.id"), primary_key=True),
-    db.Column("brother_id", db.Integer, ForeignKey("brother.id"), primary_key=True)
+    db.Column("sister_id", db.Integer, db.ForeignKey("sister.id"), primary_key=True),
+    db.Column("brother_id", db.Integer, db.ForeignKey("brother.id"), primary_key=True)
 )
 
 class Sister(db.Model):
@@ -160,6 +160,40 @@ class Brother(db.Model):
             "name": self.name,
             "sisters": list(map(lambda x: x.serialize(), self.sisters))
         }
+```
+
+## Migrations
+
+Once your models.py file is ready, you have to `migrate` and `upgrade` so you can synch the changes into your database engine.
+
+### Creating migrations
+
+This command will create all the migrations files in your `./migrations` folder, that way we have have them commited into github and everyone
+working on the project will have the exact same database structure.
+
+```
+$ pipenv run migrate
+```
+
+> Note: It's important to mention that the `migrate` command does not update your database, you will have to `upgrade` if you want to actually synch changes to your database.
+
+### Running the migrations
+
+The upgrade command takes a look at the migrations files, and runs everything there is left to run (out of sync) to make sure that your database is aligned with the migrations.
+
+```
+$ pipenv run upgrade
+```
+
+### Troubleshooting migrations
+
+You will encounter lot's of errors when updating and migrating your database. 
+This is were that SQL syntax knowledge comes handy.
+
+> 🛑 **The panic button**: We have prepared this command to help you reset your database and migrations back to zero.
+
+```
+$ bash docs/assets/reset_migrations.bash
 ```
 
 ## CRUD Operations
