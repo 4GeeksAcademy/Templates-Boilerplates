@@ -9,10 +9,11 @@ description: 'How to start and build a successful Flask API'
 
 There is an example API working with an example database. All your application code should be written inside the `./src/` folder.
 
-- src/app.py (it's where your endpoints should be coded, most of your python code)
-- src/models.py (your database tables and serialization logic)
-- src/utils.py (some reusable classes and functions)
-- src/admin.py (add your models to the admin and manage your data easily)
+- src/app.py: It's where the app initilizes, in small API's you can also code your different endpoints here.
+- src/routes.py (optional): If you project has a `src/routes.py` file, here is where you must code to add your endpoints.
+- src/models.py: Your database tables and serialization logic.
+- src/utils.py: Some reusable classes and functions.
+- src/admin.py: Add your models to the admin and manage your data easily.
 
 For a more detailed explanation, look for the tutorial inside the `docs` folder.
 
