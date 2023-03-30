@@ -24,7 +24,7 @@
     - label: Postgress DB
       link: /backend/database
 
-- label: Delpoy
+- label: Deploy
   items:  
     - label: To Render.com
       link: /deploy/render
