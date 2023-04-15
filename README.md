@@ -27,7 +27,7 @@
 - **Flask API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Autentication, SQL ALchemy Integratoin, Pipenv, .env, One-Click deploy to heroku (free hosting).  
 [Open Repository](https://github.com/4GeeksAcademy/flask-rest-hello)
 
-- **Express API (with TypeScript)**: Building API's with Express and Typescript. Uses TypeORM as ORM. Heroku ready.
+- **Express API (with TypeScript)**: Building API's with Express and Typescript. Uses TypeORM as ORM. Heroku ready.  
 [Open Repository](https://github.com/4GeeksAcademy/expressjs-rest-hello)
 
 - **Headless Wordpress for Developers**: Heavy developer oriented boilerplate for WP, create API's similar to modern frameworks like Flask, Express, etc. MVC Implementation and bare minimum theme implementation. 100% command line integration and installation. No need for the wordpress admin.  
