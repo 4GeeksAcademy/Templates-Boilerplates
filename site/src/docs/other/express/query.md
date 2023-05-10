@@ -20,7 +20,7 @@ userRepository.find({ relations: ["profile", "photos", "videos"] });
 userRepository.find({ relations: ["profile", "photos", "videos", "videos.video_attributes"] });
 ```
 
-* `join` - joins needs to be performed for the entity. Extended version of "relations".
+* `join` - join needs to be performed for the entity. Extended version of "relations".
 
 ```typescript
 userRepository.find({
@@ -57,7 +57,7 @@ userRepository.find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "user" WHERE ("firstName" = 'Timber' AND "lastName" = 'Saw') OR ("firstName" = 'Stan' AND "lastName" = 'Lee')
@@ -82,7 +82,7 @@ userRepository.find({
 });
 ```
 
-`find` methods which return multiple entities (`find`, `findAndCount`, `findByIds`) also accept following options:
+`find` methods which return multiple entities (`find`, `findAndCount`, `findByIds`) also accept the following options:
 
 * `skip` - offset (paginated) from where entities should be taken.
 
@@ -100,7 +100,7 @@ userRepository.find({
 });
 ```
 
-** If you are using typeorm with MSSQL, and want to use `take` or `limit`, you need to use order as well or you will receive the following error:   `'Invalid usage of the option NEXT in the FETCH statement.'`
+* If you are using typeORM with MSSQL, and want to use `take` or `limit`, you need to use order as well or you will receive the following error:   `'Invalid usage of the option NEXT in the FETCH statement.'`
 
 ```typescript
 userRepository.find({
@@ -114,7 +114,7 @@ userRepository.find({
 
 
 
-* `cache` - Enables or disables query result caching. See [caching](caching.md) for more information and options.
+* `cache` - Enables or disables query result caching. <!--- See [caching](caching.md) for more information and options. -->
 
 ```typescript
 userRepository.find({
@@ -187,7 +187,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 })
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "title" != 'About #1'
@@ -203,7 +203,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "likes" < 10
@@ -219,7 +219,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "likes" <= 10
@@ -251,7 +251,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "likes" >= 10
@@ -267,7 +267,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "title" = 'About #2'
@@ -283,7 +283,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "title" LIKE '%out #%'
@@ -299,7 +299,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "title" ILIKE '%out #%'
@@ -315,7 +315,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "likes" BETWEEN 1 AND 10
@@ -331,7 +331,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "title" IN ('About #2','About #3')
@@ -347,7 +347,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query (Postgres notation):
+will execute the following query (Postgres notation):
 
 ```sql
 SELECT * FROM "post" WHERE "title" = ANY(['About #2','About #3'])
@@ -363,7 +363,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "title" IS NULL
@@ -379,7 +379,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "likes" = "dislikes" - 4
@@ -396,13 +396,13 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "currentDate" > NOW()
 ```
 
-If you need to provide user input, you should not include the user input directly in your query as this may create a SQL injection vulnerability.  Instead, you can use the second argument of the `Raw` function to provide a list of parameters to bind to the query.
+If you need to provide user input, you should not include the user input directly in your query as this may create a SQL injection vulnerability. Instead, you can use the second argument of the `Raw` function to provide a list of parameters to bind to the query.
 
 ```ts
 import {Raw} from "typeorm";
@@ -412,7 +412,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "currentDate" > '2020-10-06'
@@ -428,7 +428,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE "titles" IN ('Go To Statement Considered Harmful', 'Structured Programming')
@@ -447,7 +447,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 });
 ```
 
-will execute following query:
+will execute the following query:
 
 ```sql
 SELECT * FROM "post" WHERE NOT("likes" > 10) AND NOT("title" = 'About #2')

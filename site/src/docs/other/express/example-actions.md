@@ -1,6 +1,6 @@
 # Example actions using TypeORM & Express
 
-Each of this actions can be matched with a URL like this:
+Each of these actions can be matched with a URL like this:
 
 ```
 router.get('/some_url', yourAction);
@@ -29,7 +29,7 @@ Here is the sample user creation:
 ```js
 export const createUser = async (req: Request, res:Response): Promise<Response> =>{
 
-	// important validations to avoid ambiguos errors, the client needs to understand what went wrong
+	// important validations to avoid ambiguous errors, the client needs to understand what went wrong
 	if(!req.body.first_name) throw new Exception("Please provide a first_name")
 	if(!req.body.last_name) throw new Exception("Please provide a last_name")
 	if(!req.body.email) throw new Exception("Please provide an email")
@@ -38,7 +38,7 @@ export const createUser = async (req: Request, res:Response): Promise<Response> 
 	const userRepo = getRepository(Users)// to manipulate users I need the user repository
 	// fetch for any user with this email
 	const user = await userRepo.findOne({ where: {email: req.body.email }})
-	if(user) throw new Exception("Users already exists with this email")
+	if(user) throw new Exception("User already exists with this email")
 
 	const newUser = getRepository(Users).create(req.body);  //Create the new user based on the incoming json body
 	const results = await getRepository(Users).save(newUser); //commit to the database
@@ -60,7 +60,7 @@ export const updateUser = async (req: Request, res:Response): Promise<Response> 
 	
     // better to merge, that way we can do partial update (only a couple of properties)
 	userRepo.merge(user, req.body); 
-	const results = await userRepo.save(user);  // commit to DM	
+	const results = await userRepo.save(user);  // commit to DB	
 	return res.json(results);
 }
 ```
@@ -76,9 +76,9 @@ export const deleteUser = async (req: Request, res: Response): Promise<Response>
 
 ## 4) How to get one single user
 
-Get a single user is simple using the findOne, but the cool part is that you can also retrieve the user planets by passing a second param to the findONe function. `{ relations: ["planets"] }`
+Get a single user is simple using the findOne, but the cool part is that you can also retrieve the user planets by passing a second param to the findOne function. `{ relations: ["planets"] }`
 
-Note: there are other ways to find, [you can read more about find here](./QUERY_OR_FIND.md).
+Note: there are other ways to find, [you can read more about find here](./query).
 
 ```js
 export const getUser = async (req: Request, res: Response): Promise<Response> =>{
@@ -117,11 +117,11 @@ export const updateCurrentUser = async (req: Request, res:Response): Promise<Res
 	if(!req.user) throw new Exception("No user was found on the session token")
 	const user_id = (req.user as ObjectLiteral).id
 	const user = await userRepo.findOne(user_id); 
-	if(!user) throw new Exception("Not User found");
+	if(!user) throw new Exception("User not found");
 	
     // better to merge, that way we can do partial update (only a couple of properties)
 	userRepo.merge(user, req.body); 
-	const results = await userRepo.save(user);  // commit to DM	
+	const results = await userRepo.save(user);  // commit to DB	
 	return res.json(results);
 }
 ```
