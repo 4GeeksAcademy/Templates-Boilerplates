@@ -21,14 +21,14 @@
       link: /starters/express
     - label: React & Flask (Full-Stack)
       link: /starters/react-flask
-    - label: Postgress DB
+    - label: Postgres DB
       link: /backend/database
 
 - label: Deploy
   items:  
     - label: To Render.com
       link: /deploy/render
-    - label: To Heroku + Postgress
+    - label: To Heroku + Postgres
       link: /deploy/heroku-postgress
     - label: To Heroku + MySQL
       link: /deploy/heroku-mysql
