@@ -39,8 +39,6 @@
       link: /tutorials/upload-images
     - label: API Validations in Flask
       link: /backend/api-validations
-    - label: FAQ
-      link: /other/faq
     - label: Changelog
       link: /other/changelog
     - label: 'Github'
