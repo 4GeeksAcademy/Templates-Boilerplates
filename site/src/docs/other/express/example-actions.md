@@ -60,7 +60,7 @@ export const updateUser = async (req: Request, res:Response): Promise<Response> 
 	
     // better to merge, that way we can do partial update (only a couple of properties)
 	userRepo.merge(user, req.body); 
-	const results = await userRepo.save(user);  // commit to DM	
+	const results = await userRepo.save(user);  // commit to DB	
 	return res.json(results);
 }
 ```
@@ -121,7 +121,7 @@ export const updateCurrentUser = async (req: Request, res:Response): Promise<Res
 	
     // better to merge, that way we can do partial update (only a couple of properties)
 	userRepo.merge(user, req.body); 
-	const results = await userRepo.save(user);  // commit to DM	
+	const results = await userRepo.save(user);  // commit to DB	
 	return res.json(results);
 }
 ```
