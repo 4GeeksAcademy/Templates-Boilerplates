@@ -109,34 +109,38 @@ TypeORM has a lot of ways to retrieve information from the database, we are goin
 > ⚠️ Important: You must always start by declaring a new `repository` for that entity
 
 ```js
-
+const user = repository.create({
+    id: 1,
+    firstName: "Timber",
+    lastName: "Saw",
+}) // same as const user = new User(); user.firstName = "Timber"; user.lastName = "Saw";
 ```
 
 After having the repository object you can start your query, for example:
 
 ### Find by
 
-Find the user with the first name "bob"
+Find the user with the first name "Bob"
 
 ```js
-userRepository.find({ where: { firstName: "Timber", lastName: "Saw" } });
+userRepository.find({ where: { firstName: "Bob", lastName: "Saw" } });
 ```
 
 ### Find by (many)
 
-Find the user with the first name "bob"
+Find the user with the first name "Bob"
 
 ```js
-userRepository.find({ where: { firstName: "Timber", lastName: "Saw" } });
+userRepository.find({ where: { firstName: "Bob", lastName: "Saw" } });
 ```
 
 ### Find One by (just one)
 
-Find the user with the first name "bob"
+Find the user with the first name "Bob"
 
 ```typescript
 userRepository.findOne(1, {
-    where: { firstName: "Timber" }
+    where: { firstName: "Bob" }
 })
 ``` 
 
