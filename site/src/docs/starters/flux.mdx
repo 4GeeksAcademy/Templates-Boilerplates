@@ -15,20 +15,20 @@ Make sure to follow the steps on [running the project](https://github.com/4Geeks
 
 ### Add your first view
 
-It's time to add some code: Everything starts at the application layout (`js/layout.js`), this file is like a table of contents where all of your application pages will be added before they can be rendered by react and the browser, you can [read more about React Router here](https://4geeks.com/lesson/routing-our-views-with-react-router).
+It's time to add some code: Everything starts at the application layout (`js/layout.js`), this file is like a table of contents where all of your application pages will be added before they can be rendered by React and the browser, you can [read more about React Router here](https://4geeks.com/lesson/routing-our-views-with-react-router).
 
 We already added a few routes like `Home`, `Demo` and `Single`, these views are useful examples of the most frequent things you usually need in a project.
 
-All of your application pages will be added into the `js/pages` folder, each of them will be a separate react component.
+All of your application pages will be added into the `js/pages` folder, each of them will be a separate React component.
 
-Let's open the `<Home>` view at `js/pages/home.js`.
+Let's open the `<Demo>` view at `js/pages/demo.js`.
 
-### Code your first view HTML
+### Code your first HTML view
 
-As you can see, the `Home.js` page is just a React component, here are additional things to notice:
+As you can see, the `demo.js` page is just a React component, here are additional things to notice:
 
 - The component returns HTML.
-- At the start of the component file (Home.js) there are two imports: The `AppContext` that will be used for dealing with any global information needed from other views or the application; And the `home.css` that will be used to add any CSS classes and styles used on this view in particular.
+- At the start of the component file (demo.js) there are two imports: The `AppContext` that will be used for dealing with any global information needed from other views or the application; And the `demo.css` that will be used to add any CSS classes and styles used on this view in particular.
 - It's also important to mention that the AppContext is declared inside the component, on the very first couple of lines:
 
 ```js
@@ -121,11 +121,11 @@ return <div>{/* you can use your actions or store inside the html */}</div>
 1. **Vercel:** The FREE recommended hosting provider is [vercel.com](https://vercel.com/), you can deploy in 1 minute by typing the following 2 commands:
 
 Login (you need to have an account):
-```sh
+```bash
 $ npm i vercel -g && vercel login
 ```
 Deploy:
-```sh
+```bash
 $ vercel --prod
 ```
 > ✎ Note: If you don't have an account just go to vercel.com, create an account and come back here.
@@ -134,7 +134,7 @@ $ vercel --prod
 
 2. **Github Pages:** This boilerplate is 100% compatible with the free Github pages hosting.
 To publish your website you need to push your code to your Github repository and run the following command after:
-```sh
+```bash
 $ npm run deploy
 ```
 > 👉 Note: You will need to [configure Github pages for the branch gh-pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
@@ -144,11 +144,11 @@ $ npm run deploy
 > Note: Make sure you are using node version 14+
 
 1. Install the packages:
-```
+```bash
 $ npm install
 ```
 2. Create a .env file:
-```
+```bash
 $ cp .env.example .env
 ```
 3. Start coding! and use the webpack dev server with live reload, for Windows, Mac, Linux or Gitpod:
