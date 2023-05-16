@@ -9,14 +9,14 @@ You can use the env var `DATABASE_URL` for this purpose.
 ## Creating and/or Accessing the Postgres Database
 
 1. Log in to Postgres terminal:
-```sh
+```bash
 $ psql
 ```
 2. Once inside, list all the databases and check if you have the database already created:
 ```sql
 \l
 ```
-Note: If you are using GitPod, check the file `docs/assets/reset_migrations.bash`. Basically, you are creating a database from scratch called `example`.
+> Note: If you are using Gitpod, check the file `docs/assets/reset_migrations.bash`. Basically, you are creating a database from scratch called `example`.
 
 3. If you don't see the example database, create it by typing:
 ```sql
@@ -46,7 +46,7 @@ You are now connected to database "example" as user "gitpod".
 select * from users;
 ```
 
-Note: Type `exit` if you want to exit from the Postgres terminal.
+> Note: Type `exit` if you want to exit from the Postgres terminal.
 
 For more commands, you can check this [amazing summary](https://www.postgresqltutorial.com/postgresql-cheat-sheet/).
 
@@ -164,7 +164,7 @@ class Brother(db.Model):
 
 ## Migrations
 
-Once your models.py file is ready, you have to `migrate` and `upgrade` so you can sync the changes into your database engine.
+Once your `models.py` file is ready, you have to `migrate` and `upgrade` so you can sync the changes into your database engine.
 
 ### Creating migrations
 
@@ -202,7 +202,7 @@ There are many ways to manipulate databases, but we decided to use Python and SQ
 
 ### Querying (SELECT) data
 
-Assuming you have a Person object in your models.py file.
+Assuming you have a Person object in your `models.py` file.
 
 ```py
 # get all the people
@@ -220,7 +220,7 @@ user1 = Person.query.get(person_id)
 
 ### Inserting data
 
-Assuming you have a Person object in your models.py file.
+Assuming you have a Person object in your `models.py` file.
 
 ```py
 user1 = Person(username="my_super_username", email="my_super@email.com")
