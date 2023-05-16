@@ -22,13 +22,13 @@
 [Abrir repositorio](https://github.com/4GeeksAcademy/react-hello) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello.git)
 
 - **Full Stack: React + Flask API**: React Front-End con Python/Flask API backend, despliegue en un clic a Heroku.  
-[Open Repository](https://github.com/4GeeksAcademy/react-flask-hello)
+[Abrir repositorio](https://github.com/4GeeksAcademy/react-flask-hello)
 
 - **Flask API**: Ideal para desarrollo profesional, mínimo posible de boilerplate para construir una API con Flask. Arregla problemas comunes como CORS, Tests, manejo de errores, Autentificación, integración de SQL Alchemy, Pipenv, .env, despliegue a Heroku en un minuto (hosting gratuito).  
 [Abrir repositorio](https://github.com/4GeeksAcademy/flask-rest-hello) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/flask-rest-hello.git)
 
 - **Express API (with TypeScript)**: Construye APIs con Express y TypeScript. Usa TypeORM como ORM. listo para Heroku.  
-[Open Repository](https://github.com/4GeeksAcademy/expressjs-rest-hello)
+[Abrir repositorio](https://github.com/4GeeksAcademy/expressjs-rest-hello)
 
 
 ## Otros boilerplates obsoletos (⚠️ sin mantenimiento)
