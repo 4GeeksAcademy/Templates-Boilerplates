@@ -114,7 +114,7 @@ userRepository.find({
 
 
 
-* `cache` - Enables or disables query result caching. <!--- See [caching](caching.md) for more information and options. -->
+* `cache` - Enables or disables query result caching. <!--- See [caching](caching) for more information and options. esta página aún no existe-->
 
 ```typescript
 userRepository.find({
