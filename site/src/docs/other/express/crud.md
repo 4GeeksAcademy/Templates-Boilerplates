@@ -2,7 +2,7 @@
 
 
 * `createQueryBuilder` - Creates a query builder used to build SQL queries.
-Learn more about [QueryBuilder](select-query-builder). <!--- esta pagina aun no existe -->
+<!--- Learn more about [QueryBuilder](select-query-builder). esta pagina aun no existe -->
 
 ```typescript
 const users = await repository
