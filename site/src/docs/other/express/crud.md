@@ -1,8 +1,8 @@
 ## `Repository` API
 
 
-* `createQueryBuilder` - Creates a query builder use to build SQL queries.
-Learn more about [QueryBuilder](select-query-builder.md).
+* `createQueryBuilder` - Creates a query builder used to build SQL queries.
+Learn more about [QueryBuilder](select-query-builder). <!--- esta pagina aun no existe -->
 
 ```typescript
 const users = await repository
@@ -20,7 +20,7 @@ const users = await repository
 ```
 
 * `getId` - Gets the primary column property values of the given entity.
-If entity has composite primary keys then the returned value will be an object with names and values of primary columns.
+If entity has composite primary keys, then the returned value will be an object with names and values of primary columns.
 
 ```typescript
 const userId = repository.getId(user); // userId === 1
@@ -45,7 +45,7 @@ const user = new User();
 repository.merge(user, { firstName: "Timber" }, { lastName: "Saw" }); // same as user.firstName = "Timber"; user.lastName = "Saw";
 ```
 
-* `preload` - Creates a new entity from the given plain javascript object. If the entity already exists in the database, then
+* `preload` - Creates a new entity from the given plain JavaScript object. If the entity already exists in the database, then
 it loads it (and everything related to it), replaces all values with the new ones from the given object,
 and returns the new entity. The new entity is actually an entity loaded from the database with all properties
 replaced from the new object. 
@@ -67,7 +67,7 @@ const user = await repository.preload(partialUser);
 ```
 
 * `save` - Saves a given entity or array of entities.
-If the entity already exist in the database, it is updated.
+If the entity already exists in the database, it is updated.
 If the entity does not exist in the database, it is inserted.
 It saves all given entities in a single transaction (in the case of entity, manager is not transactional).
 Also supports partial updating since all undefined properties are skipped.
@@ -197,7 +197,7 @@ const user = await repository.findOne(1);
 const timber = await repository.findOne({ firstName: "Timber" });
 ```
 
-* `findOneOrFail` - Finds the first entity that matches the some id or find options.
+* `findOneOrFail` - Finds the first entity that matches the same id or find options.
 Rejects the returned promise if nothing matches.
 
 ```typescript
@@ -205,7 +205,7 @@ const user = await repository.findOneOrFail(1);
 const timber = await repository.findOneOrFail({ firstName: "Timber" });
 ```
 
->Note: It is strongly recommended to ensure that your `id` or `FindOptions` value is not `null` or `undefined` before calling `findOne` and `findOneOrFail`. When passed `null` or `undefined`, the query will match with every entity in the repository and return the first record.
+> Note: It is strongly recommended to ensure that your `id` or `FindOptions` value is not `null` or `undefined` before calling `findOne` and `findOneOrFail`. When passed `null` or `undefined`, the query will match with every entity in the repository and return the first record.
 
 * `query` - Executes a raw SQL query.
 
@@ -224,9 +224,9 @@ Optional `SaveOptions` can be passed as parameter for `save`.
 
 * `data` -  Additional data to be passed with persist method. This data can be used in subscribers then.
 * `listeners`: boolean - Indicates if listeners and subscribers are called for this operation. By default they are enabled, you can disable them by setting `{ listeners: false }` in save/remove options.
-* `transaction`: boolean - By default transactions are enabled and all queries in persistence operation are wrapped into the transaction. You can disable this behaviour by setting `{ transaction: false }` in the persistence options.
+* `transaction`: boolean - By default transactions are enabled and all queries in persistence operation are wrapped into the transaction. You can disable this behavior by setting `{ transaction: false }` in the persistence options.
 * `chunk`: number - Breaks save execution into multiple groups of chunks. For example, if you want to save 100.000 objects but you have issues with saving them, you can break them into 10 groups of 10.000 objects (by setting `{ chunk: 10000 }`) and save each group separately. This option is needed to perform very big insertions when you have issues with underlying driver parameter number limitation.
-* `reload`: boolean - Flag to determine whether the entity that is being persisted should be reloaded during the persistence operation. It will work only on databases which does not support RETURNING / OUTPUT statement. Enabled by default.
+* `reload`: boolean - Flag to determine whether the entity that is being persisted should be reloaded during the persistence operation. It will work only on databases which do not support RETURNING / OUTPUT statement. Enabled by default.
 
 Example:
 ```typescript
@@ -238,7 +238,7 @@ Optional `RemoveOptions` can be passed as parameter for `remove` and `delete`.
 
 * `data` - Additional data to be passed with remove method. This data can be used in subscribers then.
 * `listener`: boolean - Indicates if listeners and subscribers are called for this operation. By default they are enabled, you can disable them by setting `{ listeners: false }` in save/remove options.
-* `transaction`: boolean - By default transactions are enabled and all queries in persistence operation are wrapped into the transaction. You can disable this behaviour by setting `{ transaction: false }` in the persistence options.
+* `transaction`: boolean - By default transactions are enabled and all queries in persistence operation are wrapped into the transaction. You can disable this behavior by setting `{ transaction: false }` in the persistence options.
 * `chunk`: number - Breaks save execution into multiple groups of chunks. For example, if you want to save 100.000 objects but you have issues saving them, you can break them into 10 groups of 10.000 objects, by setting `{ chunk: 10000 }`, and save each group separately. This option is needed to perform very big insertions when you have issues with underlying driver parameter number limitation.
 
 Example:
