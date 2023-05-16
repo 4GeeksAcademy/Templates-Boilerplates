@@ -33,7 +33,7 @@
 
 ## Other deprecated templates (⚠️ Unmaintained):
 
-- **React.js Advanced**: Ideal for professional development, Minimum version for Flux + Context API implemented. One click deploy to several hostings free, documentation and video tutorials. Just a little boilerplated.  
+- **React.js Advanced**: Ideal for professional development, Minimum version for Flux + Context API implemented. One click deploy to several hostings free, documentation and video tutorials.  
 [Open Repository](https://github.com/4GeeksAcademy/react-hello-webapp)
 
 - **Flask API + VanillaJS**: The Flask boilerplate merged with the VanillaJS boilerplate, for anyone interested in publishing front-end and back-end in the same hosting and one unified project.  
