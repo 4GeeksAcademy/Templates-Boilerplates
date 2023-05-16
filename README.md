@@ -8,7 +8,7 @@
 [![build by developers](https://img.shields.io/badge/build_by-Developers-blue)](https://breatheco.de)
 [![build by developers](https://img.shields.io/twitter/follow/4geeksacademy?style=social&logo=twitter)](https://twitter.com/4geeksacademy)
 
-```bash
+```text
 🔥 Here you can find the documentation about these boilerplates: start.4geeksacademy.com
 ```
 
