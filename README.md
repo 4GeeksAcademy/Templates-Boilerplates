@@ -30,9 +30,6 @@
 - **Express API (with TypeScript)**: Building API's with Express and TypeScript. Uses TypeORM as ORM. Heroku ready.  
 [Open Repository](https://github.com/4GeeksAcademy/expressjs-rest-hello)
 
-- **Headless WordPress for Developers**: Heavy developer oriented boilerplate for WP, create API's similar to modern frameworks like Flask, Express, etc. MVC Implementation and bare minimum theme implementation. 100% command line integration and installation. No need for the WordPress admin.  
-[Open Repository](https://github.com/4GeeksAcademy/wordpress-hello)
-
 
 ## Other deprecated templates (⚠️ Unmaintained):
 
@@ -44,6 +41,9 @@
 
 - **Django Rest**: Smallest possible approach for building API's with django, one click deploy to Heroku (free hosting), documentation and video tutorials.  
 [Open Repository](https://github.com/4GeeksAcademy/django-rest-hello)
+
+- **Headless WordPress for Developers**: Heavy developer oriented boilerplate for WP, create API's similar to modern frameworks like Flask, Express, etc. MVC Implementation and bare minimum theme implementation. 100% command line integration and installation. No need for the WordPress admin.  
+[Open Repository](https://github.com/4GeeksAcademy/wordpress-hello)
 
 ### Contributors
 
