@@ -21,6 +21,9 @@
 - **React.js**: Create React App comes with too many files and almost no utilities. With documentation and video tutorials, deploy to different servers in just one command. Ideal for anyone.  
 [Open Repository](https://github.com/4GeeksAcademy/react-hello)
 
+- **React.js Advanced**: Ideal for professional development, Minimum version for Flux + Context API implemented. One click deploy to several hostings free, documentation and video tutorials.  
+[Open Repository](https://github.com/4GeeksAcademy/react-hello-webapp)
+
 - **Full Stack: React + Flask API**: React Front-End and Python/Flask API backend, one click deploy to Heroku.  
 [Open Repository](https://github.com/4GeeksAcademy/react-flask-hello)
 
@@ -32,9 +35,6 @@
 
 
 ## Other deprecated templates (⚠️ Unmaintained):
-
-- **React.js Advanced**: Ideal for professional development, Minimum version for Flux + Context API implemented. One click deploy to several hostings free, documentation and video tutorials.  
-[Open Repository](https://github.com/4GeeksAcademy/react-hello-webapp)
 
 - **Flask API + VanillaJS**: The Flask boilerplate merged with the VanillaJS boilerplate, for anyone interested in publishing front-end and back-end in the same hosting and one unified project.  
 [Open Repository](https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate)
