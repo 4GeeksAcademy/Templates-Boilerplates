@@ -21,6 +21,9 @@
 - **React.js**: Create React App tiene muchos archivos y casi no tiene utilidades. Con documentación y video tutoriales, despliega varios servidores con un solo comando. Ideal para cualquiera. 
 [Abrir repositorio](https://github.com/4GeeksAcademy/react-hello) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello.git)
 
+- **React.js Avanzado**: Ideal para desarrollo profesional, versión de Flux + Context API mínima implementada. En un clic despliega varios hostings gratuitos, documentación y video tutoriales. 
+[Abrir repositorio](https://github.com/4GeeksAcademy/react-hello-webapp) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
+
 - **Full Stack: React + Flask API**: React Front-End con Python/Flask API backend, despliegue en un clic a Heroku.  
 [Abrir repositorio](https://github.com/4GeeksAcademy/react-flask-hello)
 
@@ -32,9 +35,6 @@
 
 
 ## Otros boilerplates obsoletos (⚠️ sin mantenimiento)
-
-- **React.js Avanzado**: Ideal para desarrollo profesional, versión de Flux + Context API mínima implementada. En un clic despliega varios hostings gratuitos, documentación y video tutoriales. 
-[Abrir repositorio](https://github.com/4GeeksAcademy/react-hello-webapp) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
 
 - **Flask API + VanillaJS**: Boilerplate de Flask fusionado con el boilerplate de VanillaJS, para cualquiera interesado en publicar front-end y back-end en el mismo hosting y en un proyecto unificado.
 [Abrir repositorio](https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate)
