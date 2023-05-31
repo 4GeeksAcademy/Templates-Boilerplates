@@ -8,7 +8,7 @@
 [![build by developers](https://img.shields.io/badge/build_by-Developers-blue)](https://breatheco.de)
 [![build by developers](https://img.shields.io/twitter/follow/4geeksacademy?style=social&logo=twitter)](https://twitter.com/4geeksacademy)
 
-```bash
+```text
 🔥 Here you can find the documentation about these boilerplates: start.4geeksacademy.com
 ```
 
@@ -21,6 +21,9 @@
 - **React.js**: Create React App comes with too many files and almost no utilities. With documentation and video tutorials, deploy to different servers in just one command. Ideal for anyone.  
 [Open Repository](https://github.com/4GeeksAcademy/react-hello)
 
+- **React.js Advanced**: Ideal for professional development, Minimum version for Flux + Context API implemented. One click deploy to several hostings free, documentation and video tutorials.  
+[Open Repository](https://github.com/4GeeksAcademy/react-hello-webapp)
+
 - **Full Stack: React + Flask API**: React Front-End and Python/Flask API backend, one click deploy to Heroku.  
 [Open Repository](https://github.com/4GeeksAcademy/react-flask-hello)
 
@@ -30,20 +33,17 @@
 - **Express API (with TypeScript)**: Building API's with Express and TypeScript. Uses TypeORM as ORM. Heroku ready.  
 [Open Repository](https://github.com/4GeeksAcademy/expressjs-rest-hello)
 
-- **Headless WordPress for Developers**: Heavy developer oriented boilerplate for WP, create API's similar to modern frameworks like Flask, Express, etc. MVC Implementation and bare minimum theme implementation. 100% command line integration and installation. No need for the WordPress admin.  
-[Open Repository](https://github.com/4GeeksAcademy/wordpress-hello)
-
 
 ## Other deprecated templates (⚠️ Unmaintained):
-
-- **React.js Advanced**: Ideal for professional development, Minimum version for Flux + Context API implemented. One click deploy to several hostings free, documentation and video tutorials. Just a little boilerplated.  
-[Open Repository](https://github.com/4GeeksAcademy/react-hello-webapp)
 
 - **Flask API + VanillaJS**: The Flask boilerplate merged with the VanillaJS boilerplate, for anyone interested in publishing front-end and back-end in the same hosting and one unified project.  
 [Open Repository](https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate)
 
 - **Django Rest**: Smallest possible approach for building API's with django, one click deploy to Heroku (free hosting), documentation and video tutorials.  
 [Open Repository](https://github.com/4GeeksAcademy/django-rest-hello)
+
+- **Headless WordPress for Developers**: Heavy developer oriented boilerplate for WP, create API's similar to modern frameworks like Flask, Express, etc. MVC Implementation and bare minimum theme implementation. 100% command line integration and installation. No need for the WordPress admin.  
+[Open Repository](https://github.com/4GeeksAcademy/wordpress-hello)
 
 ### Contributors
 
