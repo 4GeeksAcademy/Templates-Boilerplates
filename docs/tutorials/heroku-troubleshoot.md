@@ -1,9 +1,9 @@
 ---
-title: 'Heroku Documentation'
-description: 'Frequently asked questions about heroku'
+title: 'Heroku Troubleshoot - 4Geeks Academy Templates'
+description: 'Frequently asked questions or problems about deploying 4Geeks Academy template starters into heroku'
 ---
 
-# Heroku FAQ
+# Heroku Troubleshoot
 
 
 ## How to Add a Heroku Remote to an Existing Project
