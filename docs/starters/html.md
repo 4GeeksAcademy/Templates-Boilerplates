@@ -3,7 +3,7 @@ title: 'Start a new HTML/CSS Project'
 description: 'Build and publish the most basic HTML/CSS website you can build'
 ---
 
-# ![4Geeks Logo](http://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=4geeks,16) HTML Hello
+# HTML Hello
 
 ## How to start
 
