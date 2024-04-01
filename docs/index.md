@@ -1,5 +1,3 @@
-# 4Geeks' Project Starters
-
 Through the years, we have created a list of project starters (boilerplates) with great documentation, packages and use cases for people learning how to code.
 
 ## Start a project in...
