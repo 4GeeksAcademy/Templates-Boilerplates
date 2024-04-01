@@ -1,5 +1,5 @@
 ---
-title: 'Database Configuration'
+title: 'PostgreSQL Template Starter & Database Configuration'
 description: 'Setup your Postgres or MySQL database engine'
 technologies: ['postgre', 'databases']
 ---
