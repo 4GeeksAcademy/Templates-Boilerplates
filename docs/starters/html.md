@@ -19,7 +19,7 @@ Just click on [this link to start your project](https://gitpod.io#https://github
 
 
 
-[![How to open html/css preview of my project in gitpod](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/assets/hello-html-intro.png?raw=true)](https://youtu.be/dfbDCMu_p-0)
+[![How to open html/css preview of my project in gitpod](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/static/img/hello-html-intro.png?raw=true)](https://youtu.be/dfbDCMu_p-0)
 
 ## What to do next?
 
