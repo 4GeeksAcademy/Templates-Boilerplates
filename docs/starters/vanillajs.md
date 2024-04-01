@@ -8,7 +8,7 @@ technologies: ['vanillajs', 'html', 'css']
 
 Start coding in 30 seconds by [opening this template in a new cloud computer here](https://breathecode.herokuapp.com/v1/provisioning/public/container/new?repo=https://github.com/4GeeksAcademy/vanillajs-hello.git).
 
-Or you can download the template into your computer and manually install it:
+Or you can download the template into your computer and manually install it by following the steps below:
 
 1) Remember to install the npm packages first:
 ```bash
