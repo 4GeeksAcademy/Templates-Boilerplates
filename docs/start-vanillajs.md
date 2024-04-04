@@ -1,14 +1,14 @@
 ---
 title: 'Vanilla.js Project'
 description: 'Use Webpack to compile and build a project with the latest Javascript and HTML/CSS'
+technologies: ['vanillajs', 'html', 'css']
 ---
 
 # Starting a project in Vanilla JS
 
-Start coding in 30 seconds by opening this template in gitpod:
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/vanillajs-hello.git)
+Start coding in 30 seconds by [opening this template in a new cloud computer here](https://breathecode.herokuapp.com/v1/provisioning/public/container/new?repo=https://github.com/4GeeksAcademy/vanillajs-hello.git).
 
-### Manual Installation
+Or you can download the template into your computer and manually install it by following the steps below:
 
 1) Remember to install the npm packages first:
 ```bash

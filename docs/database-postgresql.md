@@ -1,6 +1,7 @@
 ---
-title: 'Database Configuration'
+title: 'PostgreSQL Template Starter & Database Configuration'
 description: 'Setup your Postgres or MySQL database engine'
+technologies: ['postgre', 'databases']
 ---
 
 In this boilerplate, you can use either Postgres or SQLite as database engine. Verify your .env file to specify which one you would like to use.

@@ -3,10 +3,6 @@ title: 'Start a new HTML/CSS Project'
 description: 'Build and publish the most basic HTML/CSS website you can build'
 ---
 
-# ![4Geeks Logo](http://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=4geeks,16) HTML Hello
-
-## How to start
-
 The most basic boilerplate for any 4Geeks Academy Student ideal to start your first HTML/CSS website.
 
 ### If you are **working locally**:
@@ -17,9 +13,7 @@ Download and install node.js in your computer [from here](https://nodejs.org/en/
 
 Just click on [this link to start your project](https://gitpod.io#https://github.com/4GeeksAcademy/html-hello.git).
 
-
-
-[![How to open html/css preview of my project in gitpod](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/assets/hello-html-intro.png?raw=true)](https://youtu.be/dfbDCMu_p-0)
+[![How to open html/css preview of my project in gitpod](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/static/img/hello-html-intro.png?raw=true)](https://youtu.be/dfbDCMu_p-0)
 
 ## What to do next?
 
