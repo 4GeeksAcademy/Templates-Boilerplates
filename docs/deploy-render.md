@@ -35,6 +35,14 @@ You will see a loading animation with the status of the Postgres database and th
 
 It takes several minutes to load both services, please be patient and wait until both checkmarks show up.
 
+## 4) Set the environment variables
+
+As you did in your local project, you will have to set the extra env vars you have added in your project in the Render settings.
+
+Go to the Environment section in your Render's server panel and include the additional Environment Variables you need.
+
+> 🔥 IMPORTANT: Every time you change the ENV VARs you will need to redeploy your project. ENV VARs only have an effect when the project is built again.**
+
 ## Your website is ready!
 
 Once the deploy is finished you can go ahead and open your website:
