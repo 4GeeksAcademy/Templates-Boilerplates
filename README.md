@@ -27,14 +27,17 @@
 - **Full Stack: React + Flask API**: React Front-End and Python/Flask API backend, one click deploy to Heroku.  
 [Open Repository](https://github.com/4GeeksAcademy/react-flask-hello)
 
-- **Flask API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Authentication, SQL Alchemy Integration, Pipenv, .env, One-Click deploy to Heroku (free hosting).  
-[Open Repository](https://github.com/4GeeksAcademy/flask-rest-hello)
+- **Fast API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Fast API. Fixes common problems like CORS, Tests, Error Handling, Authentication, SQL Alchemy Integration, Pipenv, .env, One-Click deploy to Render.com and Heroku (free hosting).  
+[Open Repository](https://github.com/4GeeksAcademy/fastapi-rest-hello)
 
 - **Express API (with TypeScript)**: Building API's with Express and TypeScript. Uses TypeORM as ORM. Heroku ready.  
 [Open Repository](https://github.com/4GeeksAcademy/expressjs-rest-hello)
 
 
-## Other deprecated templates (⚠️ Unmaintained):
+## Other deprecated templates (⚠️ Unmaintained & Deprecated):
+
+- **Flask API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Authentication, SQL Alchemy Integration, Pipenv, .env, One-Click deploy to Heroku (free hosting).  
+[Open Repository](https://github.com/4GeeksAcademy/flask-rest-hello)
 
 - **Flask API + VanillaJS**: The Flask boilerplate merged with the VanillaJS boilerplate, for anyone interested in publishing front-end and back-end in the same hosting and one unified project.  
 [Open Repository](https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate)
