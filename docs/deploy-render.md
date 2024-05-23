@@ -19,7 +19,7 @@ Create a blueprint from your Github connection. [Click here](https://dashboard.r
 
 After choosing your repository you should see a screen similar to this:
 
-![new blueprint](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/site/static/img/new-blueprint.png?raw=true)
+![new blueprint](https://raw.githubusercontent.com/4GeeksAcademy/Templates-Boilerplates/master/static/img/new-blueprint.png)
 
 ## 3) Fill the form for the blueprint
 
@@ -31,7 +31,7 @@ Now you should see a small form with 3 questions:
 
 You will see a loading animation with the status of the Postgres database and the web service being built.
 
-![loading blueprint](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/site/static/img/loading-blueprint.gif?raw=true)
+![loading blueprint](https://raw.githubusercontent.com/4GeeksAcademy/Templates-Boilerplates/master/static/img/loading-blueprint.gif)
 
 It takes several minutes to load both services, please be patient and wait until both checkmarks show up.
 
@@ -39,7 +39,7 @@ It takes several minutes to load both services, please be patient and wait until
 
 Once the deploy is finished you can go ahead and open your website:
 
-![open your website](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/site/static/img/open-website.png?raw=true)
+![open your website](https://raw.githubusercontent.com/4GeeksAcademy/Templates-Boilerplates/master/static/img/open-website.png)
 
 ## Errors? How to Troubleshoot
 
@@ -51,5 +51,5 @@ Some times the deploy service has errors for no particular reason, if you believ
 
 It is always recommended to check your deploy logs for errors or any other important messages, this is how a successful deploy should look like.
 
-![success log](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/site/static/img/success-log.png?raw=true)
+![success log](https://raw.githubusercontent.com/4GeeksAcademy/Templates-Boilerplates/master/static/img/success-log.png)
 

@@ -142,5 +142,5 @@ admin.add_view(ModelView(YourModelName, db.session))
 
 This template is 100% compatible with [Heroku](https://www.heroku.com/) and [Render.com](https://www.render.com), just make sure to read the quick deployment guides.
 
-1. [How to deploy into Render.com](/deploy/render) (for free)
-2. [How to deploy into Heroku.com](/deploy/heroku-postgress) (for $0.01 a month)
+1. [How to deploy into Render.com](https://4geeks.com/docs/start/deploy-to-render-com) (for free)
+2. [How to deploy into Heroku.com](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/docs/deploy-heroku-postgress.md) (for $0.01 a month)
