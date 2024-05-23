@@ -35,7 +35,8 @@ You will see a loading animation with the status of the Postgres database and th
 
 It takes several minutes to load both services, please be patient and wait until both checkmarks show up.
 
-## 4) Set the environment variables
+
+## 4) Set the environment variables
 
 As you did in your local project, you will have to set the extra env vars you have added in your project in the Render settings.
 
