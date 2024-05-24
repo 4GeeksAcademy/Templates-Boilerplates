@@ -78,7 +78,7 @@ export const deleteUser = async (req: Request, res: Response): Promise<Response>
 
 Get a single user is simple using the findOne, but the cool part is that you can also retrieve the user planets by passing a second param to the findOne function. `{ relations: ["planets"] }`
 
-Note: there are other ways to find, [you can read more about find here](./query).
+Note: there are other ways to find, [you can read more about find here](express-query).
 
 ```js
 export const getUser = async (req: Request, res: Response): Promise<Response> =>{
