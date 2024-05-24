@@ -28,7 +28,7 @@
 [Open Repository](https://github.com/4GeeksAcademy/react-flask-hello)
 
 - **Fast API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Fast API. Fixes common problems like CORS, Tests, Error Handling, Authentication, SQL Alchemy Integration, Pipenv, .env, One-Click deploy to Render.com and Heroku (free hosting).  
-[Open Repository](https://github.com/4GeeksAcademy/fastapi-rest-hello)
+[Open Repository](https://github.com/4GeeksAcademy/fastapi-hello)
 
 - **Express API (with TypeScript)**: Building API's with Express and TypeScript. Uses TypeORM as ORM. Heroku ready.  
 [Open Repository](https://github.com/4GeeksAcademy/expressjs-rest-hello)
