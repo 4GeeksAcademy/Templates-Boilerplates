@@ -1,30 +1,30 @@
 ---
-title: 'Start a new HTML/CSS Project'
-description: 'Build and publish the most basic HTML/CSS website you can build'
+title: 'Iniciar un nuevo proyecto HTML/CSS'
+description: 'Cree y publique el sitio web HTML/CSS más básico que pueda construir'
 ---
 
-The most basic boilerplate for any 4Geeks Academy Student ideal to start your first HTML/CSS website.
+La plantilla más básica para cualquier estudiante de la Academia 4Geeks ideal para empezar su primer sitio web HTML/CSS.
 
-### If you are **working locally**:
+### Si estás **trabajando localmente**:
 
-Download and install node.js in your computer [from here](https://nodejs.org/en/download/).
+Descarga e instala node.js en tu ordenador [desde aquí].(https://nodejs.org/en/download/).
 
-### If you are working from Gitpod:
+### Si estás trabajando desde Gitpod:
 
-Just click on [this link to start your project](https://gitpod.io#https://github.com/4GeeksAcademy/html-hello.git).
+Haz clic en [este enlace para iniciar tu proyecto](https://gitpod.io#https://github.com/4GeeksAcademy/html-hello.git).
 
-[![How to open html/css preview of my project in gitpod](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/static/img/hello-html-intro.png?raw=true)](https://youtu.be/dfbDCMu_p-0)
+[![Cómo abrir la vista previa html/css de mi proyecto en gitpod](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/static/img/hello-html-intro.png?raw=true)](https://youtu.be/dfbDCMu_p-0)
 
-## What to do next?
+## ¿Qué hacer a continuación?
 
-Create a `index.html` file with the [basic HTML structure](http://content.breatheco.de/lesson/what-is-html-learn-html#page-structure) and see it live by running web-server using the following command:
+Cree un archivo `index.html` con la [estructura HTML básica](http://content.breatheco.de/lesson/what-is-html-learn-html#page-structure) y véalo en vivo ejecutando web-server con el siguiente comando:
 
 ```bash
 $ pip3 install flask && python3 server.py
 ```
 
-- You can create as many HTML files you want
-- You can also create CSS files and you can import them onto your website using a `<link>` tag placed between the `<head></head>` tags, like this:
+- Puedes crear tantos archivos HTML como quieras 
+- También puedes crear archivos CSS y puedes importarlos a tu sitio web utilizando una etiqueta `<link>` colocada entre las etiquetas `<head></head>`, así:
 
 ```html
 <head>
