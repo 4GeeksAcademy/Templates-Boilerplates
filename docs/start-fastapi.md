@@ -77,7 +77,6 @@ def create_user(user: CreateSerializer, db: Session = Depends(get_db)):
     db_user = UserModel(username=user.username, email=user.email, age=user.age)
     db.add(db_user)
     db.commit()
-    db.refresh(db_user)
     return UserSmallSerializer.model_validate(db_user)
 
 @router.put("/users/{user_id}", response_model=UserSmallSerializer)
@@ -88,7 +87,6 @@ def update_user(user_id: int, user: UserUpdate, db: Session = Depends(get_db)):
     for key, value in user.dict().items():
         setattr(db_user, key, value)
     db.commit()
-    db.refresh(db_user)
     return UserSmallSerializer.model_validate(db_user)
 
 @router.delete("/users/{user_id}", response_model=UserSmallSerializer)
@@ -103,11 +101,16 @@ def delete_user(user_id: int, db: Session = Depends(get_db)):
 
 > 🔥 All the python files inside `./src/endpoints` will be automatically included as routes in your API, there is no need to use the `app.include_router` function.
 
-## Validations
+## Request Validations
 
-FastAPI provides automatic request validation using Pydantic models. Custom exceptions can be raised for validation errors.
+In API development, a concept called "Serialization" is used to receive and return data:
 
-The following serializer called `CreateSerializer` was defined to validate the `POST /user` that creates a new user, the endpoint payload must contain a password, email and `is_active` boolean.
+- When receiving the information, you can use the serializers to **validate** the incoming data and convert it into Python objects.
+- When returning information, you can use the serializers to **convert your Python objects back into JSON** text to be sent to the front end.
+
+In FastAPI, you can create a Serializer using a library called "Pydantic" and these serializers are called Pydantic Models. 
+
+The following serializer called `CreateSerializer` was defined to validate the incoming data payload used during the `POST /user` endpoint that creates a new user, the endpoint payload must contain a password, email and `is_active` boolean.
 
  ```py
 # Serializers are used to validate the incoming request body
@@ -123,11 +126,16 @@ We have to specify our `CreateSerializer` class as the first parameter of the fu
 ```py
 @router.post("/users/")
 #                   ⬇️ here we add the CreateSerializer
-def create_user(user: CreateSerializer, db: Session = Depends(get_db)):
-    db_user = UserModel(username=user.username, email=user.email, age=user.age)
+def create_user(incoming_payload: CreateSerializer, db: Session = Depends(get_db)):
+
+    # The incoming_payload has already been validated, and you can "trust" it.
+    db_user = UserModel(
+        password=incoming_payload.password,
+        email=incoming_payload.email,
+        is_active=incoming_payload.is_active
+    )
     db.add(db_user)
     db.commit()
-    db.refresh(db_user)
     return UserSmallSerializer.model_validate(db_user)
 ```
 
@@ -142,7 +150,6 @@ Serialization is handled by Pydantic models which automatically convert Python o
         db_user = UserModel(username=user.username, email=user.email, age=user.age)
         db.add(db_user)
         db.commit()
-        db.refresh(db_user)
         return UserSmallSerializer.model_validate(db_user)
     ```
 
