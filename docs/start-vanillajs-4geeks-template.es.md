@@ -1,57 +1,57 @@
 ---
-title: 'Vanilla.js Project'
-description: 'Use Webpack to compile and build a project with the latest Javascript and HTML/CSS'
+title: 'Proyecto Vanilla.js'
+description: 'Utilizar Webpack para compilar y crear un proyecto con Javascript y HTML/CSS actualizados.'
 technologies: ['vanillajs', 'html', 'css']
 ---
 
-# Starting a project in Vanilla JS
+# Empezar un proyecto en Vanilla JS
 
-Start coding in 30 seconds by [opening this template in a new cloud computer here](https://breathecode.herokuapp.com/v1/provisioning/public/container/new?repo=https://github.com/4GeeksAcademy/vanillajs-hello.git).
+Empieza a programar en 30 segundos [abriendo esta plantilla en un nuevo ordenador en la nube aquí](https://breathecode.herokuapp.com/v1/provisioning/public/container/new?repo=https://github.com/4GeeksAcademy/vanillajs-hello.git).
 
-Or you can download the template into your computer and manually install it by following the steps below:
+O puede descargar la plantilla en su ordenador e instalarla manualmente siguiendo los pasos que se indican a continuación:
 
-1) Remember to install the npm packages first:
+1) Recuerda instalar primero los paquetes npm:
 ```bash
 $ npm install
 ```
 
-2) Build and Start coding!
+2) Construye y empieza a codificar
 
-Build the application for the first time...
+Construir la aplicación por primera vez...
 
 ```bash
 $ npm run start
 ```
 
-And start coding your Vanilla.js application, update the `src/index.html`, `src/style.css` or `src/app.js` depending on your needs.
+Y empieza a codificar tu aplicación Vanilla.js, actualiza el `src/index.html`, `src/style.css` o `src/app.js` dependiendo de tus necesidades.
 
 ## FAQ
 
-#### 1) How do I run my code?
+### 1) ¿Cómo puedo ejecutar mi código?
 
-- Type on the command line `$ npm run start` and type localhost on the browser.
+- Escriba en la línea de comandos `$ npm run start` y escriba localhost en el navegador.
 
-#### 2) Where do I write my code?
-It depends on the language, but you have `./src/app.js`, `./src/style.css` and `./src/index.html` respectively, you can add new `.html` as you please, just make sure to import it on the `app.js`.
+### 2) ¿Dónde escribo mi código?
 
-> Note: remember that the JS workflow starts inside `window.onload`.
+Depende del lenguaje, pero tienes `./src/app.js`, `./src/style.css` y `./src/index.html` respectivamente, puedes añadir nuevos `.html` a tu gusto, sólo asegúrate de importarlos en el `app.js`.
 
-#### 3) I don't see my changes.
+> Nota: recuerda que el flujo de trabajo JS comienza dentro de `window.onload`.
 
-Every time you change any file inside the `./src` folder the website's public URL will automatically refresh the changes (it's a process called hot deploy)
-Remember also to refresh cleaning the cache (`command+shift+r` on Mac, `control+shift+r` on PC & Linux)
+### 3) No veo mis cambios.
 
-#### 4) How do I include more images on my project?
-Add them inside the `./src/assets/img` folder and import them from any of your JS files. E.g: `import "../assets/img/rigo-baby.jpg";`
+Cada vez que cambies cualquier archivo dentro de la carpeta `./src` la URL pública del sitio web refrescará automáticamente los cambios (es un proceso llamado hot deploy) Recuerda también refrescar limpiando la caché (`command+shift+r` en Mac, `control+shift+r` en PC y Linux)
 
-#### 5) How do I include more JS files?
-Just add the files into the JS folder and import the files/variables into your `app.js`. E.g: `import myVar from "./file2.js"`
+### 4) ¿Cómo puedo incluir más imágenes en mi proyecto?
+Añádelas dentro de la carpeta `./src/assets/img` e impórtalas desde cualquiera de tus archivos JS. Por ejemplo: `import "../assets/img/rigo-baby.jpg";`.
 
-#### 6) How do I publish the website?
+### 5) ¿Cómo incluyo más archivos JS?
+Simplemente añade los archivos en la carpeta JS e importa los archivos/variables en tu `app.js`. Por ejemplo: `import myVar from "./archivo2.js"`.
 
-This boilerplate is 100% compatible with the free Github pages hosting. Publish your website by running:
+### 6) ¿Cómo publico el sitio web?
+
+Este boilerplate es 100% compatible con el alojamiento gratuito de páginas en Github. Publica tu página web ejecutando:
 ```bash
 $ npm run deploy
 ```
 
-Very easy and in just one step! Push to your __main__ branch and use the free hosting that comes with [GitHub pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages), the project is ready to be published. Remember to choose to run the Github Page from your master branch.
+¡Muy fácil y en un solo paso! Empuja a tu rama __main__ y utiliza el alojamiento gratuito que viene con [GitHub pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages), el proyecto está listo para ser publicado. Recuerda elegir ejecutar la página de Github desde tu rama maestra.
