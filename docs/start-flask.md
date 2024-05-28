@@ -2,7 +2,7 @@
 title: 'Starting a project for API Development (with Flask)'
 description: 'How to start and build a successful Flask API'
 technologies: ['python','flask']
-------
+---
 
 > 🎥 Here's a video tutorial about [creating Flask API's using this boilerplate](https://youtu.be/ORxQ-K3BzQA).
 
