@@ -1,8 +1,13 @@
+---
+title: 'Start Fastapi'
+description: 'Starting with the fastapi-hello boilerplate'
+technologies: ['postgres', 'databases','fast']
+---
 # Guide to Using FastAPI
 
 ## How to Start coding?
 
-Starting with the [flast-rest-hello](https://github.com/4GeeksAcademy/flask-rest-hello) boilerplate, you can find an example API working with a database. All your application code should be written inside the `./src/` folder.
+Starting with the [fastapi-hello](https://github.com/4GeeksAcademy/fastapi-hello) boilerplate, you can find an example API working with a database. All your application code should be written inside the `./src/` folder.
 
 - src/main.py: This is where the app starts (main thread) and initializes; all other Python files are imported from this thread.
 - src/endpoints/: Add inside a new Python file for each entity you want to manipulate, for example: user.py includes the GET, POST, PUT and DELETE methods and endpoints for `User` model/entity.
