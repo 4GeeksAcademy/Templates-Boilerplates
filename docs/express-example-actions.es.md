@@ -83,7 +83,7 @@ export const deleteUser = async (req: Request, res: Response): Promise<Response>
 
 Obtener un único usuario es sencillo utilizando findOne, pero lo bueno es que también puedes recuperar los planets de usuarios pasando un segundo parámetro a la función findOne. `{ relations: ["planets"] }`
 
-Nota: hay otras formas de buscar, [puedes leer más sobre buscar aquí](./consultas-con-express).
+Nota: hay otras formas de buscar, [puedes leer más sobre buscar aquí](consultas-con-express).
 
 ```js
 export const getUser = async (req: Request, res: Response): Promise<Response> =>{
