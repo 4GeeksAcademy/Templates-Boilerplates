@@ -103,7 +103,7 @@ def delete_user(user_id: int, db: Session = Depends(get_db)):
 
 > 🔥 All the python files inside `./src/endpoints` will be automatically included as routes in your API, there is no need to use the `app.include_router` function.
 
-### Validations
+## Validations
 
 FastAPI provides automatic request validation using Pydantic models. Custom exceptions can be raised for validation errors.
 
@@ -131,7 +131,7 @@ def create_user(user: CreateSerializer, db: Session = Depends(get_db)):
     return UserSmallSerializer.model_validate(db_user)
 ```
 
-### Serialization
+## Serialization
 
 Serialization is handled by Pydantic models which automatically convert Python objects to JSON text.
 
@@ -146,7 +146,7 @@ Serialization is handled by Pydantic models which automatically convert Python o
         return UserSmallSerializer.model_validate(db_user)
     ```
 
-### Data Operations and Modeling
+## Data Operations and Modeling
 
 For database operations we use SQLAlchemy.
 
