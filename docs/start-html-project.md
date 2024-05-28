@@ -10,7 +10,7 @@ The most basic boilerplate for any 4Geeks Academy Student ideal to start your fi
 
 Download and install node.js in your computer [from here](https://nodejs.org/en/download/).
 
-### If you are working from Gitpod:
+### If you are working from Codespaces or Gitpod:
 
 Just click on [this link to start your project](https://gitpod.io#https://github.com/4GeeksAcademy/html-hello.git).
 
