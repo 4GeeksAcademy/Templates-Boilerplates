@@ -19,7 +19,7 @@ For a more detailed explanation, look for the tutorial inside the `docs` folder.
 
 ## Installing on Ubuntu, Mac and Windows
 
-⚠️ Make sure you have `python 3.6+` and `MySQL` installed on your computer and MySQL is running, then run the following commands:
+⚠️ Make sure you have `python 3.6+`, `pipenv` and `Postgres` installed on your computer and Postgres is running, then run the following commands:
 
 ```bash
 $ pipenv install #(to install pip packages)
