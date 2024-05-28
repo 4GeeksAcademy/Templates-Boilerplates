@@ -1,3 +1,9 @@
+---
+title: 'CRUD de datos en Express'
+description: 'Crea, Leer, Actualiza y Elimina (CRUD: Acrónimo en inglés) información en su base de datos con Express'
+technologies: ['expressjs', 'node', 'Postgres','RestAPI']
+---
+
 ## API `Repository` 
 
 * `createQueryBuilder` - Crea un constructor de consultas utilizado para construir consultas SQL.

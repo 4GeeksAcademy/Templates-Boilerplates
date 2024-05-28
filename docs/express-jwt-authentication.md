@@ -1,3 +1,9 @@
+---
+title: 'Express JWT Authentication'
+description: 'Implement Authentication on your Express API with JSON Web Token'
+technologies: ['expressjs', 'node', 'JWT','RestAPI']
+---
+
 # Steps to implement JWT inside your express application
 
 ## 1) Installation

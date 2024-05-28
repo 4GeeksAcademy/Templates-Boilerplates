@@ -1,6 +1,7 @@
 ---
 title: 'Inicio de un proyecto de desarrollo de API (con Flask)'
 description: 'Cómo crear una API de Flask con éxito'
+technologies: ['python','flask']
 ---
 
 > 🎥 Here's a video tutorial about [creating Flask API's using this boilerplate](https://youtu.be/ORxQ-K3BzQA).
@@ -272,5 +273,5 @@ db.session.commit()
 
 Esta plantilla es 100% compatible con [Heroku](https://www.heroku.com/) y [Render.com](https://www.render.com), sólo asegúrate de leer las guías de despliegue rápido.
 
-1. [Cómo desplegar en Render.com](https://4geeks.com/docs/start/deploy-to-render-com) (gratis)
-2. [Cómo desplegar en Heroku.com](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/docs/deploy-heroku-postgress.md) (desde $0.01 mensual)
+1. [Cómo desplegar en Render.com](https://4geeks.com/es/docs/start/despliega-con-render-com) (gratis)
+2. [Cómo desplegar en Heroku.com](https://4geeks.com/es/docs/start/desplegar-a-heroku-con-postgresql) (desde $0.01 mensual)

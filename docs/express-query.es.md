@@ -1,3 +1,9 @@
+---
+title: 'Consultas con Express y TypeORM'
+description: 'Usa TypeORM para consultar tu base de datos, desde tu API Express'
+technologies: ['vanillajs', 'html', 'css']
+---
+
 # Opciones de buscar
 
 * [Opciones básicas](#basic-options)
