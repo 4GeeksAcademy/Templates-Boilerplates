@@ -27,27 +27,27 @@ And start coding your Vanilla.js application, update the `src/index.html`, `src/
 
 ## FAQ
 
-#### 1) How do I run my code?
+### 1) How do I run my code?
 
 - Type on the command line `$ npm run start` and type localhost on the browser.
 
-#### 2) Where do I write my code?
+### 2) Where do I write my code?
 It depends on the language, but you have `./src/app.js`, `./src/style.css` and `./src/index.html` respectively, you can add new `.html` as you please, just make sure to import it on the `app.js`.
 
 > Note: remember that the JS workflow starts inside `window.onload`.
 
-#### 3) I don't see my changes.
+### 3) I don't see my changes.
 
 Every time you change any file inside the `./src` folder the website's public URL will automatically refresh the changes (it's a process called hot deploy)
 Remember also to refresh cleaning the cache (`command+shift+r` on Mac, `control+shift+r` on PC & Linux)
 
-#### 4) How do I include more images on my project?
+### 4) How do I include more images on my project?
 Add them inside the `./src/assets/img` folder and import them from any of your JS files. E.g: `import "../assets/img/rigo-baby.jpg";`
 
-#### 5) How do I include more JS files?
+### 5) How do I include more JS files?
 Just add the files into the JS folder and import the files/variables into your `app.js`. E.g: `import myVar from "./file2.js"`
 
-#### 6) How do I publish the website?
+### 6) How do I publish the website?
 
 This boilerplate is 100% compatible with the free Github pages hosting. Publish your website by running:
 ```bash
