@@ -1,6 +1,6 @@
 ---
-title: 'Inicia un proyecto Fullstack'
-description: 'Utiliza las tecnologías Fullstack para crear aplicaciones profesionales con React.js y FastAPI.'
+title: 'Start a Fullstack project'
+description: 'Use the Fullstack technologies to build professional apps using React.js and FastAPI'
 technologies: ['html', 'css', 'python','javascript','fastapi','react']
 ---
 
@@ -152,7 +152,7 @@ $ npm install
 ```bash
 $ cp .env.example .env
 ```
-3. Start coding! and use the webpack dev server with live reload, for Windows, Mac, Linux or Gitpod:
+3. Start coding and use the webpack dev server with live reload, for Windows, Mac, Linux or Gitpod:
 
 ```bash
 $ npm run start

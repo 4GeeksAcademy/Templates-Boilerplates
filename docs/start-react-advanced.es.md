@@ -1,159 +1,169 @@
 ---
-title: 'Start a Fullstack project'
-description: 'Use the Fullstack technologies to build professional apps using React.js and FastAPI'
+title: 'Inicia un proyecto Fullstack'
+description: 'Utiliza las tecnologías Fullstack para crear aplicaciones profesionales con React.js y FastAPI.'
 technologies: ['html', 'css', 'python','javascript','fastapi','react']
 ---
 
-> 🎥 You can watch a full video tutorial on [how to create your React application with Context.API and Flux following this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b).
+> 🎥 Puedes ver un videotutorial completo sobre [cómo crear tu aplicación React con Context.API y Flux siguiendo esta plantilla](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b).
 
-## Quick Start
+## Inicio rápido
 
-Create your first view, add it to your application routes, create your first component, add styles and use the context API.
+Crea tu primera vista, añádela a las rutas de tu aplicación, crea tu primer componente, añade estilos y utiliza la API de contexto.
 
-### Installation 
+### Instalación
 
-Make sure to follow the steps on [running the project](https://github.com/4GeeksAcademy/react-hello-webapp/blob/master/README.md) first, then come back to this list, if you are using Gitpod or Codespaces it is possible that the project is already running.
+Asegúrate de seguir primero los pasos de [ejecutar el proyecto](https://github.com/4GeeksAcademy/react-hello-webapp/blob/master/README.md), luego vuelve a esta lista, si estás usando Gitpod o Codespaces es posible que el proyecto ya esté en ejecución.
 
-### Add your first view
+### Añade tu primera vista
 
-It's time to add some code: Everything starts at the application layout (`js/layout.js`), this file is like a table of contents where all of your application pages will be added before they can be rendered by React and the browser, you can [read more about React Router here](https://4geeks.com/lesson/routing-our-views-with-react-router).
+Es hora de añadir algo de código: Todo empieza en el layout de la aplicación (`js/layout.js`), este archivo es como una tabla de contenidos donde se añadirán todas las páginas de tu aplicación antes de que puedan ser renderizadas por React y el navegador, puedes [leer más sobre React Router aquí](https://4geeks.com/lesson/routing-our-views-with-react-router).
 
-We already added a few routes like `Home`, `Demo` and `Single`, these views are useful examples of the most frequent things you usually need in a project.
+Ya hemos añadido algunas rutas como `Home`, `Demo` y `Single`, estas vistas son ejemplos útiles de las cosas más frecuentes que sueles necesitar en un proyecto.
 
-All of your application pages will be added into the `js/pages` folder, each of them will be a separate React component.
+Todas las páginas de tu aplicación se añadirán en la carpeta `js/pages`, cada una de ellas será un componente React independiente.
 
-Let's open the `<Demo>` view at `js/pages/demo.js`.
+Abramos la vista `<Demo>` en `js/pages/demo.js`.
 
-### Code your first HTML view
+### Codifica tu primera vista HTML
 
-As you can see, the `demo.js` page is just a React component, here are additional things to notice:
+Como puedes ver, la página `demo.js` es sólo un componente React, aquí hay cosas adicionales a notar:
 
-- The component returns HTML.
-- At the start of the component file (demo.js) there are two imports: The `AppContext` that will be used for dealing with any global information needed from other views or the application; And the `demo.css` that will be used to add any CSS classes and styles used on this view in particular.
-- It's also important to mention that the AppContext is declared inside the component, on the very first couple of lines:
+- El componente devuelve HTML.
+- Al principio del archivo del componente (demo.js) hay dos importaciones: El `AppContext` que se utilizará para tratar cualquier información global necesaria de otras vistas o de la aplicación; Y el `demo.css` que se utilizará para añadir cualquier clase CSS y estilos utilizados en esta vista en particular.
+- También es importante mencionar que el AppContext se declara dentro del componente, en el primer par de líneas:
 
 ```js
 const { store, actions } = useContext(Context);
 ```
 
-### Adding styles to views or components
+### Añadir estilos a vistas o componentes
 
-All the application styles are saved inside the `styles` folder, we usually have a separate style for each component.
+Todos los estilos de la aplicación se guardan dentro de la carpeta `styles`, normalmente tenemos un estilo separado para cada componente.
 
-You can update the `styles/index.css` or create new `.css` files inside `styles/` and import them into your current CSS or JS files depending on your needs.
+Puedes actualizar `styles/index.css` o crear nuevos archivos `.css` dentro de `styles/` e importarlos a tus archivos CSS o JS actuales dependiendo de tus necesidades.
 
-For example, if you would want to create a class `background-blue` that makes the home background blue you need to do something like this:
+Por ejemplo, si quieres crear una clase `background-blue` que haga que el fondo de la home sea azul, tienes que hacer algo como esto:
 
-- Add the class `.background-blue` into the `styles/home.css`.
-- Use your class by adding the `<div className="background-blue">` into your HTML page at `js/pages/home.js`.
+- Añade la clase `.background-blue` en `styles/home.css`.
+- Usa tu clase añadiendo el `<div className="background-blue">` en tu página HTML en `js/pages/home.js`.
 
-### Creating your first component
+### Crear su primer componente
 
-Usually you want most of your HTML application to be split into components that can be re-used.
-	
-All the components are meant to be created into the `js/components` and then you can import them into the pages that will use them.
+Normalmente querrás que la mayor parte de tu aplicación HTML esté dividida en componentes que puedan ser reutilizados.
+ 
+Todos los componentes deben ser creados en `js/components` y luego puedes importarlos a las páginas que los utilizarán.
 
-> 📝 We are using functional components (instead of class oriented components) since it's the best practice in the industry.
-	
-For example, if we want to add a new `<Card>` component that replicates the [classic bootstrap card](https://getbootstrap.com/docs/5.0/components/card/), we can create a `js/components/Card.js` with the following code:
+> Estamos utilizando componentes funcionales (en lugar de componentes orientados a clases), ya que es la mejor práctica en la industria.
+ 
+Por ejemplo, si queremos añadir un nuevo componente `<Card>` que replique la [tarjeta clásica de bootstrap](https://getbootstrap.com/docs/5.0/components/card/), podemos crear un `js/components/Card.js` con el siguiente código:
 
 ```jsx
 export const Card = () => (
-	const [state, setState] = useState('code here'); //using the state (if needed)
-	return <div className="card">
-	  <div className="card-body">
-	    <h5 className="card-title">Card title</h5>
-	    <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
-	    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-	  </div>
-	</div>
+ const [state, setState] = useState('code here'); //utilizar el estado (si es necesario)
+ return <div className="card">
+   <div className="card-body">
+     <h5 className="card-title">Card title</h5>
+     <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+   </div>
+ </div>
 );
 ```
 
-### Adding components to our pages
+### Añadiendo componentes a nuestras páginas
 
-Now that we have the `Card` component we can incorporate it to our `Home.js` page with the following steps:
+Ahora que tenemos el componente `Card` podemos incorporarlo a nuestra página `Home.js` con los siguientes pasos:
 
-1. Import the component at the top of the page.
-2. Use the component `<Card>` tag inside the HTML that your page returns, for example:
+1. Importar el componente en la parte superior de la página.
+2. Utiliza la etiqueta del componente `<Card>` dentro del HTML que devuelve tu página, por ejemplo:
 
 ```jsx
 import { Card } from "../component/Card.js";
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
+ const { store, actions } = useContext(Context);
 
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<Card />
-		</div>
-	);
+ return (
+  <div className="text-center mt-5">
+   <h1>Hello Rigo!!</h1>
+   <Card />
+  </div>
+ );
 };
 ```
 
-**Important notes**
+**Notas importantes**
 
-- It's important to use the curly brackets `{` when importing the component like this: `{ Card }`.
-- Notice the `<Card />` tag being used in line 9 of the `Home.js` file.
+- Es importante utilizar las llaves `{` al importar el componente de esta forma: `{ Card }`.
+- Observa la etiqueta `<Card />` que se utiliza en la línea 9 del archivo `Home.js`.
 
-### Using the Context
+### Uso del contexto
 
-This boilerplate comes with a centralized general Context API. The file `js/store/flux.js` has a base structure for the store, we encourage you to change it and adapt it to your needs.
+Este boilerplate viene con una API de Contexto general centralizada. El archivo `js/store/flux.js` tiene una estructura base para la tienda, te animamos a cambiarla y adaptarla a tus necesidades.
 
 - React Context [docs](https://react.dev/reference/react/useContext).
-- 4Geeks Lesson about [React hooks](https://content.breatheco.de/lesson/react-hooks-explained).
+- Lección de 4Geeks sobre [React hooks](https://content.breatheco.de/lesson/react-hooks-explained).
 
-The `Provider` is already set. You can consume from any component using the `useContext` hook to get the `store` and `actions` from the Context. Check `/views/demo.js` to see a demo.
+El `Provider` ya está configurado. Puedes consumir desde cualquier componente usando el hook `useContext` para obtener el `store` y las `actions` del Context. Mira `/views/demo.js` para ver una demo.
 
 ```jsx
 import { Context } from "../store/appContext";
 
 const MySuperPage = () => {
-  //here you use useContext to get store and actions
+  //aquí se usaContext para obtener store y actions
   const { store, actions } = useContext(Context);
 
-return <div>{/* you can use your actions or store inside the html */}</div>
+return <div>{/* puede utilizar sus acciones o almacenar dentro del html */}</div>
 }
 ```
 
-## Publish your website!
+## Publique su sitio web
 
-1. **Vercel:** The FREE recommended hosting provider is [vercel.com](https://vercel.com/), you can deploy in 1 minute by typing the following 2 commands:
+1. **Vercel:** El proveedor de hosting recomendado GRATIS es [vercel.com](https://vercel.com/), puedes desplegar en 1 minuto escribiendo los siguientes 2 comandos:
 
-Login (you need to have an account):
+Login (necesitas tener una cuenta):
+
 ```bash
-$ npm i vercel -g && vercel login
+npm i vercel -g && vercel login
 ```
-Deploy:
+
+Despliegue:
+
 ```bash
-$ vercel --prod
+vercel --prod
 ```
-> ✎ Note: If you don't have an account just go to vercel.com, create an account and come back here.
+
+> ✎ Nota: Si no tiene una cuenta, vaya a vercel.com, cree una cuenta y vuelva aquí.
 
 ![Vercel example procedure to deploy](https://github.com/4GeeksAcademy/react-hello-webapp/blob/4b530ba091a981d3916cc6e960e370decaf2e234/docs/deploy.png?raw=true)
 
-2. **Github Pages:** This boilerplate is 100% compatible with the free Github pages hosting.
-To publish your website you need to push your code to your Github repository and run the following command after:
+2. **Github Pages:** Este boilerplate es 100% compatible con el alojamiento gratuito de páginas Github.
+Para publicar su sitio web que necesita para empujar su código a su repositorio de Github y ejecutar el siguiente comando después:
+
 ```bash
-$ npm run deploy
+npm run deploy
 ```
-> 👉 Note: You will need to [configure Github pages for the branch gh-pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
 
-## Running the project:
+> 👉 Nota: Tendrás que [configurar las páginas de Github para la rama gh-pages].(https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
 
-> Note: Make sure you are using node version 14+
+## Ejecutar el proyecto
 
-1. Install the packages:
+> Nota: Asegúrese de que está utilizando la versión 14+ de node
+
+1. Instala los paquetes:
+
 ```bash
-$ npm install
+npm install
 ```
-2. Create a .env file:
-```bash
-$ cp .env.example .env
-```
-3. Start coding! and use the webpack dev server with live reload, for Windows, Mac, Linux or Gitpod:
+
+2. Cree un archivo .env:
 
 ```bash
-$ npm run start
+cp .env.example .env
+```
+
+3. Empieza a programar y utiliza el servidor de desarrollo webpack con recarga en vivo, para Windows, Mac, Linux o Gitpod:
+
+```bash
+npm run start
 ```
