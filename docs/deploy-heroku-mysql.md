@@ -4,7 +4,7 @@ description: 'Publish your website to Heroku with a MySQL database'
 technologies: ['mysql', 'databases','flask','node','express','react']
 ---
 
-> Deploying to Heroku (takes 7 minutes)
+> Deploying to Heroku (takes 7 minutes)  
 
 This template is 100% compatible with Heroku, just make sure to understand and execute the following steps:
 
