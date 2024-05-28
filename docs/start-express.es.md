@@ -1,38 +1,38 @@
 ---
-title: 'Start your API with Express.js and Typescript.js'
-description: "Use Express, Javascript, Typescript to build REST API's"
+title: 'Inicie su API con Express.js y Typescript.js'
+description: "Uso de Express, Javascript y Typescript para crear API REST"
+technologies: ["TypeORM", "TypeScript", "Node.js", "Express.js", "Postgres"]
 ---
 
 
 🍬 Technologies: TypeORM, TypeScript, Node.js, Express.js, Postgres
 
-## Quick Start
+## Inicio rápido
 
-Creating an API is basically creating a list of endpoints that you want other developers to request whenever they need to interact with your database to Create, Update, Delete or Read information. 
-When using Express.js those endpoints have to be added into your API using the router.get (or post, put or delete) function. For example:
+Crear una API es básicamente crear una lista de endpoints que quieres que otros desarrolladores soliciten cada vez que necesiten interactuar con tu base de datos para Crear, Actualizar, Borrar o Leer información.
+Cuando usas Express.js esos endpoints tienen que ser añadidos a tu API usando la función router.get (o post, put o delete). Por ejemplo:
 
 ```js
 router.get("/users", getUser)
 ```
 
-The line above, specifies a new endpoint that other devs will be able to call by requesting `GET /users`.
+La línea anterior, especifica un nuevo endpoint que otros desarrolladores podrán llamar solicitando `GET /users`.
 
-After declaring your route, you also have to declare your function that will handle that request (in this case `getUser`)
+Después de declarar tu ruta, también tienes que declarar tu función que manejará esa petición (en este caso `getUser`)
 
-The two main files you care about are `./src/<private|public>_routes.ts` and `./src/actions.ts` and you will have to always modify both every time you create a new endpoint.
+Los dos ficheros principales que te interesan son `./src/<private|public>_routes.ts` y `./src/actions.ts` y tendrás que modificar ambos cada vez que crees un nuevo endpoint.
 
-### 1) Adding the route URL
+### 1) Añadir la URL de la ruta
 
-#### Public or Private endpoint?
+#### Ruta final público o privado?
 
-First you have to think about your endpoint security, who will be using this endpoint? Any public user or only the logged in users?
+En primer lugar, debe pensar en la seguridad de su ruta: ¿quién utilizará esta ruta? ¿Cualquier usuario público o sólo los usuarios registrados?
 
-There are two files and you should update one or the other **for each endpoint you create**:
+Hay dos archivos y debes actualizar uno u otro **para cada endpoint que crees**:
 
-- `public_routes.ts` is for API URLs that are going to be used by anyone, no security whatsoever, for example: Everyone can sign up, everyone can try to login, etc.
-- `private_routes.ts` these URLs will be only for logged in users, for example: Get my list of favorites, or get my information, etc.
+- `public_routes.ts` es para URLs API que van a ser utilizadas por cualquiera, sin ningún tipo de seguridad, por ejemplo: Todo el mundo puede registrarse, todo el mundo puede intentar iniciar sesión, etc. - `private_routes.ts` estas URLs serán sólo para usuarios registrados, por ejemplo: Obtener mi lista de favoritos, u obtener mi información, etc.
 
-Open your chosen `./src/<private|public>_routes.ts` file and add a new route to the list of endpoints, for example, if we want to build an endpoint to retrieve a single user information by a given ID, for example: `GET /user/2`
+Abre el archivo `./src/<private|public>_routes.ts` que hayas elegido y añade una nueva ruta a la lista de endpoints, por ejemplo, si queremos construir un endpoint para recuperar la información de un único usuario por un ID dado, por ejemplo: `GET /user/2`.
 
 ```ts
 import { Router } from 'express';
@@ -44,83 +44,83 @@ const router = Router();
 router.get('/user/:id', safe(getUser));
 ```
 
-> 👉 Note: please note that the `safe` function must always be called before your action or the API errors will be silent.
+> 👉 Nota: tenga en cuenta que la función `safe` debe llamarse siempre antes de su acción o los errores de la API serán silenciosos.
 
-### 2) Declaring your actions.ts
+### 2) Declarando tu actions.ts
 
-Open the `./src/actions.ts` and add or re-use one of the action functions, for example:
+Abre el archivo `./src/actions.ts` y añade o reutiliza una de las funciones de acción, por ejemplo:
 
 ```ts
 export const getUser = async (req: Request, res: Response): Promise<Response> =>{
-	
-	const users = await getRepository(Users).findOne(req.params.id);
-	return res.json(users);
+ 
+ const users = await getRepository(Users).findOne(req.params.id);
+ return res.json(users);
 }
 ```
 
-## Validate incoming requests
+## Validar las solicitudes entrantes
 
-Junior developers always assume that everything will be O.K. while Senior developers are prepared for the worst possible scenarios.
+Los desarrolladores junior siempre asumen que todo va a ir bien, mientras que los senior están preparados para los peores escenarios posibles.
 
-You have to assume that the information is coming in a bad format, for example: Emails don't have the domain name inside, phone numbers have letters, etc.
+Por ejemplo, hay que asumir que la información llega en un formato incorrecto: Los correos electrónicos no tienen el nombre de dominio dentro, los números de teléfono tienen letras, etc.
 
-There are three possible types of validations that we recommend doing:
+Hay tres posibles tipos de validaciones que recomendamos hacer:
 
-### A) Validating the request payload (body)
+### A) Validación de la carga útil de la solicitud (body)
 
-The request payload can be retrieved by doing `req.body`, this is an example on how to validate if the request body contains the property `first_name`:
+El payload de la petición puede ser recuperado haciendo `req.body`, este es un ejemplo de cómo validar si el cuerpo de la petición contiene la propiedad `first_name`:
 
 ```ts
 export const getUser = async (req: Request, res:Response): Promise<Response> =>{
 
-	// validate that first_name exists or throw a new exception if not.
-	if(!req.body.first_name) throw new Exception("Please provide a first_name")
+ // validate that first_name exists or throw a new exception if not.
+ if(!req.body.first_name) throw new Exception("Please provide a first_name")
 
-	// the rest of your function code goes here
+ // the rest of your function code goes here
 
 })
 ```
 
-### B) Validating the request params (in the url)
+### B) Validación de los parámetros de la petición (en la url)
 
-If your endpoint URL is expecting a parameter you can access it by typing `req.params`, for example, if the endpoint `GET /user/:id` is called with `GET /user/23`, we can retrieve the value like this:
+Si la URL de tu endpoint espera un parámetro puedes acceder a él escribiendo `req.params`, por ejemplo, si el endpoint `GET /user/:id` es llamado con `GET /user/23`, podemos recuperar el valor así:
 
 ```ts
-	const user = await getRepository(Users).findOne(req.params.id);
-	if(!user) throw new Exception("User not found", 404)
+ const user = await getRepository(Users).findOne(req.params.id);
+ if(!user) throw new Exception("User not found", 404)
 ```
 
-We are basically querying the database to get the user with that given ID and make sure it exists.
+Básicamente estamos consultando la base de datos para obtener el usuario con ese ID dado y asegurarnos de que existe. 
 
-### C) Other validation examples
+### C) Otros ejemplos de validación
 
-In the following file [🔥🔥🔥 you can find more validation examples.](/other/express/example-actions) 
+En el siguiente archivo [🔥🔥🔥 puedes encontrar más ejemplos de validación.](/other/express/example-actions)
 
-## Authentication with JWT
+## Autenticación con JWT
 
-We strongly recommend using express-jwt and jsonwebtoken libraries for authentication.
+Recomendamos encarecidamente usar las librerías express-jwt y jsonwebtoken para la autenticación.
 
-The authentication can be split into 4 steps and [🔥🔥🔥 here is a very detailed explanation on how to implement it with express and typescript.](/other/express/jwt-authentication)
+La autenticación se puede dividir en 4 pasos y [🔥🔥🔥 aquí hay una explicación muy detallada de cómo implementarlo con express y typescript.](/other/express/jwt-authentication)
 
-## Database Query (Get information)
+## Consulta a la base de datos (Obtener información)
 
-TypeORM has a lot of ways to retrieve information from the database, we are going to show the most used examples here, and you can check this document for more advanced ways to query information.
+TypeORM tiene un montón de maneras de recuperar información de la base de datos, vamos a mostrar los ejemplos más utilizados aquí, y puede consultar este documento para formas más avanzadas de consultar información.
 
-> ⚠️ Important: You must always start by declaring a new `repository` for that entity
+> ⚠️ Importante: Siempre debe comenzar declarando un nuevo `repositorio` para esa entidad.
 
 ```js
 const user = repository.create({
     id: 1,
     firstName: "Timber",
     lastName: "Saw",
-}) // same as const user = new User(); user.firstName = "Timber"; user.lastName = "Saw";
+}) // lo mismo que const user = new User(); user.firstName = "Timber"; user.lastName = "Saw";
 ```
 
-After having the repository object you can start your query, for example:
+Después de tener el objeto repositorio puede iniciar su consulta, por ejemplo:
 
-### Find by
+### Buscar por
 
-Find the user with the first name "Bob"
+Buscar el usuario con el nombre "Bob".
 
 ```js
 userRepository.find({ where: { firstName: "Bob", lastName: "Saw" } });
@@ -134,81 +134,79 @@ Find the user with the first name "Bob"
 userRepository.find({ where: { firstName: "Bob", lastName: "Saw" } });
 ```
 
-### Find One by (just one)
+### Buscar uno por (sólo uno)
 
-Find the user with the first name "Bob"
+Encontrar el usuario con el nombre "Bob"
 
 ```typescript
 userRepository.findOne(1, {
     where: { firstName: "Bob" }
 })
-``` 
+```
 
-### More advanced queries
+### Más consultas avanzadas
 
-[🔥🔥🔥 Click here for more advanced query examples](/other/express/query)
+[🔥🔥🔥 Haga clic aquí para ver más ejemplos de consultas avanzadas](/other/express/query)
 
-## Database CRUD operations
+## Operaciones CRUD de base de datos
 
-TypeORM is one of the most simple-to-use ORM library.
+TypeORM es una de las librerías ORM más sencillas de usar.
 
-### Create a user 
+### Crear un usuario
 
-Here is a very simple example on how to create a new user:
+He aquí un ejemplo muy sencillo de cómo crear un nuevo usuario:
 
 ```js
 const user = repository.create({
     id: 1,
     firstName: "Timber",
     lastName: "Saw"
-}); // same as const user = new User(); user.firstName = "Timber"; user.lastName = "Saw";
+}); // mismo que const user = new User(); user.firstName = "Timber"; user.lastName = "Saw";
 ```
 
-### Delete a user
+### Borrar un usuario
 
-Assuming you want to delete user with ID=1
+Suponiendo que desea eliminar el usuario con ID=1
 
 ```js
 await repository.delete(1);
 ```
 
-### Update a user
+### Actualizar un usuario
 
-Assuming you want to update the user with the ID=1 and set his/her name to Rizzrak:
+Suponiendo que desea actualizar el usuario con el ID=1 y establecer su nombre a Rizzrak:
 
 ```js
 await repository.update(1, { firstName: "Rizzrak" });
 ```
 
-[🔥🔥🔥 Here you can find other example of more complex CRUD operations.](/other/express/crud)
+[🔥🔥🔥 Aquí puede encontrar otros ejemplos de operaciones CRUD más complejas.](/other/express/crud)
 
-## Migrations (only for production environment)
+## Migraciones (sólo para el entorno de producción)
 
-You don't have to use migrations in development mode because TypeORM already does that for you, but before moving to production you have to run the following command to create your migrations:
+Usted no tiene que utilizar las migraciones en el modo de desarrollo porque TypeORM ya lo hace por usted, pero antes de pasar a la producción tiene que ejecutar el siguiente comando para crear sus migraciones:
 
-1. Generate a new migration file after changes were made to the models:
-
-```bash
-$ npm run makemigrations
-```
-
-2. Apply all of your pending migrations:
+1. Generar un nuevo archivo de migración después de los cambios realizados en los modelos:
 
 ```bash
-$ npm run migrate
+npm run makemigrations
 ```
 
+2. Aplique todas sus migraciones pendientes:
+
+```bash
+npm run migrate
+```
 
 ## PostgreSQL
 
-
-This will give you an auto-starting PostgreSQL server (it should auto-start every time you open a new Terminal), plus a few utility scripts that you can run in a Terminal or in a .gitpod.yml command:
+Esto te proporcionará un servidor PostgreSQL de auto-inicio (debería auto-iniciarse cada vez que abras un nuevo Terminal), además de unos cuantos scripts de utilidades que puedes ejecutar en un Terminal o en un comando .gitpod.yml:
 
 ```
-pg_start: start the PostgreSQL service
-pg_stop: stop the PostgreSQL service
-pg_ctl status: check if the PostgreSQL service is running
-Once the PostgreSQL server is running, you can use the psql CLI as usual:
+pg_start: inicia el servicio PostgreSQL
+pg_stop: detiene el servicio PostgreSQL
+pg_ctl status: comprueba si el servicio PostgreSQL se está ejecutando
+Una vez que el servidor PostgreSQL se está ejecutando, puede utilizar la CLI psql como de costumbre:
 
 $ psql -h localhost -d postgres
 psql (10.8 (Ubuntu 10.8-0ubuntu0.18.10.1))
@@ -216,4 +214,3 @@ Type "help" for help.
 
 postgres=#
 ```
-

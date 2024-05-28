@@ -1,46 +1,48 @@
 ---
-title: 'Starting a project for API Development (with Flask)'
-description: 'How to start and build a successful Flask API'
+title: 'Inicio de un proyecto de desarrollo de API (con Flask)'
+description: 'Cómo crear una API de Flask con éxito'
 ---
 
 > 🎥 Here's a video tutorial about [creating Flask API's using this boilerplate](https://youtu.be/ORxQ-K3BzQA).
 
 ## How to Start coding?
 
-Starting with the [flast-rest-hello](https://github.com/4GeeksAcademy/flask-rest-hello) boilerplate, you can find an example API working with a database. All your application code should be written inside the `./src/` folder.
+Empezando por el boilerplate [flast-rest-hello](https://github.com/4GeeksAcademy/flask-rest-hello), puedes encontrar un ejemplo de API trabajando con una base de datos. Todo el código de tu aplicación debe estar escrito dentro de la carpeta `./src/`.
 
-- src/app.py: It's where the app initializes, in small API's you can also code your different endpoints here, please be advised that coding the endpoints here is only recommended if there is no `routes.py` file in the project already.
-- src/routes.py (optional): If your project has a `src/routes.py` file, here is where you must code to add your endpoints.
-- src/models.py: Your database tables and serialization logic.
-- src/utils.py: Some reusable classes and functions.
-- src/admin.py: Add your models to the admin and manage your data easily.
+- src/app.py: Es donde la aplicación se inicializa, en APIs pequeñas también puedes codificar tus diferentes endpoints aquí, por favor ten en cuenta que codificar los endpoints aquí sólo se recomienda si no hay un archivo `routes.py` en el proyecto.
+- src/routes.py (opcional): Si tu proyecto tiene un fichero `src/routes.py`, aquí es donde debes codificar para añadir tus endpoints.
+- src/models.py: Tus tablas de base de datos y lógica de serialización.
+- src/utils.py: Algunas clases y funciones reutilizables.
+- src/admin.py: Añade tus modelos al admin y gestiona tus datos fácilmente.
 
-For a more detailed explanation, look for the tutorial inside the `docs` folder.
+Para una explicación más detallada, busca el tutorial dentro de la carpeta `docs`.
 
-## Installing on Ubuntu & Mac
+## Instalación en Ubuntu y Mac
 
-⚠️ Make sure you have `python 3.6+` and `MySQL` installed on your computer and MySQL is running, then run the following commands:
+⚠️ Asegúrese de que tiene `python 3.6+` y `MySQL` instalado en su ordenador y MySQL se está ejecutando, a continuación, ejecute los siguientes comandos:
+
 ```bash
-$ pipenv install #(to install pip packages)
-$ pipenv run migrate #(to create the database)
-$ pipenv run start #(to start the flask webserver)
+pipenv install #(to install pip packages)
+pipenv run migrate #(to create the database)
+pipenv run start #(to start the flask webserver)
 ```
 
-## Adding an endpoint
+## Añadir un endpoint
 
-For each endpoint you will need to have:
-1. One `@app` decorator that specifies the path for the endpoint.
-    - You can have parameters in the URL like this `<int:person_id>`
-    - You can specify what methods can be called on that endpoint like this `methods=['PUT', 'GET']`
-2. The method that will execute when that endpoint is called (in this case `get_single_person`).
-3. Inside the method you can specify what logic to execute of each type of request using `if request.method == 'PUT'`
-4. You have to always return a json and a status code (200, 400, 404, etc.)
+Para cada endpoint necesitará tener:
+
+1. Un decorador `@app` que especifique la ruta para el endpoint.
+    - Puedes tener parámetros en la URL como este `<int:person_id>`.
+    - Puedes especificar qué métodos pueden ser invocados en ese endpoint como `methods=['PUT', 'GET']`.
+2. El método que se ejecutará cuando se llame a ese endpoint (en este caso `get_single_person`).
+3. Dentro del método puedes especificar qué lógica ejecutar de cada tipo de petición usando `if request.method == 'PUT'`.
+4. Tienes que devolver siempre un json y un código de estado (200, 400, 404, etc.)
 
 ```py
 @app.route('/person/<int:person_id>', methods=['PUT', 'GET'])
 def get_single_person(person_id):
     """
-    Single person
+    Una persona
     """
     body = request.get_json() #{ 'username': 'new_username'}
     if request.method == 'PUT':
@@ -55,13 +57,13 @@ def get_single_person(person_id):
     return "Invalid Method", 404
 ```
 
-### How to validate request payload or query string
+### Cómo validar la carga útil de la solicitud o la cadena de consulta
 
 ---
 
-Let's say a request is coming from the client and we need to make sure it contains the right information.
+Digamos que una petición viene del cliente y necesitamos asegurarnos de que contiene la información correcta.
 
-We have to use conditionals to make the validations, if we want to validate the request body we have to retrieve it first and then add the condition, like this:
+Tenemos que usar condicionales para hacer las validaciones, si queremos validar el cuerpo de la petición tenemos que recuperarlo primero y luego añadir la condición, así:
 
 ```py
 body = request.get_json()
@@ -69,16 +71,16 @@ if 'username' not in body:
     raise APIException('You need to specify the username', status_code=400)
 ```
 
-- It's a good practice to raise exceptions because it will stop the code execution.
-- It's a good practice to return 400 because that way the client knows it was his mistake and not ours (the server).
+- Es una buena práctica lanzar excepciones porque detendrá la ejecución del código.
+- Es una buena práctica devolver 400 porque así el cliente sabe que fue su error y no el nuestro (el servidor).
 
-### Here is a full example of a POST request to add a new person into a database
+### He aquí un ejemplo completo de una solicitud POST para añadir una nueva persona a una base de datos
 
 ```py
 @app.route('/person', methods=['POST'])
 def handle_person():
 
-    # First we get the payload json
+    # Primero obtenemos el payload json
     body = request.get_json()
 
     if body is None:
@@ -88,107 +90,107 @@ def handle_person():
     if 'email' not in body:
         raise APIException('You need to specify the email', status_code=400)
 
-    # at this point, all data has been validated, we can proceed to insert into the database
+    # en este punto, todos los datos han sido validados, podemos proceder a insertar en la base de datos
     user1 = Person(username=body['username'], email=body['email'])
     db.session.add(user1)
     db.session.commit()
     return "ok", 200
 ```
 
-## The Database
+## La base de datos
 
-The Flask boilerplate comes with a Postgres database installed and running, [take 6 min to watch this video about Postgres](https://www.youtube.com/watch?v=S4VRl1BOYGY).
+El boilerplate de Flask viene con una base de datos Postgres instalada y funcionando, [tómate 6 min para ver este video sobre Postgres](https://www.youtube.com/watch?v=S4VRl1BOYGY).
 
-We also use SQLAlchemy to abstract our database, that means that you don't have to write SQL to deal with your database, everything will be done using python.
+También usamos SQLAlchemy para abstraer nuestra base de datos, eso significa que no tienes que escribir SQL para tratar con tu base de datos, todo se hará usando python.
 
-### Add, Update & Delete data
+### Añadir, Actualizar y Borrar datos
 
-Since we are not going to be using SQL directly, instead we are going to be working with SQLAlchemy using Python.
+Ya que no vamos a usar SQL directamente, en su lugar vamos a trabajar con SQLAlchemy usando Python.
 
-> [Click in this link](/backend/database) for a more in-depth tutorial on how to work with SQLAlchemy and Postgres to CRUD (Create, Read, Update and Delete data).
+> Pulsa en este enlace](/backend/database) para ver un tutorial más detallado sobre cómo trabajar con SQLAlchemy y Postgres para CRUD (Crear, Leer, Actualizar y Borrar datos).
 
 ### Flask Admin
 
-Any API developed using this boilerplate will come with a quick and easy UI called: `Flask Admin`.
+Cualquier API desarrollada usando este boilerplate vendrá con una rápida y sencilla UI llamada: `Flask Admin`.
 
-The flask admin allows you to quickly see, add, delete or update information from your database tables.
+El flask admin te permite rápidamente ver, añadir, borrar o actualizar información de las tablas de tu base de datos.
 
-You can access your flask admin by adding `/admin` to the end of your API Host, for example:
+Puede acceder a su administrador de flask añadiendo `/admin` al final de su API Host, por ejemplo:
 
-If your API host is `https://8000-blabla-us33.gitpod.io` then you can access your database admin like this: `https://8000-blabla-us33.gitpod.io/admin`
+Si su API host es `https://8000-blabla-us33.gitpod.io` entonces usted puede acceder a su base de datos admin así: `https://8000-blabla-us33.gitpod.io/admin`
 
-> 🎥 Here is an 8 min video explaining the [Flask Admin](https://www.youtube.com/watch?v=ysdShEL1HMM).
+> Aquí hay un video de 8 minutos explicando el [Flask Admin](https://www.youtube.com/watch?v=ysdShEL1HMM).
 
-### Adding your models to your Flask admin
+### Añadiendo tus modelos a tu admin de Flask
 
-With just a couple lines of code you can integrate your model into the Flask Admin, for example, if you have a `Car` model you can add the model into the admin like this:
+Con sólo un par de líneas de código puedes integrar tu modelo en el admin de Flask, por ejemplo, si tienes un modelo `Car` puedes añadir el modelo en el admin así:
+
 ```py
 from models import Car
 ...
 admin.add_view(ModelView(Car, db.session))
 ```
 
-But you have to add those two lines inside the `admin.py` file like this:
+Pero tienes que añadir esas dos líneas dentro del archivo `admin.py` así:
 
 ```py
 from flask_admin.contrib.sqla import ModelView
 from flask_admin import Admin
-from models import db, Car # < ------ Import the model
+from models import db, Car # < ------ Importar el modelo
 
 def setup_admin(app):
     admin = Admin(app, name='your_admin_name', template_mode='bootstrap3')
     admin.add_view(ModelView(Car, db.session)) # < ------ Add the model to the admin
 ```
 
-You can add as many models as you want, like this:
+Puedes añadir tantos modelos como quieras, así:
 
 ```py
 from flask_admin.contrib.sqla import ModelView
 from flask_admin import Admin
-from models import db, Car, Person, Patient # < ------ Import the model
+from models import db, Car, Person, Patient # < ------ Importar el modelo
 
 def setup_admin(app):
     admin = Admin(app, name='your_admin_name', template_mode='bootstrap3')
-    admin.add_view(ModelView(Car, db.session)) # < ------ Add the model to the admin
-    admin.add_view(ModelView(Person, db.session)) # < ------ Add the model to the admin
-    admin.add_view(ModelView(Patient, db.session)) # < ------ Add the model to the admin
+    admin.add_view(ModelView(Car, db.session)) # < ------ Añadir el modelo al admin
+    admin.add_view(ModelView(Person, db.session)) # < ------ Añadir el modelo al admin
+    admin.add_view(ModelView(Patient, db.session)) # < ------ Añadir el modelo al admin
 ```
 
-## Migrations
+## Migraciones
 
-Database changes are tracked using alembic migrations.
-You have to migrate and upgrade the migrations for every update you make to your models that must be reflected in the tables structure:
+Los cambios en la base de datos se rastrean mediante migraciones alembic. Debe migrar y actualizar las migraciones para cada actualización que realice en sus modelos y que deba reflejarse en la estructura de las tablas:
 
 ```bash
-$ pipenv run migrate #(to make the migrations)
-$ pipenv run upgrade #(to update your database with the migrations)
+pipenv run migrate #(para realizar las migraciones)
+pipenv run upgrade #(para actualizar su base de datos con las migraciones)
 ```
 
-### Reset Migrations
+### Reiniciar Migraciones
 
-Sometimes the migration folder can get messed up, it's really hard to fix some of the issues and, since we are still in development, it makes sense to reset the entire database and migrations.
+A veces la carpeta de migraciones puede estropearse, es realmente difícil arreglar algunos de los problemas y, dado que todavía estamos en desarrollo, tiene sentido resetear toda la base de datos y las migraciones.
 
-This boilerplate contains a script that can help you to reset from scratch all your database in case you need it. To run it execute `pipenv run reset_db`, this will delete your entire database and rebuild it from the ground up, loosing all the data in the process. These are the actions that the script performs:
+Este boilerplate contiene un script que puede ayudarte a resetear desde cero toda tu base de datos en caso de que lo necesites. Para ejecutarlo ejecute `pipenv run reset_db`, esto borrará toda su base de datos y la reconstruirá desde cero, perdiendo todos los datos en el proceso. Estas son las acciones que realiza el script:
 
-> ⚠️ Warning: your data will be lost
+> ⚠️ Advertencia: sus datos se perderán
 
-1. Delete the entire migrations folder `rm -R -f ./migrations`.
-2. Create a new migration folder for flask `flask db init`
-3. Delete de database `dropdb -h localhost -U gitpod example`
-4. Create de database again `createdb -h localhost -U gitpod example";`
-5. Create the 'inaccent' extension `psql -h localhost example -U gitpod -c 'CREATE EXTENSION unaccent;'`
-7. Create the migration files again: `pipenv run migrate`
-8. Apply the migration files into your database `pipenv run upgrade`
+1. Borre toda la carpeta de migraciones `rm -R -f ./migrations`.
+2. Crea una nueva carpeta de migraciones para flask `flask db init`.
+3. Eliminar la base de datos `dropdb -h localhost -U gitpod ejemplo`.
+4. Crear de nuevo la base de datos `createdb -h localhost -U gitpod ejemplo";`.
+5. Crear la extensión 'inaccent' `psql -h localhost ejemplo -U gitpod -c 'CREATE EXTENSION unaccent;'`
+7. Crea de nuevo los archivos de migración: `pipenv run migrate`.
+8. 8. Aplique los archivos de migración a su base de datos: `pipenv run upgrade` >
 
-> ⚠️ Note: Please remember, all your data will be lost.
+> ⚠️ Nota: Por favor, recuerde que todos sus datos se perderán.
 
-## Coding a typical CRUD operation
+## Codificación de una operación CRUD típica
 
-As an example, we are going to create a small API to manage a Person.
+Como ejemplo, vamos a crear una pequeña API para gestionar una Persona.
 
-### Adding Models
+### Añadir Modelos
 
-For each `model` you will have to declare a class with the model properties and a method `serialize` that returns a dictionary representation of the class:
+Para cada `model` tendrás que declarar una clase con las propiedades del modelo y un método `serialize` que devuelva una representación de diccionario de la clase:
 
 ```py
 class Person(db.Model):
@@ -196,11 +198,11 @@ class Person(db.Model):
     username = db.Column(db.String(80), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
 
-    # tell python how to print the class object on the console
+    # indica a python cómo imprimir el objeto de clase en la consola
     def __repr__(self):
         return '<Person %r>' % self.username
 
-    # tell python how to convert the class object into a dictionary ready to jsonify
+    # indica a python cómo convertir el objeto de clase en un diccionario listo para jsonificar
     def serialize(self):
         return {
             "username": self.username,
@@ -208,33 +210,33 @@ class Person(db.Model):
         }
 ```
 
-> 📝 You can find more information on [creating models](/backend/database#creating-the-models) here.
+> 📝 Encontrará más información en [creación de modelos](/backend/database#creating-the-models) aquí.
 
-### CRUD Operations
+### Operaciones CRUD
 
-There are many ways to manipulate databases, but we decided to use Python and SQLAlchemy to do so. This means that you need no SQL knowledge, but we strongly recommend you still practice and master SQL for debugging purposes (most of the errors are shown in SQL language)
+Hay muchas maneras de manipular bases de datos, pero hemos decidido utilizar Python y SQLAlchemy para hacerlo. Esto significa que no necesitas conocimientos de SQL, pero te recomendamos encarecidamente que aún así practiques y domines SQL con fines de depuración (la mayoría de los errores se muestran en lenguaje SQL)
 
-### Querying (SELECT) data
+### Consulta (SELECT) de datos
 
-Assuming you have a Person object in your `models.py` file.
+Asumiendo que tienes un objeto Person en tu fichero `models.py`.
 
 ```py
-# get all the people
+# coger a toda la gente
 people_query = Person.query.all()
 
-# get only the ones named "Joe"
+# obtener sólo las que se llamen "Joe
 people_query = Person.query.filter_by(name='Joe')
 
-# map the results and your list of people inside of the all_people variable
+# asigna los resultados y tu lista de personas dentro de la variable all_people
 all_people = list(map(lambda x: x.serialize(), people_query))
 
-# get just one person
+# obtener sólo una persona
 user1 = Person.query.get(person_id)
  ```
 
-### Inserting data
+### Insertar datos
 
-Assuming you have a Person object in your `models.py` file.
+Asumiendo que tienes un objeto Persona en tu fichero `models.py`.
 
 ```py
 user1 = Person(username="my_super_username", email="my_super@email.com")
@@ -242,7 +244,7 @@ db.session.add(user1)
 db.session.commit()
 ```
 
-### Updating data
+### Actualización de datos
 
 ```py
 user1 = Person.query.get(person_id)
@@ -255,9 +257,9 @@ if "email" in body:
     user1.email = body["email"]
 db.session.commit()
 ```
- 
-### Delete data
- 
+
+### Borrar datos
+
  ```py
  user1 = Person.query.get(person_id)
 if user1 is None:
@@ -266,9 +268,9 @@ db.session.delete(user1)
 db.session.commit()
  ```
 
-## Deploy 
+## Despliegue
 
-This template is 100% compatible with [Heroku](https://www.heroku.com/) and [Render.com](https://www.render.com), just make sure to read the quick deployment guides.
+Esta plantilla es 100% compatible con [Heroku](https://www.heroku.com/) y [Render.com](https://www.render.com), sólo asegúrate de leer las guías de despliegue rápido.
 
-1. [How to deploy into Render.com](https://4geeks.com/docs/start/deploy-to-render-com) (for free)
-2. [How to deploy into Heroku.com](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/docs/deploy-heroku-postgress.md) (for $0.01 a month)
+1. [Cómo desplegar en Render.com](https://4geeks.com/docs/start/deploy-to-render-com) (gratis)
+2. [Cómo desplegar en Heroku.com](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/docs/deploy-heroku-postgress.md) (desde $0.01 mensual)
