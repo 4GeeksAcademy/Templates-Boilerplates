@@ -13,7 +13,7 @@ The most basic boilerplate for any 4Geeks Academy Student ideal to start your fi
 
 ### If you are working from Codespaces or Gitpod:
 
-Just click on [this link to start your project](https://gitpod.io#https://github.com/4GeeksAcademy/html-hello.git).
+Just click on [this link to start your project](https://s.4geeks.com/start?repo=https://github.com/4GeeksAcademy/html-hello.git) using our One-Click Coding technology.
 
 [![How to open html/css preview of my project in gitpod](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/static/img/hello-html-intro.png?raw=true)](https://youtu.be/dfbDCMu_p-0)
 
