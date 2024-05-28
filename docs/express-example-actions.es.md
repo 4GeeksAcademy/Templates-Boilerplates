@@ -1,4 +1,10 @@
-# Ejemplos de acciones con TypeORM y Express
+---
+title: 'Ejemplos de acciones en Express'
+description: 'Echa un vistazo a cómo crear rutas funcionales que gestionen la información de tu base de datos'
+technologies: ['expressjs', 'node', 'Postgres','RestAPI']
+---
+
+## Ejemplos de acciones con TypeORM y Express
 
 Cada una de estas acciones puede emparejarse con una URL como ésta:
 

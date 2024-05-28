@@ -1,6 +1,7 @@
 ---
-title: 'Start Flux Project'
-description: 'Use the FLUX practices to build professional apps using React.js'
+title: 'Start a Fullstack project'
+description: 'Use the Fullstack technologies to build professional apps using React.js and FastAPI'
+technologies: ['html', 'css', 'python','javascript','fastapi','react']
 ---
 
 > 🎥 You can watch a full video tutorial on [how to create your React application with Context.API and Flux following this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b).

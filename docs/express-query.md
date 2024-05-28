@@ -1,3 +1,9 @@
+---
+title: 'Queries with Express and TypeORM'
+description: 'Use TypeORM to query your database, from your Express API'
+technologies: ['vanillajs', 'html', 'css']
+---
+
 # Find Options
 
 * [Basic options](#basic-options)

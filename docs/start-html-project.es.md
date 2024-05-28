@@ -1,6 +1,7 @@
 ---
 title: 'Iniciar un nuevo proyecto HTML/CSS'
 description: 'Cree y publique el sitio web HTML/CSS más básico que pueda construir'
+technologies: ['html', 'css', 'python','javascript']
 ---
 
 La plantilla más básica para cualquier estudiante de la Academia 4Geeks ideal para empezar su primer sitio web HTML/CSS.

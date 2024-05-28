@@ -1,42 +1,44 @@
 ---
-title: 'Start a project in React.js'
-description: 'Easy to use React.js boilerplate with no configuration'
+title: 'Iniciar un proyecto en React.js'
+description: 'React.js boilerplate fácil de usar y sin configuración'
+technologies: ['html', 'css', 'node','javascript','react']
 ---
 
-# Hello World with React boilerplate
+## Hello World con React boilerplate
 
-This template is similar to create-react-app but it's meant for 4Geeks Academy students.
+Esta plantilla es similar a create-react-app pero está pensada para estudiantes de la 4Geeks Academy.
 
-##### Download the boilerplate using git
+### Descarga el boilerplate utilizando git
 
 ```bash
-$ git clone https://github.com/4GeeksAcademy/react-hello.git
-$ cd react-hello
+git clone https://github.com/4GeeksAcademy/react-hello.git
+cd react-hello
 ```
 
-##### and install the npm package:
+### e instalar el paquete npm
+
 ```bash
-$ npm install
+npm install
 ```
 
-## Start coding!
+## ¡Empieza a codear
 
-For Windows, Mac, Linux or Gitpod, start the webpack server with live reload:
+Para Windows, Mac, Linux o Gitpod, inicie el servidor webpack con live reload:
+
 - `$ npm run start`
 
-You can update the `styles/index.css` or `js/index.js` depending on your needs.
-Add more files into your, `./src/js/components` or styles folder as you need them.
+Puedes actualizar `styles/index.css` o `js/index.js` dependiendo de tus necesidades. Añade más archivos en tu carpeta, `./src/js/components` o styles a medida que los necesites.
 
-## Publish your website!
+## Publique su sitio web
 
-This boilerplate is 100% compatible with the free [github pages](https://pages.github.com/) and [vercel](https://vercel.com/) hosting.
+Esta plantilla es 100% compatible con las páginas gratuitas [github pages](https://pages.github.com/) y [vercel](https://vercel.com/).
 
-It takes just 2 minutes to deploy, [click here to start the process](https://github.com/4GeeksAcademy/react-hello/blob/master/docs/DEPLOY.md).
+Sólo se tarda 2 minutos en desplegarlo, [haga clic aquí para iniciar el proceso](https://github.com/4GeeksAcademy/react-hello/blob/master/docs/DEPLOY.md).
 
-## Other features
+## Otras funciones
 
-- Automatic Code Formatting: Use of [Prettier](https://prettier.io/) for automatic code indentation and formatting.
-- Error reporting: Use of [eslint](https://eslint.org/) for better error reporting.
-- Hot Deploy: Use of [Webpack Development Server](https://webpack.js.org/configuration/dev-server/) for hot deploy and live reload.
-- One-command publish of the code to Github pages with `npm run deploy:github`.
-- Babel 7 (really fast).
+- Formateo automático del código: Uso de [Prettier](https://prettier.io/) para la indentación y el formateo automáticos del código.
+- Informe de errores: Uso de [eslint](https://eslint.org/) para un mejor informe de errores.
+- Despliegue en caliente: Uso de [Webpack Development Server](https://webpack.js.org/configuration/dev-server/) para despliegue en caliente y recarga en vivo.
+- Publicación del código en páginas de Github con un solo comando con `npm run deploy:github`.
+- Babel 7 (realmente rápido).

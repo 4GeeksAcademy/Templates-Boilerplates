@@ -1,6 +1,7 @@
 ---
 title: 'Start a React + Flask (Full-Stack) Project'
 description: 'Use Javascript, React.js, Python and Flask to build an entire full-stack application'
+technologies: ['html', 'css', 'python','javascript','flask','react']
 ---
 
 This template has `backend files` and `front end files` together, it's the perfect combination of the React Flux and the Flask API templates so that you can create a Full Stack application applying all the concepts used in the professional world.
@@ -44,4 +45,7 @@ It is recommended to install the backend first, make sure you have Python 3.8+, 
 
 ## Publish your website!
 
-This boilerplate is 100% integrated with Heroku, just by pushing your changes to the Heroku repository it will deploy: `$ git push heroku main`
+This template is 100% compatible with [Heroku](https://www.heroku.com/) and [Render.com](https://www.render.com), just make sure to read the quick deployment guides.
+
+1. [How to deploy into Render.com](https://4geeks.com/docs/start/deploy-to-render-com) (for free)
+2. [How to deploy into Heroku.com](https://4geeks.com/docs/start/deploy-heroku-postgres) (for $0.01 a month)
