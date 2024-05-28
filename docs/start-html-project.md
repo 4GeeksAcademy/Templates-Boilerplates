@@ -4,7 +4,7 @@ description: 'Build and publish the most basic HTML/CSS website you can build'
 technologies: ['html', 'css', 'python','javascript']
 ---
 
-The most basic boilerplate for any 4Geeks Academy Student ideal to start your first HTML/CSS website.
+The most basic template for any 4Geeks Academy Student, ideal for starting your first HTML/CSS website.
 
 ### If you are **working locally**
 
