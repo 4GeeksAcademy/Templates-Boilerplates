@@ -174,8 +174,8 @@ This boilerplate contains a script that can help you to reset from scratch all y
 
 1. Delete the entire migrations folder `rm -R -f ./migrations`.
 2. Create a new migration folder for flask `flask db init`
-3. Delete de database `dropdb -h localhost -U gitpod example`
-4. Create de database again `createdb -h localhost -U gitpod example";`
+3. Delete the database `dropdb -h localhost -U gitpod example`
+4. Create the database again `createdb -h localhost -U gitpod example";`
 5. Create the 'inaccent' extension `psql -h localhost example -U gitpod -c 'CREATE EXTENSION unaccent;'`
 7. Create the migration files again: `pipenv run migrate`
 8. Apply the migration files into your database `pipenv run upgrade`

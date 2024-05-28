@@ -54,13 +54,13 @@ export const updateUser = async (req: Request, res:Response): Promise<Response> 
     const userRepo = getRepository(Users) // Necesito el userRepo para gestionar usuarios
 
     // encontrar usuario por id
-	const user = await userRepo.findOne(req.params.id); 
-	if(!user) throw new Exception("Not User found");
-	
+ const user = await userRepo.findOne(req.params.id); 
+ if(!user) throw new Exception("Not User found");
+ 
     // mejor fusionar, asi podemos hacer actualizacion parcial (solo un par de propiedades)
-	userRepo.merge(user, req.body); 
-	const results = await userRepo.save(user);  // commit to DB	
-	return res.json(results);
+ userRepo.merge(user, req.body); 
+ const results = await userRepo.save(user);  // commit to DB 
+ return res.json(results);
 }
 ```
 
@@ -68,8 +68,8 @@ export const updateUser = async (req: Request, res:Response): Promise<Response> 
 
 ```js
 export const deleteUser = async (req: Request, res: Response): Promise<Response> =>{
-	const users = await getRepository(Users).delete(req.params.id);
-	return res.json(users);
+ const users = await getRepository(Users).delete(req.params.id);
+ return res.json(users);
 }
 ```
 
@@ -81,12 +81,12 @@ Nota: hay otras formas de buscar, [puedes leer más sobre buscar aquí](./consul
 
 ```js
 export const getUser = async (req: Request, res: Response): Promise<Response> =>{
-	
+ 
     // podemos pasar un segundo parámetro al findOne con las relaciones extra que necesitamos
-	const user = await getRepository(Users).findOne(req.params.id, { relations: ["planets"] });
-	if(!user) throw new Exception("User not found", 404)
+ const user = await getRepository(Users).findOne(req.params.id, { relations: ["planets"] });
+ if(!user) throw new Exception("User not found", 404)
 
-	return res.json(user);
+ return res.json(user);
 }
 ```
 
@@ -96,8 +96,8 @@ Similar a la búsqueda de un solo usuario, pero usamos la función `find` en lug
 
 ```js
 export const getUsers = async (req: Request, res: Response): Promise<Response> =>{
-		const users = await getRepository(Users).find();
-		return res.json(users);
+  const users = await getRepository(Users).find();
+  return res.json(users);
 }
 ```
 
@@ -109,18 +109,18 @@ Es muy similar a actualizar cualquier otro usuario, la diferencia es que podemos
 export const updateCurrentUser = async (req: Request, res:Response): Promise<Response> =>{
     const userRepo = getRepository(Users) // I need the userRepo to manage users
 
-	/**
-	 * Podemos adivinar el usuario actual a partir de la autenticación, más información sobre esto aquí:
-	 * get-the-authenticated-user
-	*/
-	if(!req.user) throw new Exception("No user was found on the session token")
-	const user_id = (req.user as ObjectLiteral).id
-	const user = await userRepo.findOne(user_id); 
-	if(!user) throw new Exception("User not found");
-	
+ /**
+  * Podemos adivinar el usuario actual a partir de la autenticación, más información sobre esto aquí:
+  * get-the-authenticated-user
+ */
+ if(!req.user) throw new Exception("No user was found on the session token")
+ const user_id = (req.user as ObjectLiteral).id
+ const user = await userRepo.findOne(user_id); 
+ if(!user) throw new Exception("User not found");
+ 
     // mejor que merge, así podemos hacer actualización parcial (sólo un par de propiedades)
-	userRepo.merge(user, req.body); 
-	const results = await userRepo.save(user);  // commit to DB	
-	return res.json(results);
+ userRepo.merge(user, req.body); 
+ const results = await userRepo.save(user);  // commit to DB 
+ return res.json(results);
 }
 ```
