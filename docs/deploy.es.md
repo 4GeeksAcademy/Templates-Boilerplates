@@ -1,16 +1,12 @@
-# Deploy your project 
+# Despliegue su proyecto
 
-We have integrated the academy boilerplate for a simple and fast deployment to the following servers. 
+Hemos integrado el boilerplate de la academia para un despliegue sencillo y rápido en los siguientes servidores.
 
-Please choose one of the deployment instructions from the following list:
+Por favor, elija una de las instrucciones de despliegue de la siguiente lista:
 
-## Front-end only projects
+## Backend + Front projects
 
-- [Deploy with Vercel.com](/deploy/vercel)
+- [Despliegue con Render.com](https://4geeks.com/docs/start/deploy-to-render-com)
 
-## Backend + Front projects 
-
-- [Deploy with Render.com](/deploy/render)
-
-- [Deploy with Heroku.com and Postgres](deploy/heroku-postgress)
-- [Deploy with Heroku.com and MySQL](deploy/heroku-mysql)
+- [Deploy with Heroku.com and Postgres](https://4geeks.com/docs/start/deploy-heroku-postgres)
+- [Deploy with Heroku.com and MySQL](https://4geeks.com/docs/start/deploy-heroku-mysql)

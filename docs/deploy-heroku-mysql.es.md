@@ -1,61 +1,68 @@
 ---
 title: 'Deploy to Heroku using MySQL'
 description: 'Publish your website to Heroku with a MySQL database'
+technologies: ['mysql', 'databases','flask','node','express','react']
 ---
 
-> Deploying to Heroku (takes 7 minutes)
+> Implementación en Heroku (7 minutos)
 
-This template is 100% compatible with Heroku, just make sure to understand and execute the following steps:
+Esta plantilla es 100% compatible con Heroku, sólo asegúrese de entender y ejecutar los siguientes pasos:
 
-1. Install Heroku (if you don't have it yet)
+1. Instala Heroku (si aún no lo tienes)
 ```bash
 $ npm i heroku -g
 ```
 
-2. Login to Heroku on the command line (if you have not already)
+2. Inicie sesión en Heroku en la línea de comandos (si aún no lo ha hecho)
 ```bash
 $ heroku login -i
 ```
 
-3. Create an application (if you don't have it already)
+3. Cree una aplicación (si aún no la tiene)
 ```bash
 $ heroku create <your_application_name>
 ```
 
-4. Commit and push to Heroku
-Make sure you have committed your changes and push to Heroku
+4. Commit y Push a Heroku. Asegúrese de que ha confirmado los cambios y empujar a Heroku.
+
 ```bash
 $ git push heroku master
 ```
 
-## Environment Variables (takes 2 minutes)
+## Variables de entorno (2 minutos)
 
 <p align="center">
 <img width="400px" alt="Configuring Env Variables" src="https://github.com/4GeeksAcademy/flask-rest-hello/blob/main/docs/assets/env_variables.gif?raw=true" />
 </p>
 
-You cannot create a `.env` file on Heroku, instead you need to manually create all the variables under your project settings.
+No puedes crear un archivo `.env` en Heroku, en su lugar necesitas crear manualmente todas las variables bajo la configuración de tu proyecto.
 
-Open your `.env` file and copy and paste each variable (FLASK_APP, DB_CONNECTION_STRING, etc.) to Heroku.
+Abre tu archivo `.env` y copia y pega cada variable (FLASK_APP, DB_CONNECTION_STRING, etc.) en Heroku.
 
-
-## Deploying your database to Heroku (takes 3 minutes)
+## Despliegue de la base de datos en Heroku (3 minutos)
 
 <p align="center">
 <img width="400px" alt="Create DB on heroku" src="https://github.com/4GeeksAcademy/flask-rest-hello/blob/main/docs/assets/db_config.gif?raw=true" />
 </p>
 
-Your local MySQL Database now has to be uploaded to a cloud, there are plenty of services that provide MySQL database hosting, but we recommend JawsDB because it has a Free Tier, it's simple and 100% integrated with Heroku.
+Tu Base de Datos MySQL local ahora tiene que ser subida a una nube, hay un montón de servicios que proporcionan alojamiento de bases de datos MySQL, pero recomendamos JawsDB porque tiene un Tier Gratuito, es simple y 100% integrado con Heroku.
 
-1. Go to your Heroku project dashboard and look to add a new Heroku add-on.
-2. Look for JawsDB MySQL and add it to your project (it may ask for a Credit Card but you will not be charged as long as you remain withing 5mb database size, enough for your demo).
-3. Once JawsDB is added to your project, look for the Connection String inside your JawsDB dashboard, something like:
+1. Ve al panel de control de tu proyecto Heroku y busca añadir un nuevo add-on Heroku.
+
+2. Busca JawsDB MySQL. 2. Busque JawsDB MySQL y añádalo a su proyecto (puede que le pida una tarjeta de crédito pero no se le cobrará mientras se mantenga dentro de los 5mb de tamaño de base de datos, suficiente para su demo).
+
+3. Una vez que JawsDB esté añadido a su proyecto, haga clic en "Añadir". Una vez que JawsDB este agregado a su proyecto, busque el Connection String dentro de su dashboard de JawsDB, algo como:
+
 ```
 mysql://tqqa0ui0cga32nxd:eqi8nchjbpwth82v@c584md9egjnm02sk.5btxwkvyhwsf.us-east-1.rds.amazonaws.com:3306/45fds423rbtbr
 ```
-4. Copy the connection string and create a new environment variable on your project settings.
-5. Run migrations on Heroku: After your database is connected, you have to create the tables and structure, you can do that by running the `pipenv run upgrade` command on the production server like this:
+
+4. Copia la cadena de conexión y crea una nueva variable de entorno en la configuración de tu proyecto.
+
+5. Ejecuta las migraciones en Heroku: Después de que tu base de datos esté conectada, tienes que crear las tablas y la estructura, puedes hacerlo ejecutando el comando `pipenv run upgrade` en el servidor de producción así:
+
 ```bash
 $ heroku run -a=<your_app_name> pipenv run upgrade
 ```
-> ⚠️ Note: Notice that you have to replace `<your app name>` with your application name, you also have to be logged into Heroku in your terminal (you can do that by typing `heroku login -i`)
+
+> ⚠️ Nota: Ten en cuenta que tienes que sustituir `<nombre de tu aplicación>` por el nombre de tu aplicación, también tienes que haber iniciado sesión en Heroku en tu terminal (puedes hacerlo escribiendo `heroku login -i`)

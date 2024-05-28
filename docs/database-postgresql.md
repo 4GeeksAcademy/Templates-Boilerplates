@@ -253,7 +253,6 @@ db.session.delete(user1)
 db.session.commit()
  ```
 
-
-# OFFICIAL DOCUMENTATION FOR MODELS FLASK SQLAlchemy
+## OFFICIAL DOCUMENTATION FOR MODELS FLASK SQLAlchemy
 
 Please visit the following page for more information: https://flask-sqlalchemy.palletsprojects.com/en/2.x/models/

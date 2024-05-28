@@ -1,6 +1,7 @@
 ---
 title: 'Despliegue a Render.com'
 description: 'Publica tu sitio web con Render.com gratis'
+technologies: ['postgres', 'databases','flask','node','express','react']
 ---
 
 Despliega a Render.com (takes 7 minutes).
