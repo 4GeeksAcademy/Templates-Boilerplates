@@ -11,6 +11,7 @@ Start coding in 30 seconds by [opening this template in a new cloud computer her
 Or you can download the template into your computer and manually install it by following the steps below:
 
 1) Remember to install the npm packages first:
+
 ```bash
 $ npm install
 ```

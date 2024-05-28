@@ -18,14 +18,17 @@ Starting with the [flast-rest-hello](https://github.com/4GeeksAcademy/flask-rest
 
 For a more detailed explanation, look for the tutorial inside the `docs` folder.
 
-## Installing on Ubuntu & Mac
+## Installing on Ubuntu, Mac and Windows
 
-⚠️ Make sure you have `python 3.6+` and `MySQL` installed on your computer and MySQL is running, then run the following commands:
+⚠️ Make sure you have `python 3.6+`, `pipenv` and `Postgres` installed on your computer and Postgres is running, then run the following commands:
+
 ```bash
 $ pipenv install #(to install pip packages)
 $ pipenv run migrate #(to create the database)
 $ pipenv run start #(to start the flask webserver)
 ```
+
+> ⚠️ Windows installation may work, but you can also try installing it online through [4Geeks' One-Click bridge](https://breathecode.herokuapp.com/start) on top of Github Codespaces or Gitpod.
 
 ## Adding an endpoint
 
