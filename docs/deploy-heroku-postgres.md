@@ -1,6 +1,7 @@
 ---
 title: 'Deploy to Heroku'
 description: 'Publish your website to Heroku'
+technologies: ['postgres', 'databases','flask','node','express','react']
 ---
 
 > Deploy to Heroku, it takes 7 minutes.
@@ -73,4 +74,4 @@ $ git push heroku main
 
 ## Done!
 
-That is it! If you encounter any issues please refer to the [FAQ Heroku file](../tutorials/faq).
+That is it! If you encounter any issues please refer to the [FAQ Heroku file](https://help.heroku.com/).

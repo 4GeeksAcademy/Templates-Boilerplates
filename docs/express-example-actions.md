@@ -16,7 +16,7 @@ But we are not going to be focusing on the URL's but only the actions, here is t
 6. Update logged in user
 
 
-## 1) How to create
+## 1) How to create?
 
 We must always start with validations, the best way to notify a validation error to the user is by throwing exceptions like this:
 
@@ -46,7 +46,7 @@ export const createUser = async (req: Request, res:Response): Promise<Response> 
 }
 ```
 
-## 2) How to update entities
+## 2) How to update entities?
 
 Very similar to the user creation, we need to start with validations and then proceed to update the user:
 
@@ -65,7 +65,7 @@ export const updateUser = async (req: Request, res:Response): Promise<Response> 
 }
 ```
 
-## 3) How to delete
+## 3) How to delete?
 
 ```js
 export const deleteUser = async (req: Request, res: Response): Promise<Response> =>{
@@ -74,7 +74,7 @@ export const deleteUser = async (req: Request, res: Response): Promise<Response>
 }
 ```
 
-## 4) How to get one single user
+## 4) How to get one single user?
 
 Get a single user is simple using the findOne, but the cool part is that you can also retrieve the user planets by passing a second param to the findOne function. `{ relations: ["planets"] }`
 

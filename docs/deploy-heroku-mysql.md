@@ -1,6 +1,7 @@
 ---
 title: 'Deploy to Heroku using MySQL'
 description: 'Publish your website to Heroku with a MySQL database'
+technologies: ['mysql', 'databases','flask','node','express','react']
 ---
 
 > Deploying to Heroku (takes 7 minutes)
@@ -22,8 +23,7 @@ $ heroku login -i
 $ heroku create <your_application_name>
 ```
 
-4. Commit and push to Heroku
-Make sure you have committed your changes and push to Heroku
+4. Commit and push to Heroku. Make sure you have committed your changes and push to Heroku
 ```bash
 $ git push heroku master
 ```

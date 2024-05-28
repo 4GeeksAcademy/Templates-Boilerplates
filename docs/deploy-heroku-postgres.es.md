@@ -1,57 +1,58 @@
 ---
-title: 'Deploy to Heroku'
-description: 'Publish your website to Heroku'
+title: 'Despliegue en Heroku'
+description: 'Publique su sitio web en Heroku'
+technologies: ['postgres', 'databases','flask','node','express','react']
 ---
 
-> Deploy to Heroku, it takes 7 minutes.
+> Desplegar en Heroku, toma 7 minutos.
 
-This template is 100% compatible with Heroku, just make sure to understand and execute the following steps.
+Esta plantilla es 100% compatible con Heroku, sólo asegúrese de entender y ejecutar los siguientes pasos.
 
-0. Create an account on heroku.com, do not create a project, you will do that later, all you need is email and password set.
+0. Crea una cuenta en heroku.com, no crees un proyecto, eso lo harás después, todo lo que necesitas es email y contraseña configurados.
 
-1. Install Heroku (if you don't have it yet)
+1. Instala Heroku (si aún no lo tienes)
 ```bash
 $ npm i heroku -g
 ```
 
-2. Login to Heroku on the command line (if you have not already)
+2. Inicie sesión en Heroku en la línea de comandos (si aún no lo ha hecho)
 ```bash
 $ heroku login -i
 ```
 
-3. Create an application (if you don't have it already)
+3. Cree una aplicación (si aún no la tiene)
 ```bash
 $ heroku create <your_application_name>
 ```
 
-4. Install buildpack-registry and buildpacks
+4. Instalar buildpack-registry y buildpacks
 ```bash
 $ heroku plugins:install buildpack-registry
 $ heroku plugins:install buildpacks 
 ```
 
-5. Add Python and also node.js capabilities to Heroku to be able to use npm on production
+5. Añadir capacidades Python y también node.js a Heroku para poder utilizar npm en producción.
 ```bash
 $ heroku buildpacks:add --index 1 heroku/python
 $ heroku buildpacks:add --index 2 heroku/nodejs
 ```
 
-6. Add a new Postgres database to your project
+6. Añada una nueva base de datos Postgres a su proyecto
 ```bash
 $ heroku addons:create heroku-postgresql:hobby-dev
-# this command will also automatically add a DATABASE_URL env variable with the Postgres database url
+# este comando también añadirá automáticamente una variable env DATABASE_URL con la url de la base de datos Postgres
 ```
 
-7. Other Environment Variables
+7. Otras Variables de Entorno
 
-You cannot create a `.env` file on Heroku, instead you need to manually add all the variables using the command line or under your Heroku dashboard project settings.
+No puedes crear un archivo `.env` en Heroku, en su lugar necesitas añadir manualmente todas las variables usando la línea de comandos o bajo la configuración de tu proyecto en el dashboard de Heroku.
 
-Open your `.env` file and copy and paste each variable (FLASK_APP, FLASK_ENV, etc.) to Heroku. ⚠️ Do not add the `DATABASE_URL` variable again, it was already added by Heroku automatically when we added the Postgres add-on.
+Abre tu archivo `.env` y copia y pega cada variable (FLASK_APP, FLASK_ENV, etc.) en Heroku. ⚠️ No añadas la variable `DATABASE_URL` de nuevo, ya fue añadida por Heroku automáticamente cuando añadimos el complemento Postgres.
 
 ```bash
 $ heroku config:set FLASK_APP_KEY="any key works"
 $ heroku config:set FLASK_APP=src/app.py
-#                               ↓ Important: Set to "production"
+#                               ↓ Importante: Establecer a "producción"
 $ heroku config:set FLASK_ENV=production 
 $ heroku config:set BASENAME=/
 $ heroku config:set BACKEND_URL=
@@ -61,9 +62,9 @@ $ heroku config:set BACKEND_URL=
 <img width="400px" alt="Configuring Env Variables" src="https://github.com/4GeeksAcademy/flask-rest-hello/blob/main/docs/assets/env_variables.gif?raw=true" />
 </p>
 
-## Push your changes!
+## ¡Sube tus cambios!
 
-The last step is to push your code to Heroku with your most recent changes:
+El último paso es enviar el código a Heroku con los cambios más recientes:
 
 ```bash
 $ git add .
@@ -71,6 +72,6 @@ $ git commit -m 'deploying to heroku'
 $ git push heroku main
 ```
 
-## Done!
+## ¡Listo!
 
-That is it! If you encounter any issues please refer to the [FAQ Heroku file](../tutorials/faq).
+Ya está. Si se encuentra con algún problema, por favor consulte el [archivo FAQ Heroku](https://help.heroku.com/).
