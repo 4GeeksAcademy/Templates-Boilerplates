@@ -6,12 +6,12 @@ technologies: ['html', 'css', 'python','javascript']
 
 The most basic boilerplate for any 4Geeks Academy Student ideal to start your first HTML/CSS website.
 
-### If you are **working locally**:
+### If you are **working locally**
 
 - Download and [install node.js using nvm on your windows](https://4geeks.com/how-to/nvm-install-windows), [linux or macOS computer](https://4geeks.com/how-to/install-node-nvm-mac-osx).
 - Download the repository template
 
-### If you are working from Codespaces or Gitpod:
+### If you are working from Codespaces or Gitpod
 
 Just click on [this link to start your project](https://s.4geeks.com/start?repo=https://github.com/4GeeksAcademy/html-hello.git) using our One-Click Coding technology.
 
@@ -22,7 +22,7 @@ Just click on [this link to start your project](https://s.4geeks.com/start?repo=
 Create a `index.html` file with the [basic HTML structure](http://content.breatheco.de/lesson/what-is-html-learn-html#page-structure) and see it live by running web-server using the following command:
 
 ```bash
-$ pip3 install flask && python3 server.py
+pip3 install flask && python3 server.py
 ```
 
 - You can create as many HTML files you want
