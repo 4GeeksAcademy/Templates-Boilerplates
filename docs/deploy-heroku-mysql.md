@@ -6,7 +6,9 @@ technologies: ['mysql', 'databases','flask','node','express','react']
 
 > Deploying to Heroku (takes 7 minutes)
 
-This template is 100% compatible with Heroku, just make sure to understand and execute the following steps:
+Our templates are% compatible with Heroku, just make sure to understand and execute the following steps:
+
+## Get ready
 
 1. Install Heroku (if you don't have it yet)
 ```bash

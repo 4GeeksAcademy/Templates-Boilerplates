@@ -6,38 +6,46 @@ technologies: ['postgres', 'databases','flask','node','express','react']
 
 > Deploy to Heroku, it takes 7 minutes.
 
-This template is 100% compatible with Heroku, just make sure to understand and execute the following steps.
+Our templates are% compatible with Heroku, just make sure to understand and execute the following steps.
+
+## Get ready
 
 0. Create an account on heroku.com, do not create a project, you will do that later, all you need is email and password set.
 
 1. Install Heroku (if you don't have it yet)
+
 ```bash
-$ npm i heroku -g
+npm i heroku -g
 ```
 
 2. Login to Heroku on the command line (if you have not already)
+
 ```bash
-$ heroku login -i
+heroku login -i
 ```
 
 3. Create an application (if you don't have it already)
+
 ```bash
-$ heroku create <your_application_name>
+heroku create <your_application_name>
 ```
 
 4. Install buildpack-registry and buildpacks
+
 ```bash
-$ heroku plugins:install buildpack-registry
-$ heroku plugins:install buildpacks 
+heroku plugins:install buildpack-registry
+heroku plugins:install buildpacks 
 ```
 
 5. Add Python and also node.js capabilities to Heroku to be able to use npm on production
+
 ```bash
-$ heroku buildpacks:add --index 1 heroku/python
-$ heroku buildpacks:add --index 2 heroku/nodejs
+heroku buildpacks:add --index 1 heroku/python
+heroku buildpacks:add --index 2 heroku/nodejs
 ```
 
 6. Add a new Postgres database to your project
+
 ```bash
 $ heroku addons:create heroku-postgresql:hobby-dev
 # this command will also automatically add a DATABASE_URL env variable with the Postgres database url
@@ -62,16 +70,16 @@ $ heroku config:set BACKEND_URL=
 <img width="400px" alt="Configuring Env Variables" src="https://github.com/4GeeksAcademy/flask-rest-hello/blob/main/docs/assets/env_variables.gif?raw=true" />
 </p>
 
-## Push your changes!
+## Push your changes
 
 The last step is to push your code to Heroku with your most recent changes:
 
 ```bash
-$ git add .
-$ git commit -m 'deploying to heroku'
-$ git push heroku main
+git add .
+git commit -m 'deploying to heroku'
+git push heroku main
 ```
 
-## Done!
+## Done
 
 That is it! If you encounter any issues please refer to the [FAQ Heroku file](https://help.heroku.com/).

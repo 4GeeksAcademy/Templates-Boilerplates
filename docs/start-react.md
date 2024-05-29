@@ -1,5 +1,5 @@
 ---
-title: 'Start a project in React.js'
+title: 'Start a project in React.js (Legacy)'
 description: 'Easy to use React.js boilerplate with no configuration'
 technologies: ['html', 'css', 'node','javascript','react']
 ---

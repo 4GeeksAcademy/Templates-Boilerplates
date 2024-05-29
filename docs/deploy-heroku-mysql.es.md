@@ -6,7 +6,9 @@ technologies: ['mysql', 'databases','flask','node','express','react']
 
 > Implementación en Heroku (7 minutos)
 
-Esta plantilla es 100% compatible con Heroku, sólo asegúrese de entender y ejecutar los siguientes pasos:
+Nuestras plantilla son compatibles con Heroku, sólo asegúrese de entender y ejecutar los siguientes pasos:
+
+## Prepárate
 
 1. Instala Heroku (si aún no lo tienes)
 ```bash
