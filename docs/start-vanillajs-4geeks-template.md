@@ -29,7 +29,6 @@ And start coding your Vanilla.js application, update the `src/index.html`, `src/
 - Type on the command line `$ npm run start`, look on the terminal for your project URL to open it.
 
 ## 2) Where do I write my code?
-
 It depends on the language, but you have `./src/app.js`, `./src/style.css` and `./src/index.html` respectively, you can add new `.html` as you please, just make sure to import it on the `app.js`.
 
 > Note: remember that the JS workflow starts inside `window.onload`.

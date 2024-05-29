@@ -4,12 +4,12 @@ description: 'Build and publish the most basic HTML/CSS website you can build'
 technologies: ['html', 'css', 'python','javascript']
 ---
 
-The most basic boilerplate for any 4Geeks Academy Student ideal to start your first HTML/CSS website.
+The most basic template for any 4Geeks Academy Student, ideal for starting your first HTML/CSS website.
 
 ## If you are **working locally**
 
-- Download and [install node.js using nvm on your windows](https://4geeks.com/how-to/nvm-install-windows), [linux or macOS computer](https://4geeks.com/how-to/install-node-nvm-mac-osx).
-- Download the repository template
+- Download and install node.js [through nvm on your windows](https://4geeks.com/how-to/nvm-install-windows) or [linux, or macOS](https://4geeks.com/how-to/install-node-nvm-mac-osx).
+- Download the repository template.  
 
 ## If you are working from Codespaces or Gitpod
 
