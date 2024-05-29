@@ -1,5 +1,5 @@
 ---
-title: 'Iniciar un proyecto en React.js (Legado)'
+title: 'Iniciar un proyecto básico en React.js'
 description: 'React.js boilerplate fácil de usar y sin configuración'
 technologies: ['html', 'css', 'node','javascript','react']
 ---

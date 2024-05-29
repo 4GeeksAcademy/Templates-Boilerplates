@@ -1,5 +1,5 @@
 ---
-title: 'Start a React + Flask (Full-Stack) Project'
+title: 'Start a React + Flask Full-Stack Project'
 description: 'Use Javascript, React.js, Python and Flask to build an entire full-stack application'
 technologies: ['html', 'css', 'python','javascript','flask','react']
 ---

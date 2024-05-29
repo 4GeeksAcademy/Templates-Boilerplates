@@ -1,5 +1,5 @@
 ---
-title: 'Start a Frontend project with React'
+title: 'Start a web application with React'
 description: 'Use the Fullstack technologies to build professional apps using React.js and FastAPI'
 technologies: ['html', 'css', 'python','javascript','fastapi','react']
 ---
