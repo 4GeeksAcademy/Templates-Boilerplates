@@ -1,5 +1,5 @@
 ---
-title: 'Inicia con Fastapi'
+title: 'Inicia un con Fastapi'
 description: 'Iniciando con el boilerplate fastapi-hello'
 technologies: ['postgres', 'databases','fast']
 ---
