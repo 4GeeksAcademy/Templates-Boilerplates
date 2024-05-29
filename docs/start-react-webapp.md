@@ -50,23 +50,23 @@ For example, if you would want to create a class `background-blue` that makes th
 ### Creating your first component
 
 Usually you want most of your HTML application to be split into components that can be re-used.
-	
+ 
 All the components are meant to be created into the `js/components` and then you can import them into the pages that will use them.
 
 > 📝 We are using functional components (instead of class oriented components) since it's the best practice in the industry.
-	
+ 
 For example, if we want to add a new `<Card>` component that replicates the [classic bootstrap card](https://getbootstrap.com/docs/5.0/components/card/), we can create a `js/components/Card.js` with the following code:
 
 ```jsx
 export const Card = () => (
-	const [state, setState] = useState('code here'); //using the state (if needed)
-	return <div className="card">
-	  <div className="card-body">
-	    <h5 className="card-title">Card title</h5>
-	    <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
-	    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-	  </div>
-	</div>
+ const [state, setState] = useState('code here'); //using the state (if needed)
+ return <div className="card">
+   <div className="card-body">
+     <h5 className="card-title">Card title</h5>
+     <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+   </div>
+ </div>
 );
 ```
 
@@ -81,14 +81,14 @@ Now that we have the `Card` component we can incorporate it to our `Home.js` pag
 import { Card } from "../component/Card.js";
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
+ const { store, actions } = useContext(Context);
 
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<Card />
-		</div>
-	);
+ return (
+  <div className="text-center mt-5">
+   <h1>Hello Rigo!!</h1>
+   <Card />
+  </div>
+ );
 };
 ```
 
@@ -117,43 +117,53 @@ return <div>{/* you can use your actions or store inside the html */}</div>
 }
 ```
 
-## Publish your website!
+## Publish your website
 
 1. **Vercel:** The FREE recommended hosting provider is [vercel.com](https://vercel.com/), you can deploy in 1 minute by typing the following 2 commands:
 
 Login (you need to have an account):
+
 ```bash
-$ npm i vercel -g && vercel login
+npm i vercel -g && vercel login
 ```
+
 Deploy:
+
 ```bash
-$ vercel --prod
+vercel --prod
 ```
+
 > ✎ Note: If you don't have an account just go to vercel.com, create an account and come back here.
 
 ![Vercel example procedure to deploy](https://github.com/4GeeksAcademy/react-hello-webapp/blob/4b530ba091a981d3916cc6e960e370decaf2e234/docs/deploy.png?raw=true)
 
 2. **Github Pages:** This boilerplate is 100% compatible with the free Github pages hosting.
 To publish your website you need to push your code to your Github repository and run the following command after:
+
 ```bash
-$ npm run deploy
+npm run deploy
 ```
+
 > 👉 Note: You will need to [configure Github pages for the branch gh-pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
 
-## Running the project:
+## Running the project
 
 > Note: Make sure you are using node version 14+
 
 1. Install the packages:
+
 ```bash
-$ npm install
+npm install
 ```
+
 2. Create a .env file:
+
 ```bash
-$ cp .env.example .env
+cp .env.example .env
 ```
+
 3. Start coding and use the webpack dev server with live reload, for Windows, Mac, Linux or Gitpod:
 
 ```bash
-$ npm run start
+npm run start
 ```
