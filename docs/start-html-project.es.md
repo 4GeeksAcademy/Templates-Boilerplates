@@ -6,11 +6,11 @@ technologies: ['html', 'css', 'python','javascript']
 
 La plantilla más básica para cualquier estudiante de la Academia 4Geeks ideal para empezar su primer sitio web HTML/CSS.
 
-### Si estás **trabajando localmente**:
+## Si estás **trabajando localmente**:
 
 Descarga e instala node.js en tu ordenador [desde aquí].(https://nodejs.org/en/download/).
 
-### Si estás trabajando desde Gitpod:
+## Si estás trabajando desde Gitpod:
 
 Haz clic en [este enlace para iniciar tu proyecto](https://gitpod.io#https://github.com/4GeeksAcademy/html-hello.git).
 

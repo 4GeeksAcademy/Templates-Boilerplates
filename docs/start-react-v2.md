@@ -1,5 +1,5 @@
 ---
-title: 'Start a Fullstack project'
+title: 'Start a Frontend project with React'
 description: 'Use the Fullstack technologies to build professional apps using React.js and FastAPI'
 technologies: ['html', 'css', 'python','javascript','fastapi','react']
 ---
@@ -10,7 +10,7 @@ technologies: ['html', 'css', 'python','javascript','fastapi','react']
 
 Create your first view, add it to your application routes, create your first component, add styles and use the context API.
 
-### Installation 
+### Installation
 
 Make sure to follow the steps on [running the project](https://github.com/4GeeksAcademy/react-hello-webapp/blob/master/README.md) first, then come back to this list, if you are using Gitpod or Codespaces it is possible that the project is already running.
 

@@ -6,12 +6,12 @@ technologies: ['html', 'css', 'python','javascript']
 
 The most basic template for any 4Geeks Academy Student, ideal for starting your first HTML/CSS website.
 
-### If you are **working locally**
+## If you are **working locally**
 
 - Download and install node.js [through nvm on your windows](https://4geeks.com/how-to/nvm-install-windows) or [linux, or macOS](https://4geeks.com/how-to/install-node-nvm-mac-osx).
 - Download the repository template.  
 
-### If you are working from Codespaces or Gitpod (recommended)
+## If you are working from Codespaces or Gitpod
 
 Just click on [this link to start your project](https://s.4geeks.com/start?repo=https://github.com/4GeeksAcademy/html-hello.git) using our One-Click Coding technology.
 
