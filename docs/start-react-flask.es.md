@@ -1,6 +1,6 @@
 ---
-title: 'Comienza un proyecto Fullstack con React + Flask'
-description: 'Utiliza Javascript, React.js, Python y Flask para construir una aplicación completa.'
+title: 'Comienza un proyecto Fullstack con React $ Flux'
+description: 'Utiliza Javascript con React.js para construir una aplicación web profesional.'
 technologies: ['html', 'css', 'python','javascript','flask','react']
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: 'Start a web application with React'
-description: 'Use the Fullstack technologies to build professional apps using React.js and FastAPI'
-technologies: ['html', 'css', 'python','javascript','fastapi','react']
+title: 'Start a web application with React & Flux'
+description: 'Use the Fullstack technologies to build professional apps using React.js'
+technologies: ['html', 'css', 'javascript','flux','react']
 ---
 
 > 🎥 You can watch a full video tutorial on [how to create your React application with Context.API and Flux following this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b).
