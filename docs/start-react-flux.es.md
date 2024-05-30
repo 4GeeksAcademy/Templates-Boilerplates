@@ -1,7 +1,7 @@
 ---
 title: 'Inicia una aplicación Web con React'
 description: 'Utiliza las tecnologías Fullstack para crear aplicaciones profesionales con React.js y FastAPI.'
-technologies: ['html', 'css', 'python','javascript','fastapi','react']
+technologies: ['html', 'css', 'javascript','flux','react']
 ---
 
 > 🎥 Puedes ver un videotutorial completo sobre [cómo crear tu aplicación React con Context.API y Flux siguiendo esta plantilla](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b).
