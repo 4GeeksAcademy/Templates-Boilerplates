@@ -94,7 +94,7 @@ Básicamente estamos consultando la base de datos para obtener el usuario con es
 
 ### C) Otros ejemplos de validación
 
-En el siguiente archivo [🔥🔥🔥 puedes encontrar más ejemplos de validación.](/other/express/example-actions)
+En el siguiente archivo [🔥🔥🔥 puedes encontrar más ejemplos de validación.](https://4geeks.com/es/docs/start/ejemplos-de-actions-en-express)
 
 ## Autenticación con JWT
 
@@ -146,7 +146,7 @@ userRepository.findOne(1, {
 
 ### Más consultas avanzadas
 
-[🔥🔥🔥 Haga clic aquí para ver más ejemplos de consultas avanzadas](/other/express/query)
+[🔥🔥🔥 Haga clic aquí para ver más ejemplos de consultas avanzadas](https://4geeks.com/es/docs/start/consultas-con-express)
 
 ## Operaciones CRUD de base de datos
 
@@ -180,7 +180,7 @@ Suponiendo que desea actualizar el usuario con el ID=1 y establecer su nombre a 
 await repository.update(1, { firstName: "Rizzrak" });
 ```
 
-[🔥🔥🔥 Aquí puede encontrar otros ejemplos de operaciones CRUD más complejas.](/other/express/crud)
+[🔥🔥🔥 Aquí puede encontrar otros ejemplos de operaciones CRUD más complejas.](https://4geeks.com/es/docs/start/haciendo-un-crud-con-express)
 
 ## Migraciones (sólo para el entorno de producción)
 
