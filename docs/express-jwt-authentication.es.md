@@ -6,7 +6,7 @@ technologies: ['expressjs', 'node', 'JWT','RestAPI']
 
 # Pasos para implementar JWT dentro de su aplicación express
 
-## 1) Instalación
+### 1) Instalación
 
 Instala estas 3 librerías que se encargarán de generar los tokens JWT:
 
@@ -14,7 +14,7 @@ Instala estas 3 librerías que se encargarán de generar los tokens JWT:
 npm install express-jwt @types/express-jwt jsonwebtoken @types/jsonwebtoken --save
 ```
 
-## 2) Login endpoint
+### 2) Login endpoint
 
 El segundo paso es crear una ruta API que pueda ser llamada por el cliente para generar un token (también conocido como login), esta ruta recibirá el `email` y `password` del `body` y buscará cualquier usuario en la base de datos que coincida con esos dos valores.
 
@@ -44,9 +44,9 @@ export const createToken = async (req: Request, res: Response): Promise<Response
 }
 ```
 
-## 3) Ejecución
+### 3) Ejecución
 
-Ahora tenemos que añadir un [middleware](https://developer.okta.com/blog/2018/09/13/build-and-understand-express-middleware-through-examples) que buscará el token en el [Encabezado de autorización de la petición](https://blog.restcase.com/restful-api-authentication-basics/).
+Ahora tenemos que añadir un [middleware](https://developer.okta.com/blog/2018/09/13/build-and-understand-express-middleware-through-examples) que buscará el token en el [Encabezado de autorización de la petición](https://blog.restcase.com/restful-api-authentication-basics/). El middleware interceptará cada petición y ejecuta la función `next` para avanzar solo si logra validar el token, en caso contrario retornará un error.
 
 Añade estos dos middlewares dentro de `./src/app.js` que se encargarán de hacer cumplir el token.
 
@@ -58,13 +58,13 @@ app.use(jwt(opt))
 app.use(((err: any, req: any, res: any, next: any) => {
  if (err) console.error(err);
  if (err.name === 'UnauthorizedError') {
-   res.status(401).json({ status: err.message });
+   return res.status(401).json({ status: err.message });
  }
  next();
 }))
 ```
 
-#### ⚠️ Important
+### ⚠️ Important
 
 Cualquier endpoint que se añada DEBAJO de estos middlewares será privado, por ejemplo:
 
@@ -82,7 +82,7 @@ app.get('/private', (req, res) => {
 })
 ```
 
-## 3) Obtener el usuario autenticado
+### 3) Obtener el usuario autenticado
 
 Hemos terminado, pero si sólo los usuarios registrados pueden llamar a nuestros endpoints privados, entonces necesitamos una forma de saber quién los está llamando, por ejemplo podemos usar `req.user` de ahora en adelante, para identificar al usuario de la petición:
 
@@ -91,7 +91,7 @@ export const getMe = async (req: Request, res: Response): Promise<Response> =>{
  
  const users = await getRepository(Users).find({ where: });
  //                  ⬇ no procedentes de la BD
- return res.json(req.user);
+ return res.json(req.auth);
 }
 ```
 
@@ -102,6 +102,6 @@ export const getMe = async (req: Request, res: Response): Promise<Response> =>{
 
 
  //                  ⬇ not comming from the BD
- return res.json(req.user);
+ return res.json(req.auth);
 }
 ```
