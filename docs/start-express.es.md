@@ -210,4 +210,4 @@ postgres=#
 ```
 ## ¿Cómo implementar un esquema JWT en mi API con Flask?
 
-> [En éste artículo encontrarás todos los detalles de cómo implementar este esquema en tu API Flask](https://4geeks.com/es/lesson/what-is-JWT-and-how-to-implement-with-Flask-es)
+> [En éste artículo encontrarás todos los detalles de cómo implementar este esquema en tu API Flask](https://4geeks.com/es/lesson/comprendiendo-jwt-y-como-implementar-un-jwt-simple-con-express)
