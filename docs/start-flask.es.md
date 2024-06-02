@@ -269,6 +269,10 @@ db.session.delete(user1)
 db.session.commit()
  ```
 
+## ¿Cómo implementar un esquema JWT en mi API con Flask?
+
+> [En éste artículo encontrarás todos los detalles de cómo implementar este esquema en tu API Flask](https://4geeks.com/es/lesson/what-is-JWT-and-how-to-implement-with-Flask-es)
+
 ## Despliegue
 
 Esta plantilla es 100% compatible con [Heroku](https://www.heroku.com/) y [Render.com](https://www.render.com), sólo asegúrate de leer las guías de despliegue rápido.

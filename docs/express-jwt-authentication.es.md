@@ -25,6 +25,8 @@ Si encuentra el valor, generará un token llamando a la función `jwt.sign`.
 router.post('/token', safe(createToken));
 
 // esta función va en tu actions.ts
+import jwt from 'jsonwebtoken'
+
 export const createToken = async (req: Request, res: Response): Promise<Response> =>{
   
  if(!req.body.email) throw new Exception("Please specify an email on your request body", 400)
@@ -52,6 +54,8 @@ Añade estos dos middlewares dentro de `./src/app.js` que se encargarán de hace
 
 ```js
 // ⬆ todo lo ANTERIOR es público
+import jwt, { Options } from 'express-jwt';
+
 let opt: Options = { secret: process.env.JWT_KEY as string, algorithms: ["HS256"] }
 app.use(jwt(opt))
 // ⬇ todo lo que esté POR DEBAJO es público

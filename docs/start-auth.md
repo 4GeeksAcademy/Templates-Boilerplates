@@ -1,5 +1,5 @@
 ---
-title: "Understanding JWT and how to implement a simple JWT with Flask"
+title: "API Authentication with Json Web Tokens"
 subtitle: "What is JSON Web Token (JWT), how does it work, and how to apply it to your API using the Flask Microframework for API Development"
 technologies: ['expressjs', 'node', 'JWT','RestAPI', 'python','flask','fastapi']
 ---

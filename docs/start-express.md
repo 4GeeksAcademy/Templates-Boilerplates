@@ -96,12 +96,6 @@ We are basically querying the database to get the user with that given ID and ma
 
 In the following file [🔥🔥🔥 you can find more validation examples.](https://4geeks.com/docs/start/express-example-actions) 
 
-## Authentication with JWT
-
-We strongly recommend using express-jwt and jsonwebtoken libraries for authentication.
-
-The authentication can be split into 4 steps and [🔥🔥🔥 here is a very detailed explanation on how to implement it with express and typescript.](/other/express/jwt-authentication)
-
 ## Database Query (Get information)
 
 TypeORM has a lot of ways to retrieve information from the database, we are going to show the most used examples here, and you can check this document for more advanced ways to query information.
@@ -217,3 +211,6 @@ Type "help" for help.
 postgres=#
 ```
 
+## How to implement a JWT schema on my API with Express?
+
+> [In this article you will find the details about how to implement this schema on your Express API](https://4geeks.com/lesson/what-is-jwt-and-how-to-implement-with-express)
