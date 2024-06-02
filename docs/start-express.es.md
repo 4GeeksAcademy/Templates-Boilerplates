@@ -96,12 +96,6 @@ Básicamente estamos consultando la base de datos para obtener el usuario con es
 
 En el siguiente archivo [🔥🔥🔥 puedes encontrar más ejemplos de validación.](https://4geeks.com/es/docs/start/ejemplos-de-actions-en-express)
 
-## Autenticación con JWT
-
-Recomendamos encarecidamente usar las librerías express-jwt y jsonwebtoken para la autenticación.
-
-La autenticación se puede dividir en 4 pasos y [🔥🔥🔥 aquí hay una explicación muy detallada de cómo implementarlo con express y typescript.](/other/express/jwt-authentication)
-
 ## Consulta a la base de datos (Obtener información)
 
 TypeORM tiene un montón de maneras de recuperar información de la base de datos, vamos a mostrar los ejemplos más utilizados aquí, y puede consultar este documento para formas más avanzadas de consultar información.
@@ -214,3 +208,6 @@ Type "help" for help.
 
 postgres=#
 ```
+## ¿Cómo implementar un esquema JWT en mi API con Flask?
+
+> [En éste artículo encontrarás todos los detalles de cómo implementar este esquema en tu API Flask](https://4geeks.com/es/lesson/what-is-JWT-and-how-to-implement-with-Flask-es)

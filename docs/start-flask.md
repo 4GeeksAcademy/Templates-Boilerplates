@@ -270,6 +270,10 @@ db.session.delete(user1)
 db.session.commit()
  ```
 
+## How to implement a JWT schema on my API with Flask?
+
+> [In this article you will find the details about how to implement this schema on your Flask API](https://4geeks.com/lesson/what-is-jwt-and-how-to-implement-with-flask)
+
 ## Deploy 
 
 This template is 100% compatible with [Heroku](https://www.heroku.com/) and [Render.com](https://www.render.com), just make sure to read the quick deployment guides.
