@@ -8,7 +8,7 @@ The most basic template for any 4Geeks Academy Student, ideal for starting your 
 
 ## If you are **working locally**
 
-- Download and install node.js: [use nvm on your windows](https://4geeks.com/how-to/nvm-install-windows) or [nvm on linux](https://4geeks.com/how-to/install-nvm-linux), or [nvm on macOS](https://4geeks.com/how-to/install-node-nvm-mac-osx).
+- Download and [install python using pyenv](https://4geeks.com/how-to/what-is-pyenv-and-how-to-install-pyenv) (recommended).
 - Download the repository template.  
 
 ## If you are working from Codespaces or Gitpod
