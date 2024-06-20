@@ -8,7 +8,8 @@ La plantilla más básica para cualquier estudiante de la Academia 4Geeks ideal 
 
 ## Si estás **trabajando localmente**:
 
-Descarga e [instala python usando pyenv](https://4geeks.com/es/how-to/que-es-pyenv-y-como-instalar-pyenv).
+- Descarga e [instala python usando pyenv](https://4geeks.com/es/how-to/que-es-pyenv-y-como-instalar-pyenv).
+- Clona el repositorio del template y entra al nuevo directorio recien clonado.
 
 ## Si estás trabajando desde Gitpod:
 
