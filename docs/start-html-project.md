@@ -22,7 +22,7 @@ Just click on [this link to start your project](https://s.4geeks.com/start?repo=
 Create a `index.html` file with the [basic HTML structure](http://content.breatheco.de/lesson/what-is-html-learn-html#page-structure) and see it live by running web-server using the following command:
 
 ```bash
-pip3 install flask && python3 server.py
+pip zinstall flask && python server.py
 ```
 
 - You can create as many HTML files you want
