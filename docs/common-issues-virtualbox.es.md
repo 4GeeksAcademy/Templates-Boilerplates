@@ -24,7 +24,7 @@ Esta clave solo es valida para el proceso de instalación, pero no para activar 
 
 
 
-## Error after instalation "Fallo al adquirir objeto VirtualBox COM"
+## Error despues de la instalación "Fallo al adquirir objeto VirtualBox COM"
 
 Este error puede ocurrir por algún error en el proceso posterior a la instalación de VirtualBox, lo que impide que el programa inicie por primera vez.
 
