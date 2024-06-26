@@ -2,7 +2,7 @@
 
 > Microsoft Visual C++ Redistributable Package required
 
-![VirtualBox C++ error](../static/img/vbox-cpp-error.png)
+![VirtualBox C++ error](https://github.com/4GeeksAcademy/Templates-Boilerplates/raw/master/static/img/vbox-cpp-error.png)
 
 There are 2 steps to solve this error:
 
@@ -12,7 +12,7 @@ There are 2 steps to solve this error:
 
 ## Problem with product key in unattended Windows installation
 
-Windows product key error](../static/img/win-product-key-error.png)
+![Windows product key error](https://github.com/4GeeksAcademy/Templates-Boilerplates/raw/master/static/img/win-product-key-error.png)
 
 This error appears when a product key is not specified during the unattended installation setup process. To correct this, it is recommended to reconfigure the virtual machine and place the following key in the "Product Key" field
 
@@ -20,14 +20,14 @@ This error appears when a product key is not specified during the unattended ins
 
 This key is only valid for the installation process, but not for activating Windows.
 
-![Windows unattended](../static/img/createvm2.png)
+![Windows unattended](https://github.com/4GeeksAcademy/Templates-Boilerplates/raw/master/static/img/createvm2.png)
 
 
 
 ## Error after installation "Failed to acquire VirtualBox COM object".
 
 This error may occur due to some error in the process after the installation of VirtualBox, which prevents the program from starting for the first time.
-![VirtualBox C++ error](../static/img/vbox-com-error.png)
+![VirtualBox C++ error](https://github.com/4GeeksAcademy/Templates-Boilerplates/raw/master/static/img/vbox-com-error.png)
 
 It occurs due to the occurrence of an error in the VirtualBox configuration files. To solve it we must force the program to generate these files again, to do this you must go to the user's personal folder `C:\Users\{Username}` and there locate the folder `.VirtualBox`. It is enough to change the name of this folder (it can be .VirtualBox_old) and to start the program again so that the configuration files are generated again. 
 

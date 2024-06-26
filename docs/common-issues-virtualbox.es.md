@@ -2,7 +2,7 @@
 
 > Se necesita Microsoft Visual C++ Redistributable Package
 
-![VirtualBox C++ error](../static/img/vbox-cpp-error.png)
+![VirtualBox C++ error](https://github.com/4GeeksAcademy/Templates-Boilerplates/raw/master/static/img/vbox-cpp-error.png)
 
 Hay 2 pasos para solventar este error:
 
@@ -12,7 +12,7 @@ Hay 2 pasos para solventar este error:
 
 ## Problema con la clave de producto en la instalación desatendida de Windows
 
-![Windows product key error](../static/img/win-product-key-error.png)
+![Windows product key error](https://github.com/4GeeksAcademy/Templates-Boilerplates/raw/master/static/img/win-product-key-error.png)
 
 Este error aparece cuando no se especifíca una clave de producto durante el proceso de configuración de la instalación desatendida. Para corregir esto lo recomendable es volver a configurar la máquina virtual y colocar la siguiente clave en el campo de "Product Key"
 
@@ -20,7 +20,7 @@ Este error aparece cuando no se especifíca una clave de producto durante el pro
 
 Esta clave solo es valida para el proceso de instalación, pero no para activar Windows.
 
-![Windows desatendido](../static/img/createvm2.png)
+![Windows desatendido](https://github.com/4GeeksAcademy/Templates-Boilerplates/raw/master/static/img/createvm2.png)
 
 
 
@@ -28,7 +28,7 @@ Esta clave solo es valida para el proceso de instalación, pero no para activar 
 
 Este error puede ocurrir por algún error en el proceso posterior a la instalación de VirtualBox, lo que impide que el programa inicie por primera vez.
 
-![VirtualBox C++ error](../static/img/vbox-com-error.png)
+![VirtualBox C++ error](https://github.com/4GeeksAcademy/Templates-Boilerplates/raw/master/static/img/vbox-com-error.png)
 
 Ocurre debido a la ocurrencia de un error en los archivos de configuración de VirtualBox. Para solucionarlo debemos forzar que el programa vuelva a generar estos archivos, para ello debes ir a la carpeta personal del usuario `C:\Users\{NombreDeUsuario}` y ahi ubicar la carpeta `.VirtualBox`. Basta con cambiarle el nombre a esta carpeta (puede ser .VirtualBox_old) y arrancar el programa de nuevo para que se generen los archivos de configuracion nuevamente. 
 
