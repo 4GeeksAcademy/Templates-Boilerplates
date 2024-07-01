@@ -1,3 +1,10 @@
+---
+title: "Common issues on Virtualbox"
+description: "Discover solutions to common issues on VirtualBox. From installation errors to performance problems, our guide covers everything you need to know to troubleshoot effectively."
+tags: ["cybersecurity"]
+
+---
+
 ## Error installing VirtualBox on Windows
 
 > Microsoft Visual C++ Redistributable Package required
