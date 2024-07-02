@@ -1,7 +1,8 @@
 ---
 title: 'Starting a project for API Development (with Flask)'
 description: 'How to start and build a successful Flask API'
-technologies: ['python','flask']
+technologies: ['python', 'flask']
+
 ---
 
 > 🎥 Here's a video tutorial about [creating Flask API's using this boilerplate](https://youtu.be/ORxQ-K3BzQA).
@@ -20,15 +21,15 @@ For a more detailed explanation, look for the tutorial inside the `docs` folder.
 
 ## Installing on Ubuntu, Mac and Windows
 
-⚠️ Make sure you have `python 3.6+`, `pipenv` and `Postgres` installed on your computer and Postgres is running, then run the following commands:
+⚠️ Make sure you have `python 3.6+` (Here we have a step-by-step guide of [how to install python](https://4geeks.com/how-to/how-to-install-python)), `pipenv` (On this article, we explain [what is pyenv and how to install pyenv](https://4geeks.com/how-to/what-is-pyenv-and-how-to-install-pyenv)) and `Postgres` installed on your computer, then make sure Postgres is running, and run the following commands:
 
 ```bash
-$ pipenv install #(to install pip packages)
-$ pipenv run migrate #(to create the database)
-$ pipenv run start #(to start the flask webserver)
+$ pipenv install # (to install pip packages)
+$ pipenv run migrate # (to create the database)
+$ pipenv run start # (to start the flask webserver)
 ```
 
-> ⚠️ Windows installation may work, but you can also try installing it online through [4Geeks' One-Click bridge](https://breathecode.herokuapp.com/start) on top of Github Codespaces or Gitpod.
+> ⚠️ Local installation may work, but you can also try installing it online through [4Geeks' Click and Learn](https://breathecode.herokuapp.com/start) on top of Github Codespaces or Gitpod.
 
 ## Adding an endpoint
 
