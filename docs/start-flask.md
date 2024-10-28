@@ -110,7 +110,7 @@ We also use SQLAlchemy to abstract our database, that means that you don't have 
 
 Since we are not going to be using SQL directly, instead we are going to be working with SQLAlchemy using Python.
 
-> [Click in this link](/backend/database) for a more in-depth tutorial on how to work with SQLAlchemy and Postgres to CRUD (Create, Read, Update and Delete data).
+> [Click in this link](/docs/start/postgresql-template-starter) for a more in-depth tutorial on how to work with SQLAlchemy and Postgres to CRUD (Create, Read, Update and Delete data).
 
 ### Flask Admin
 
