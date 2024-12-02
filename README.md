@@ -15,8 +15,9 @@
 - **Empty project**: Ideal for beginners, lightweight server.py to run HTML projects.  
 [Open Repository](https://github.com/4GeeksAcademy/html-hello)
 
-- **Vanilla JS**: Use webpack without front-end frameworks. Hot Deploy. ES7. Minimum configuration but professional workflow. Ideal for juniors starting on webpack.  
-[Open Repository](https://github.com/4GeeksAcademy/vanillajs-hello)
+
+- **Vanilla JS with Vite**: Use vite without front-end frameworks. Hot Deploy. ES7. Minimum configuration but professional workflow. Ideal for juniors starting on vite.  
+[Open Repository](https://github.com/4GeeksAcademy/vanillajs-hello-vite)
 
 - **React.js**: Create React App comes with too many files and almost no utilities. With documentation and video tutorials, deploy to different servers in just one command. Ideal for anyone.  
 [Open Repository](https://github.com/4GeeksAcademy/react-hello)
@@ -35,6 +36,9 @@
 
 
 ## Other deprecated templates (⚠️ Unmaintained & Deprecated):
+
+- **Vanilla JS**: Use webpack without front-end frameworks. Hot Deploy. ES7. Minimum configuration but professional workflow. Ideal for juniors starting on webpack.  
+[Open Repository](https://github.com/4GeeksAcademy/vanillajs-hello)
 
 - **Flask API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Authentication, SQL Alchemy Integration, Pipenv, .env, One-Click deploy to Heroku (free hosting).  
 [Open Repository](https://github.com/4GeeksAcademy/flask-rest-hello)
