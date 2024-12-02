@@ -37,7 +37,7 @@
 
 ## Other deprecated templates (⚠️ Unmaintained & Deprecated):
 
-- **Vanilla JS**: Use webpack without front-end frameworks. Hot Deploy. ES7. Minimum configuration but professional workflow. Ideal for juniors starting on webpack.  
+- **Vanilla JS with Webpack**: Use webpack without front-end frameworks. Hot Deploy. ES7. Minimum configuration but professional workflow. Ideal for juniors starting on webpack.  
 [Open Repository](https://github.com/4GeeksAcademy/vanillajs-hello)
 
 - **Flask API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Authentication, SQL Alchemy Integration, Pipenv, .env, One-Click deploy to Heroku (free hosting).  
