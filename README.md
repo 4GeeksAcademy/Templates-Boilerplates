@@ -19,8 +19,8 @@
 - **Vanilla JS with Vite**: Use vite without front-end frameworks. Hot Deploy. ES7. Minimum configuration but professional workflow. Ideal for juniors starting on vite.  
 [Open Repository](https://github.com/4GeeksAcademy/vanillajs-hello-vite)
 
-- **React.js**: Create React App comes with too many files and almost no utilities. With documentation and video tutorials, deploy to different servers in just one command. Ideal for anyone.  
-[Open Repository](https://github.com/4GeeksAcademy/react-hello)
+- **React.js**: Create React App has too many files and almost no utilities; this version is simplified. Ideal for beginners.  
+[Open Repository](https://github.com/4GeeksAcademy/react-hello-vite)
 
 - **React.js Advanced**: Ideal for professional development, Minimum version for Flux + Context API implemented. One click deploy to several hostings free, documentation and video tutorials.  
 [Open Repository](https://github.com/4GeeksAcademy/react-hello-webapp)
@@ -39,6 +39,9 @@
 
 - **Vanilla JS with Webpack**: Use webpack without front-end frameworks. Hot Deploy. ES7. Minimum configuration but professional workflow. Ideal for juniors starting on webpack.  
 [Open Repository](https://github.com/4GeeksAcademy/vanillajs-hello)
+
+- **React.js**: Create React App comes with too many files and almost no utilities. With documentation and video tutorials, deploy to different servers in just one command. Ideal for anyone.  
+[Open Repository](https://github.com/4GeeksAcademy/react-hello)
 
 - **Flask API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Authentication, SQL Alchemy Integration, Pipenv, .env, One-Click deploy to Heroku (free hosting).  
 [Open Repository](https://github.com/4GeeksAcademy/flask-rest-hello)
