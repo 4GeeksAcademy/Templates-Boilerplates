@@ -15,7 +15,7 @@
 - **Empty project**: Ideal for beginners, lightweight server.py to run HTML projects.  
 [Open Repository](https://github.com/4GeeksAcademy/html-hello)
 
-- **Python Project**: Beginners starter template for Python.
+- **Python Project**: Beginners starter template for Python.  
 [Open Repository](https://github.com/4GeeksAcademy/python-hello)
 
 - **Vanilla JS with Vite**: Use vite without front-end frameworks. Hot Deploy. ES7. Minimum configuration but professional workflow. Ideal for juniors starting on vite.  
