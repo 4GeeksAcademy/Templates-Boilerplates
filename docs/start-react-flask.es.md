@@ -8,11 +8,11 @@ Esta plantilla tiene `archivos backend` y `archivos frontend` juntos, es la comb
 
 ## Front end
 
-Puedes encontrar una explicación completa sobre cómo crear nuevas páginas, componentes, añadir estilos y usar el contexto, dentro de [esta documentación previa que creamos para la plantilla React Flux](https://4geeks.com/es/docs/start/start-new-project-with-react). Esto se debe a que la plantilla Full-Stack fue creada bajo la misma estructura y conceptos que aquella.
+Puedes encontrar una explicación completa sobre cómo crear nuevas páginas, componentes, añadir estilos y usar el contexto, dentro de [esta documentación previa que creamos para la plantilla React Flux](https://4geeks.com/es/docs/start/inicia-react-flux). Esto se debe a que la plantilla Full-Stack fue creada bajo la misma estructura y conceptos que aquella.
 
 ## Backend
 
-Usted puede encontrar una explicación completa sobre la creación de sus puntos finales de la API de Flask, la creación de nuevos modelos, migraciones de base de datos y el uso del administrador de Flask [en esta documentación](https://4geeks.com/es/docs/start/python-api-flask-template), esto se debe a que esta plantilla fue creada con la misma estructura y conceptos que la plantilla de la API de Flask.
+Usted puede encontrar una explicación completa sobre la creación de sus puntos finales de la API de Flask, la creación de nuevos modelos, migraciones de base de datos y el uso del administrador de Flask [en esta documentación](https://4geeks.com/es/docs/start/inicia-api-flask-python), esto se debe a que esta plantilla fue creada con la misma estructura y conceptos que la plantilla de la API de Flask.
 
 ## Instalación manual (sólo si es necesario)
 
