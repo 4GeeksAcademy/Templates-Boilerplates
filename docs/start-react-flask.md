@@ -8,11 +8,11 @@ This template has `backend files` and `front end files` together, it's the perfe
 
 ## Front end
 
-You can find a thorough explanation on how to create new pages, components, adding styles and using the context, inside [this previous documentation we created for the React Flux template](/starters/flux). This is because the Full-Stack Template was created under the same structure and concepts as that one.
+You can find a thorough explanation on how to create new pages, components, adding styles and using the context, inside [this previous documentation we created for the React Flux template](/starters/start-react-flux). This is because the Full-Stack Template was created under the same structure and concepts as that one.
 
 ## Backend
 
-You can find a thorough explanation on creating your Flask API endpoints, creating new models, database migrations and using the flask admin [in this documentation](/starters/flask), this is because this template was created with the same structure and concepts as the Flask API Template.
+You can find a thorough explanation on creating your Flask API endpoints, creating new models, database migrations and using the flask admin [in this documentation](/starters/python-api-flask-template), this is because this template was created with the same structure and concepts as the Flask API Template.
 
 
 ## Manual Installation (only if needed)
