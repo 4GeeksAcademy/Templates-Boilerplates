@@ -40,23 +40,37 @@ Para cada endpoint necesitará tener:
 4. Tienes que devolver siempre un json y un código de estado (200, 400, 404, etc.)
 
 ```py
+from sqlalchemy import select
+from sqlalchemy.exc import NoResultFound
+
+
 @app.route('/person/<int:person_id>', methods=['PUT', 'GET'])
 def get_single_person(person_id):
-    """
-    Una persona
-    """
+    """A person (Updated: Using session.execute)"""
     body = request.get_json() #{ 'username': 'new_username'}
-    if request.method == 'PUT':
-        user1 = Person.query.get(person_id)
-        user1.username = body.username
-        db.session.commit()
-        return jsonify(user1.serialize()), 200
-    if request.method == 'GET':
-        user1 = Person.query.get(person_id)
-        return jsonify(user1.serialize()), 200
+    try:
+        stmt = select(Person).where(Person.id == person_id)
+        result = db.session.execute(stmt)
+        user1 = result.scalars().first()
+        
+        if user1 is None:
+            return jsonify({'error': 'Person not found'}), 404
 
-    return "Invalid Method", 404
+        if request.method == 'PUT':
+            user1.username = body['username']
+            db.session.commit()
+            return jsonify(user1.serialize()), 200
+        elif request.method == 'GET':
+            return jsonify(user1.serialize()), 200
+
+    except NoResultFound:
+        return jsonify({'error': 'Person not found'}), 404
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+    return jsonify({'error': 'Invalid method'}), 405
 ```
+
 
 ### Cómo validar la carga útil de la solicitud o la cadena de consulta
 
@@ -108,7 +122,7 @@ También usamos SQLAlchemy para abstraer nuestra base de datos, eso significa qu
 
 Ya que no vamos a usar SQL directamente, en su lugar vamos a trabajar con SQLAlchemy usando Python.
 
-> Pulsa en este enlace](/backend/database) para ver un tutorial más detallado sobre cómo trabajar con SQLAlchemy y Postgres para CRUD (Crear, Leer, Actualizar y Borrar datos).
+> [Pulsa en este enlace](/backend/database) para ver un tutorial más detallado sobre cómo trabajar con SQLAlchemy y Postgres para CRUD (Crear, Leer, Actualizar y Borrar datos).
 
 ### Flask Admin
 
@@ -194,14 +208,14 @@ Como ejemplo, vamos a crear una pequeña API para gestionar una Persona.
 Para cada `model` tendrás que declarar una clase con las propiedades del modelo y un método `serialize` que devuelva una representación de diccionario de la clase:
 
 ```py
-class Person(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True, nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
+from sqlalchemy import String
+from sqlalchemy.orm import Mapped, mapped_column
 
-    # indica a python cómo imprimir el objeto de clase en la consola
-    def __repr__(self):
-        return '<Person %r>' % self.username
+
+class Person(db.Model):
+    id: Mapped[int] = mapped_column(primary_key=True)
+    username: Mapped[str] = mapped_column(unique=True)
+    email: Mapped[str] = mapped_column(String(120), unique=True, nullable=False)
 
     # indica a python cómo convertir el objeto de clase en un diccionario listo para jsonificar
     def serialize(self):
@@ -223,16 +237,19 @@ Asumiendo que tienes un objeto Person en tu fichero `models.py`.
 
 ```py
 # coger a toda la gente
-people_query = Person.query.all()
+stmt = select(Person)
+people_query = db.session.execute(stmt).scalars().all()
 
 # obtener sólo las que se llamen "Joe
-people_query = Person.query.filter_by(name='Joe')
+stmt = select(Person).where(Person.name == 'Joe')
+people_query = db.session.execute(stmt).scalars().all()
 
 # asigna los resultados y tu lista de personas dentro de la variable all_people
 all_people = list(map(lambda x: x.serialize(), people_query))
 
 # obtener sólo una persona
-user1 = Person.query.get(person_id)
+stmt = select(Person).where(Person.id == person_id)
+user1 = db.session.execute(stmt).scalars().first()
  ```
 
 ### Insertar datos
@@ -248,7 +265,9 @@ db.session.commit()
 ### Actualización de datos
 
 ```py
-user1 = Person.query.get(person_id)
+stmt = select(Person).where(Person.id == person_id)
+user1 = db.session.execute(stmt).scalars().first()
+
 if user1 is None:
     raise APIException('User not found', status_code=404)
 
@@ -262,7 +281,9 @@ db.session.commit()
 ### Borrar datos
 
  ```py
- user1 = Person.query.get(person_id)
+stmt = select(Person).where(Person.id == person_id)
+user1 = db.session.execute(stmt).scalars().first()
+
 if user1 is None:
     raise APIException('User not found', status_code=404)
 db.session.delete(user1)
