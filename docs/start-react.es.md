@@ -33,7 +33,7 @@ Puedes actualizar `styles/index.css` o `js/index.js` dependiendo de tus necesida
 
 Esta plantilla es 100% compatible con las páginas gratuitas [github pages](https://pages.github.com/) y [vercel](https://vercel.com/).
 
-Sólo se tarda 2 minutos en desplegarlo, [haga clic aquí para iniciar el proceso](https://github.com/4GeeksAcademy/react-hello/blob/master/docs/DEPLOY.md).
+Sólo se tarda 2 minutos en desplegarlo, [haga clic aquí para iniciar el proceso](https://4geeks.com/docs/start/deploy-to-render-com).
 
 ## Otras funciones
 
