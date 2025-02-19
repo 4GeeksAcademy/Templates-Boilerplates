@@ -1,169 +1,218 @@
 ---
 title: 'Inicia una aplicación Web con React'
-description: 'Utiliza las tecnologías Fullstack para crear aplicaciones profesionales con React.js y FastAPI.'
-technologies: ['html', 'css', 'javascript','flux','react']
+description: 'Utiliza las tecnologías Fullstack para crear aplicaciones profesionales con React.js.'
+technologies: ['html', 'css', 'javascript', 'react', 'react-router', 'useReducer', 'useContext']
 ---
 
-> 🎥 Puedes ver un videotutorial completo sobre [cómo crear tu aplicación React con Context.API y Flux siguiendo esta plantilla](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b).
+> 🎥 Puedes ver un videotutorial completo sobre [cómo crear tu aplicación React con Context.API y useReducer siguiendo esta plantilla]().
 
-## Inicio rápido
 
-Crea tu primera vista, añádela a las rutas de tu aplicación, crea tu primer componente, añade estilos y utiliza la API de contexto.
 
-### Instalación
 
-Asegúrate de seguir primero los pasos de [ejecutar el proyecto](https://github.com/4GeeksAcademy/react-hello-webapp/blob/master/README.md), luego vuelve a esta lista, si estás usando Gitpod o Codespaces es posible que el proyecto ya esté en ejecución.
+## Inicio rápido: `useReducer` y `useContext` en tu Template
 
-### Añade tu primera vista
 
-Es hora de añadir algo de código: Todo empieza en el layout de la aplicación (`js/layout.js`), este archivo es como una tabla de contenidos donde se añadirán todas las páginas de tu aplicación antes de que puedan ser renderizadas por React y el navegador, puedes [leer más sobre React Router aquí](https://4geeks.com/lesson/routing-our-views-with-react-router).
 
-Ya hemos añadido algunas rutas como `Home`, `Demo` y `Single`, estas vistas son ejemplos útiles de las cosas más frecuentes que sueles necesitar en un proyecto.
+### 1. Instalación
 
-Todas las páginas de tu aplicación se añadirán en la carpeta `js/pages`, cada una de ellas será un componente React independiente.
+Asegúrate de seguir primero los pasos de [ejecutar el proyecto](https://github.com/4GeeksAcademy/react-hello-webapp/blob/master/README.es.md), luego vuelve a esta lectura. Si estás usando **Codespaces** es posible que el proyecto ya esté en ejecución.
 
-Abramos la vista `<Demo>` en `js/pages/demo.js`.
 
-### Codifica tu primera vista HTML
 
-Como puedes ver, la página `demo.js` es sólo un componente React, aquí hay cosas adicionales a notar:
+### 2. Añade tu primera vista
 
-- El componente devuelve HTML.
-- Al principio del archivo del componente (demo.js) hay dos importaciones: El `AppContext` que se utilizará para tratar cualquier información global necesaria de otras vistas o de la aplicación; Y el `demo.css` que se utilizará para añadir cualquier clase CSS y estilos utilizados en esta vista en particular.
-- También es importante mencionar que el AppContext se declara dentro del componente, en el primer par de líneas:
+La app inicia en `main.jsx`, donde se define el proveedor global. Las rutas están en el archivo `routes.jsx`, que organiza la navegación de la aplicación a través de `reac-router`, puedes [leer más sobre React Router aquí](https://4geeks.com/lesson/routing-our-views-with-react-router).
 
-```js
-const { store, actions } = useContext(Context);
-```
+Abre  el archivo `routes.jsx`, donde se definen las rutas como:
 
-### Añadir estilos a vistas o componentes
+```javascript
+import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
+import { Layout } from "./pages/Layout";
+import { Home } from "./pages/Home";
+import { Single } from "./pages/Single";
+import { Demo } from "./pages/Demo";
 
-Todos los estilos de la aplicación se guardan dentro de la carpeta `styles`, normalmente tenemos un estilo separado para cada componente.
-
-Puedes actualizar `styles/index.css` o crear nuevos archivos `.css` dentro de `styles/` e importarlos a tus archivos CSS o JS actuales dependiendo de tus necesidades.
-
-Por ejemplo, si quieres crear una clase `background-blue` que haga que el fondo de la home sea azul, tienes que hacer algo como esto:
-
-- Añade la clase `.background-blue` en `styles/home.css`.
-- Usa tu clase añadiendo el `<div className="background-blue">` en tu página HTML en `js/pages/home.js`.
-
-### Crear su primer componente
-
-Normalmente querrás que la mayor parte de tu aplicación HTML esté dividida en componentes que puedan ser reutilizados.
- 
-Todos los componentes deben ser creados en `js/components` y luego puedes importarlos a las páginas que los utilizarán.
-
-> Estamos utilizando componentes funcionales (en lugar de componentes orientados a clases), ya que es la mejor práctica en la industria.
- 
-Por ejemplo, si queremos añadir un nuevo componente `<Card>` que replique la [tarjeta clásica de bootstrap](https://getbootstrap.com/docs/5.0/components/card/), podemos crear un `js/components/Card.js` con el siguiente código:
-
-```jsx
-export const Card = () => (
- const [state, setState] = useState('code here'); //utilizar el estado (si es necesario)
- return <div className="card">
-   <div className="card-body">
-     <h5 className="card-title">Card title</h5>
-     <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
-     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-   </div>
- </div>
+export const router = createBrowserRouter(
+    createRoutesFromElements(
+        <Route path="/" element={<Layout />} errorElement={<h1>Not found!</h1>}>
+            <Route path="/" element={<Home />} />
+            <Route path="/single/:theId" element={<Single />} />
+            <Route path="/demo" element={<Demo />} />
+        </Route>
+    )
 );
 ```
 
-### Añadiendo componentes a nuestras páginas
+Como verás ya hemos añadido algunas rutas como `Home`, `Demo` y `Single`, estas vistas son ejemplos útiles de las cosas más frecuentes que sueles necesitar en un proyecto.
 
-Ahora que tenemos el componente `Card` podemos incorporarlo a nuestra página `Home.js` con los siguientes pasos:
+### 3. Codifica tu primera vista HTML
 
-1. Importar el componente en la parte superior de la página.
-2. Utiliza la etiqueta del componente `<Card>` dentro del HTML que devuelve tu página, por ejemplo:
+Como puedes ver, la página `/pages/Demo.jsx` es un componente React  que accede al estado global y despacha acciones:
 
-```jsx
-import { Card } from "../component/Card.js";
+```javascript
+import useGlobalReducer from "../hooks/useGlobalReducer";
 
-export const Home = () => {
- const { store, actions } = useContext(Context);
-
- return (
-  <div className="text-center mt-5">
-   <h1>Hello Rigo!!</h1>
-   <Card />
-  </div>
- );
+export const Demo = () => {
+  const { store, dispatch } = useGlobalReducer();
+  
+  return (
+    <ul>
+      {store.todos.map(todo => (
+        <li key={todo.id} style={{ background: todo.background }}>
+          {todo.title}
+          <button onClick={() => dispatch({ 
+            type: 'add_task', 
+            payload: { id: todo.id, color: '#ffa500' } 
+          })}>
+            Cambiar color
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
 };
 ```
+Algunos puntos claves que podrias observar de esta vista, son:
 
-**Notas importantes**
+- El componente devuelve HTML.
+- Al principio del archivo del componente (`Demo.js`) se hace la importacion de `useGlobalReducer` que se utilizará para tratar cualquier información global necesaria de otras vistas o de la aplicación.
+- También es importante mencionar que `useGlobalReducer` se llama dentro del componente, en el primer par de líneas:
 
-- Es importante utilizar las llaves `{` al importar el componente de esta forma: `{ Card }`.
-- Observa la etiqueta `<Card />` que se utiliza en la línea 9 del archivo `Home.js`.
+```js
+const { store, dispatch } = useGlobalReducer();
+```
 
-### Uso del contexto
 
-Este boilerplate viene con una API de Contexto general centralizada. El archivo `js/store/flux.js` tiene una estructura base para la tienda, te animamos a cambiarla y adaptarla a tus necesidades.
+### 4. Añadir estilos a componentes  
 
-- React Context [docs](https://react.dev/reference/react/useContext).
-- Lección de 4Geeks sobre [React hooks](https://content.breatheco.de/lesson/react-hooks-explained).
+Guarda estilos en el archivo `index.css` o crea archivos CSS por componente.  
 
-El `Provider` ya está configurado. Puedes consumir desde cualquier componente usando el hook `useContext` para obtener el `store` y las `actions` del Context. Mira `/views/demo.js` para ver una demo.
+#### Ejemplo (`src/styles/demo.css`):
 
-```jsx
-import { Context } from "../store/appContext";
-
-const MySuperPage = () => {
-  //aquí se usaContext para obtener store y actions
-  const { store, actions } = useContext(Context);
-
-return <div>{/* puede utilizar sus acciones o almacenar dentro del html */}</div>
+```css
+.orange-bg { 
+  background-color: #ffa500; 
 }
 ```
 
-## Publique su sitio web
+Importa en `Demo.jsx`:
 
-1. **Vercel:** El proveedor de hosting recomendado GRATIS es [vercel.com](https://vercel.com/), puedes desplegar en 1 minuto escribiendo los siguientes 2 comandos:
-
-Login (necesitas tener una cuenta):
-
-```bash
-npm i vercel -g && vercel login
+```javascript
+import "../styles/demo.css";
 ```
 
-Despliegue:
+### 5. Crea tu primer componente reutilizable  
 
-```bash
-vercel --prod
+Crea `./components/Card.jsx`:  
+
+```javascript
+export const Card = ({ title, subtitle }) => (
+  <div className="card">
+    <h5>{title}</h5>
+    <h6>{subtitle}</h6>
+  </div>
+);
 ```
 
-> ✎ Nota: Si no tiene una cuenta, vaya a vercel.com, cree una cuenta y vuelva aquí.
+Úsalo en `Home.jsx`:
 
-![Vercel example procedure to deploy](https://github.com/4GeeksAcademy/react-hello-webapp/blob/4b530ba091a981d3916cc6e960e370decaf2e234/docs/deploy.png?raw=true)
+```javascript
+import { Card } from "../components/Card";
 
-2. **Github Pages:** Este boilerplate es 100% compatible con el alojamiento gratuito de páginas Github.
-Para publicar su sitio web que necesita para empujar su código a su repositorio de Github y ejecutar el siguiente comando después:
-
-```bash
-npm run deploy
+export const Home = () => (
+  <Card title="Hello" subtitle="Welcome to Home" />
+);
 ```
 
-> 👉 Nota: Tendrás que [configurar las páginas de Github para la rama gh-pages].(https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
 
-## Ejecutar el proyecto
 
-> Nota: Asegúrese de que está utilizando la versión 14+ de node
+### 6. Uso del contexto (`useGlobalReducer`)
 
-1. Instala los paquetes:
+`useGlobalReducer` obtiene `store` y `dispatch` desde el contexto global definido en `src/hooks/useGlobalReducer.jsx`, conectándose con el sistema de manejo de estado de `src/store.js`.
 
-```bash
-npm install
+#### 🟡 ¿Cómo usarlo?
+En tus componentes, importa y usa el hook `useGlobalReducer` para acceder al estado (`store`) y actualizarlo mediante `dispatch`.
+
+#### 📌 Ejemplo en `Demo.jsx`:
+
+```javascript
+import useGlobalReducer from "../hooks/useGlobalReducer";
+
+export const Demo = () => {
+  const { store, dispatch } = useGlobalReducer();
+  
+  const cambiarColor = (id) => {
+    dispatch({
+      type: 'add_task',
+      payload: { id, color: '#ffa500' }
+    });
+  };
+
+  return (
+    <ul>
+      {store.todos.map(todo => (
+        <li key={todo.id} style={{ background: todo.background }}>
+          {todo.title}
+          <button onClick={() => cambiarColor(todo.id)}>
+            Cambiar color
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
+};
 ```
 
-2. Cree un archivo .env:
+### Cómo funcionan las acciones (`store.js`):
 
-```bash
-cp .env.example .env
+El estado global se guarda y gestiona en `src/store.js` mediante un *reducer* y un estado inicial definido en `initialStore`.
+
+#### Estado inicial (`initialStore`):
+```javascript
+export const initialStore = () => {
+  return {
+    message: null,
+    todos: [
+      { id: 1, title: "Make the bed", background: null },
+      { id: 2, title: "Do my homework", background: null }
+    ]
+  };
+};
 ```
 
-3. Empieza a programar y utiliza el servidor de desarrollo webpack con recarga en vivo, para Windows, Mac, Linux o Gitpod:
+El estado inicial contiene un mensaje y una lista de tareas (`todos`), cada una con un `id`, `title` y `background`.
 
-```bash
-npm run start
+#### Reducer (`storeReducer`):
+
+Cuando se ejecuta `dispatch`, la acción es recibida por el *reducer* en `src/store.js`, que actualiza el estado según el `type`:
+
+```javascript
+case 'add_task':
+  return {
+    ...store,
+    todos: store.todos.map(todo => 
+      todo.id === action.payload.id 
+        ? { ...todo, background: action.payload.color }
+        : todo
+    )
+  };
 ```
+
+Con esta estructura (`initialStore` y `storeReducer`), tu aplicación mantiene un estado global centralizado y escalable. 
+
+
+## ¡Publica tu sitio web!
+
+1. **Vercel:** El proveedor de alojamiento GRATUITO recomendado es [vercel.com](https://vercel.com/), puedes desplegar en 1 minuto escribiendo los siguientes 2 comandos:
+
+Iniciar sesión (necesitas tener una cuenta):
+```sh
+$ npm i vercel -g && vercel login
+```
+Desplegar:
+```sh
+$ vercel --prod
+```
+✎ Nota: Si no tienes una cuenta, simplemente ve a vercel.com, crea una cuenta y regresa aquí.
+
+![Procedimiento de ejemplo de Vercel para desplegar](https://github.com/4GeeksAcademy/react-hello-webapp/blob/4b530ba091a981d3916cc6e960e370decaf2e234/docs/deploy.png?raw=true)
