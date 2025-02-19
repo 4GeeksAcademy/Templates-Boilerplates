@@ -34,7 +34,7 @@ Add more files into your, `./src/js/components` or styles folder as you need the
 
 This boilerplate is 100% compatible with the free [github pages](https://pages.github.com/) and [vercel](https://vercel.com/) hosting.
 
-It takes just 2 minutes to deploy, [click here to start the process](https://github.com/4GeeksAcademy/react-hello/blob/master/docs/DEPLOY.md).
+It takes just 2 minutes to deploy, [click here to start the process](https://4geeks.com/docs/start/deploy-to-render-com).
 
 ## Other features
 

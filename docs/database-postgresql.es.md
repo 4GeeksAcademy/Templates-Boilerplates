@@ -56,12 +56,8 @@ La mayoría de las plantillas de 4Geeks Academy utilizan la librería SQLAlchemy
 
 ```py
 class Artist(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80), nullable=False)
-
-    # Así es como el artista se imprimirá en la consola, sólo el nombre
-    def __repr__(self):
-        return self.name
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(80), nullable=False)
 
     # Este es el aspecto que tendrá el artista en las respuestas JSON de la API
     def serialize(self):
@@ -77,19 +73,17 @@ He aquí algunos ejemplos de los distintos tipos de relaciones.
 
 Una relación uno a muchos coloca una clave foránea en la tabla del hijo que hace referencia al padre.
 
-`db.relationship()` se especifica en el padre, como referencia a una colección de elementos representados por el hijo:
+`relationship()` se especifica en el padre, como referencia a una colección de elementos representados por el hijo:
 
 ```py
 class Artist(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80), nullable=False)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(80), nullable=False)
     
     # Un artista puede tener muchas grabaciones, y llamaremos a esta lista "records"
     # esta es una clave externa que apunta al Record.id
-    records = db.relationship('Record', backref='parent',lazy=True)
+    records: Mapped[List["Record"]] = relationship()
 
-    def __repr__(self):
-        return self.name
 
     def serialize(self):
         return {
@@ -99,14 +93,12 @@ class Artist(db.Model):
         }
 
 class Record(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80), nullable=False)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(80), nullable=False)
     
     # un registro sólo puede tener un artista, esto apunta al Artist.id
-    artist_id = db.Column(db.Integer, db.ForeignKey("parent.id"), nullable=False)
+    artist_id: Mapped[int] = mapped_column(ForeignKey("parent.id"), nullable=False)
     
-    def __repr__(self):
-        return self.name
         
     def serialize(self):
         return {
@@ -117,25 +109,24 @@ class Record(db.Model):
 
 ### Relación Muchos a Muchos
 
-Muchos a Muchos añade una tabla de asociación entre dos clases. La tabla de asociación se indica mediante el argumento secundario de `db.relationship()`.
+Muchos a Muchos añade una tabla de asociación entre dos clases. La tabla de asociación se indica mediante el argumento secundario de `relationship()`.
 
 Normalmente, la tabla utiliza el objeto MetaData asociado a la clase base declarativa, para que las directivas ForeignKey puedan localizar las tablas remotas con las que enlazar:
 
 ```py
 association_table = db.Table('association',
-    db.Column("sister_id", db.Integer, db.ForeignKey("sister.id"), primary_key=True),
-    db.Column("brother_id", db.Integer, db.ForeignKey("brother.id"), primary_key=True)
+    Base.metadata,
+    Column("sister_id", ForeignKey("sister.id"), primary_key=True),
+    Column("brother_id", ForeignKey("brother.id"), primary_key=True)
 )
 
 class Sister(db.Model):
-    id = db.Column(Integer, primary_key=True)
-    name = db.Column(String(80), nullable=False)
-    brothers = db.relationship("Brother",
-                    secondary=association_table,
-                    back_populates="sisters") # this line is so it updates the field when Sister is updated
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(80), nullable=False)
+    brothers: Mapped[List[Brother]] = relationship(
+        secondary=association_table, back_populates="sisters"
+    ) # this line is so it updates the field when Sister is updated
                     
-    def __ref__(self):
-        return f'<Sister {self.name}>'
         
     def serialize(self):
         return {
@@ -145,14 +136,12 @@ class Sister(db.Model):
         }
 
 class Brother(db.Model):
-    id = db.Column(Integer, primary_key=True)
-    name = db.Column(String(80), nullable=False)
-    sisters = db.relationship("Sister",
-                    secondary=association_table,
-                    back_populates="brothers")
-                    
-    def __ref__(self):
-        return f'<Brother {self.name}>'
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(80), nullable=False)
+    sisters: Mapped[List[Sister]] = relationship(
+        secondary=association_table, back_populates="brothers"
+    )
+   
         
     def serialize(self):
         return {
@@ -204,17 +193,20 @@ Hay muchas maneras de manipular bases de datos, pero hemos decidido utilizar Pyt
 Asumiendo que tienes un objeto Person en tu archivo `models.py`.
 
 ```py
-# conseguir a toda la gente
-people_query = Person.query.all()
+# coger a toda la gente
+stmt = select(Person)
+people_query = db.session.execute(stmt).scalars().all()
 
-# obtener sólo los nombrados"Joe"
-people_query = Person.query.filter_by(name='Joe')
+# obtener sólo las que se llamen "Joe
+stmt = select(Person).where(Person.name == 'Joe')
+people_query = db.session.execute(stmt).scalars().all()
 
 # asigna los resultados y tu lista de personas dentro de la variable all_people
 all_people = list(map(lambda x: x.serialize(), people_query))
 
-# conseguir una sola persona
-user1 = Person.query.get(person_id)
+# obtener sólo una persona
+stmt = select(Person).where(Person.id == person_id)
+user1 = db.session.execute(stmt).scalars().first()
  ```
 
 ### Insertar datos
@@ -230,7 +222,9 @@ db.session.commit()
 ### Actualización de datos
 
 ```py
-user1 = Person.query.get(person_id)
+stmt = select(Person).where(Person.id == person_id)
+user1 = db.session.execute(stmt).scalars().first()
+
 if user1 is None:
     raise APIException('User not found', status_code=404)
 
@@ -244,7 +238,9 @@ db.session.commit()
 ### Borrar datos
 
  ```py
- user1 = Person.query.get(person_id)
+stmt = select(Person).where(Person.id == person_id)
+user1 = db.session.execute(stmt).scalars().first()
+
 if user1 is None:
     raise APIException('User not found', status_code=404)
 db.session.delete(user1)
@@ -253,4 +249,4 @@ db.session.commit()
 
 ## DOCUMENTACIÓN OFICIAL PARA MODELOS FLASK SQLAlchemy
 
-Para más información, visite la siguiente página: https://flask-sqlalchemy.palletsprojects.com/en/2.x/models/
+Para más información, visite la siguiente página: https://flask-sqlalchemy.palletsprojects.com/en/stable/quickstart/#define-models

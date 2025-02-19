@@ -1,14 +1,14 @@
 ---
-title: 'Comienza un proyecto Fullstack con React $ Flux'
-description: 'Utiliza Javascript con React.js para construir una aplicación web profesional.'
+title: 'Comienza un proyecto Fullstack con React, useReducer y useContext'
+description: 'Usa Javascript, React.js, Python y Flask para construir una aplicación full-stack completa'
 technologies: ['html', 'css', 'python','javascript','flask','react']
 ---
 
-Esta plantilla tiene `archivos backend` y `archivos frontend` juntos, es la combinación perfecta de las plantillas React Flux y Flask API para que puedas crear una aplicación Full Stack aplicando todos los conceptos utilizados en el mundo profesional.
+Esta plantilla tiene `archivos backend` y `archivos frontend` juntos, es la combinación perfecta de las plantillas React.js y Flask API para que puedas crear una aplicación Full Stack aplicando todos los conceptos utilizados en el mundo profesional.
 
 ## Front end
 
-Puedes encontrar una explicación completa sobre cómo crear nuevas páginas, componentes, añadir estilos y usar el contexto, dentro de [esta documentación previa que creamos para la plantilla React Flux](https://4geeks.com/es/docs/start/inicia-react-flux). Esto se debe a que la plantilla Full-Stack fue creada bajo la misma estructura y conceptos que aquella.
+Puedes encontrar una explicación completa sobre cómo crear nuevas páginas, componentes, añadir estilos y usar el contexto, dentro de [esta documentación previa que creamos para la plantilla React, , useReducer y useContext](https://4geeks.com/docs/start/start-react-flux). Esto se debe a que la plantilla Full-Stack fue creada bajo la misma estructura y conceptos que aquella.
 
 ## Backend
 
@@ -18,7 +18,7 @@ Usted puede encontrar una explicación completa sobre la creación de sus puntos
 
 ### Instalación Manual del Back-End
 
-Se recomienda instalar primero el backend, asegúrate de tener Python 3.8+, Pipenv y un motor de base de datos (Postgres recomendado)
+Se recomienda instalar primero el backend, asegúrate de tener Python 3.10+, Pipenv y un motor de base de datos (Postgres recomendado)
 
 1. Instala los paquetes de python: `$ pipenv install`
 2. Crea un archivo .env basado en el .env.example: `$ cp .env.example .env`
@@ -36,7 +36,7 @@ Se recomienda instalar primero el backend, asegúrate de tener Python 3.8+, Pipe
 
 ### Instalación Manual del Front-End
 
-- Asegúrate de que estás utilizando la versión 14+ de node y que ya has instalado y ejecutado correctamente el backend.
+- Asegúrate de que estás utilizando la versión 20 de node y que ya has instalado y ejecutado correctamente el backend.
 
 1. Instala los paquetes: `$ npm install`
 2. Inicia el servidor de desarrollo webpack `$ npm run start`.
@@ -47,3 +47,4 @@ Esta plantilla es 100% compatible con [Heroku](https://www.heroku.com/) y [Rende
 
 1. [Cómo desplegar en Render.com](https://4geeks.com/es/docs/start/despliega-con-render-com) (gratis)
 2. [Cómo desplegar en Heroku.com](https://4geeks.com/es/docs/start/desplegar-a-heroku-con-postgresql) (desde $0.01 mensual)
+
