@@ -8,7 +8,7 @@ This template has `backend files` and `frontend files` together, it is the perfe
 
 ## Front end
 
-You can find a complete explanation on how to create new pages, components, add styles, and use context, within [this previous documentation we created for the React, useReducer, and useContext template](https://4geeks.com/es/docs/start/start-react-flux). This is because the Full-Stack template was created under the same structure and concepts as that one.
+You can find a complete explanation on how to create new pages, components, add styles, and use context, within [this previous documentation we created for the React, useReducer, and useContext template](https://4geeks.com/docs/start/react-flask-template). This is because the Full-Stack template was created under the same structure and concepts as that one.
 
 ## Backend
 
