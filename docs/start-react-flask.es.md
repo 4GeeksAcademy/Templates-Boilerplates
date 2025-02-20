@@ -1,5 +1,5 @@
 ---
-title: 'Comienza un proyecto Fullstack con React, useReducer y useContext'
+title: 'Comienza un proyecto Fullstack con React, useReducer, useContext + Flask'
 description: 'Usa Javascript, React.js, Python y Flask para construir una aplicación full-stack completa'
 technologies: ['html', 'css', 'python','javascript','flask','react']
 ---
