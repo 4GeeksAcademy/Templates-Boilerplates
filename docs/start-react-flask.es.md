@@ -8,7 +8,7 @@ Esta plantilla tiene `archivos backend` y `archivos frontend` juntos, es la comb
 
 ## Front end
 
-Puedes encontrar una explicación completa sobre cómo crear nuevas páginas, componentes, añadir estilos y usar el contexto, dentro de [esta documentación previa que creamos para la plantilla React, , useReducer y useContext](https://4geeks.com/docs/start/inicia-react-avanzado). Esto se debe a que la plantilla Full-Stack fue creada bajo la misma estructura y conceptos que aquella.
+Puedes encontrar una explicación completa sobre cómo crear nuevas páginas, componentes, añadir estilos y usar el contexto, dentro de [esta documentación previa que creamos para la plantilla React, useReducer y useContext](https://4geeks.com/docs/start/inicia-react-avanzado). Esto se debe a que la plantilla Full-Stack fue creada bajo la misma estructura y conceptos que aquella.
 
 ## Backend
 
