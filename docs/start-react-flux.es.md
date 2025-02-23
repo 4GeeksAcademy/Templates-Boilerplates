@@ -1,6 +1,6 @@
 ---
 title: 'Inicia una aplicación Web con React'
-description: 'Utiliza las tecnologías Fullstack para crear aplicaciones profesionales con React.js.'
+description: 'Utiliza React avanzado para garantizar una experiencia de usuario dinámica e interactiva, optimizando el rendimiento y la capacidad de respuesta de la aplicación.'
 technologies: ['html', 'css', 'javascript', 'react', 'react-router', 'useReducer', 'useContext']
 ---
 
