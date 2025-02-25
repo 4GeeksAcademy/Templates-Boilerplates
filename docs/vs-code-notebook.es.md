@@ -1,4 +1,9 @@
-# 📝 VS Code Notebooks: Programación Interactiva en tu Computadora
+---
+title: 'VS Code Notebooks: Programación Interactiva en tu Computadora'
+description: 'Aprende a usar VS Code Notebooks para ejecutar código en tu computadora local, aprovechando al máximo tus recursos y sin depender de la nube.'
+technologies: ['python', 'vs-code', 'jupyter-notebook']
+---
+
 
 ## 📌 ¿Qué es un Notebook en VS Code?
 Un **VS Code Notebook** es un tipo especial de archivo (`.ipynb`) que permite ejecutar código en **celdas**, similar a Jupyter Notebook o Google Colab. La diferencia principal es que **todo se ejecuta en tu propia computadora**, lo que significa que tienes control total sobre los recursos y el tiempo de ejecución.
@@ -9,50 +14,53 @@ Un **VS Code Notebook** es un tipo especial de archivo (`.ipynb`) que permite ej
 - Puedes usar todo el poder de tu computadora (más RAM, CPU, y GPU si tienes una).
 - Se integra con extensiones de Python y Jupyter en VS Code.
 
-## 🛠 Cómo Usar Notebooks en VS Code
+## ¿Cómo usar Notebooks en VS Code?
 
-### 🔹 1. Instalación de los Requisitos
+### Instalación de los Requisitos
 Para usar notebooks en VS Code, necesitas instalar algunas herramientas:
 
-1️⃣ Instalar VS Code
-- Descárgalo desde https://code.visualstudio.com/
+1. Instalar VS Code. Descárgalo desde https://code.visualstudio.com/
 
-2️⃣ Instalar la Extensión de Python
+2. Instalar la Extensión de Python
 - Abre VS Code
 - Ve a la pestaña Extensiones (Ctrl + Shift + X)
 - Busca Python e instálala.
 
-3️⃣ Instalar Jupyter en Python
+3. Instalar Jupyter en Python
 - Si no lo tienes instalado, abre una terminal en VS Code y ejecuta:
-``` python
-pip install jupyter
-```
 
-### 🔹 2. Creando un Notebook en VS Code
+    ``` python
+    pip install jupyter
+    ```
 
-1️⃣ Abre VS Code.
+### Creando un Notebook en VS Code
 
-2️⃣ Ve a Archivo > Nuevo Archivo y guarda el archivo con extensión .ipynb.
+1. Abre VS Code.
 
-3️⃣ Verás un entorno similar a Jupyter con celdas de código.
+2. Ve a Archivo > Nuevo Archivo y guarda el archivo con extensión .ipynb.
 
-4️⃣ Escribe código en una celda y ejecútalo con el botón ▶️ o presionando Shift + Enter.
+3. Verás un entorno similar a Jupyter con celdas de código.
 
-🖥 Ejemplo Básico en VS Code Notebooks
+4. Escribe código en una celda y ejecútalo con el botón ▶️ o presionando Shift + Enter.
 
-🔹 Celda 1: Importar Librerías
-``` python
-import math
-```
 
-🔹 Celda 2: Usar la librería importada
-``` python
-print(math.sqrt(36))  # Output: 6.0
-```
+## Ejemplo Básico en VS Code Notebooks
 
-💡 **Recuerda**: Al igual que en Jupyter o Colab, las celdas comparten memoria, por lo que puedes definir una variable en una celda y usarla en otra.
+- Celda 1: Importar Librerías
+    ``` python
+    import math
+    ```
+
+- Celda 2: Usar la librería importada
+    ``` python
+    print(math.sqrt(36))  # Output: 6.0
+    ```
+
+> 💡 **Recuerda**: Al igual que en Jupyter o Colab, las celdas comparten memoria, por lo que puedes definir una variable en una celda y usarla en otra.
+
 
 ## ⚡ Diferencias Clave entre VS Code Notebooks y Google Colab
+
 | Característica       | VS Code Notebooks 🖥       | Google Colab ☁️          |
 |----------------------|----------------------------|--------------------------|
 | Ubicación            | Computadora local          | Nube de Google           |
@@ -62,7 +70,4 @@ print(math.sqrt(36))  # Output: 6.0
 | Tiempo de Ejecución  | Ilimitado                  | Puede desconectarse      |
 
 
-## 🎯 Conclusión
-📌 **VS Code Notebooks te da más control sobre tus recursos y no tiene las limitaciones de la nube**. Si trabajas en proyectos grandes o necesitas más potencia, es una mejor opción que Google Colab.
-
-✅ **Recomendación**: Si vas a trabajar con notebooks a largo plazo, instala **VS Code y Jupyter** en tu computadora para evitar las restricciones de Google Colab. 🚀
+**VS Code Notebooks te da más control sobre tus recursos y no tiene las limitaciones de la nube**. Si trabajas en proyectos grandes o necesitas más potencia, es una mejor opción que Google Colab.
