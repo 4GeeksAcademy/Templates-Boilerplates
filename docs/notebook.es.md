@@ -1,12 +1,12 @@
 ---
-title: 'Notebooks: Un Solo Ambiente de Trabajo'
+title: 'Python notebook: Un Solo Ambiente de Trabajo'
 description: 'Aprende qué es un notebook, cómo funciona y cómo manejar importaciones y variables en este entorno interactivo. Descubre errores comunes y cómo evitarlos para trabajar eficientemente en notebooks como Jupyter Notebook y Google Colab.'
 technologies: ['python', 'jupyter-notebook', 'google-colab']
 ---
 
 
-## ¿Qué es un Notebook y cómo Funciona?
-Un **notebook** (como Jupyter Notebook o Google Colab) es un entorno interactivo donde puedes escribir y ejecutar código en **celdas**.
+## ¿Qué es un Python notebook y cómo Funciona?
+Un **Python notebook** (como Jupyter Notebook o Google Colab) es un entorno interactivo donde puedes escribir y ejecutar código en **celdas**.
 
 A diferencia de los archivos de código tradicionales (`.py` en Python, por ejemplo), donde todo el código se ejecuta de arriba hacia abajo en un solo archivo, en un notebook **puedes ejecutar diferentes partes del código en distintos momentos y en cualquier orden**.
 
