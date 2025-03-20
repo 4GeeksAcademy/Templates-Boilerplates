@@ -1,11 +1,11 @@
 ---
-title: 'Notebooks: A Single Workspace'
+title: 'Python notebook: A Single Workspace'
 description: 'Learn what a notebook is, how it works, and how to handle imports and variables in this interactive environment. Discover common errors and how to avoid them to work efficiently in notebooks like Jupyter Notebook and Google Colab.'
 technologies: ['python', 'jupyter-notebook', 'google-colab']
 ---
 
-## What is a Notebook and How Does It Work?
-A **notebook** (like Jupyter Notebook or Google Colab) is an interactive environment where you can write and execute code in **cells**.
+## What is a Python notebook and How Does It Work?
+A **Python notebook** (like Jupyter Notebook or Google Colab) is an interactive environment where you can write and execute code in **cells**.
 
 Unlike traditional code files (`.py` in Python, for example), where all the code is executed from top to bottom in a single file, in a notebook **you can execute different parts of the code at different times and in any order**.
 
