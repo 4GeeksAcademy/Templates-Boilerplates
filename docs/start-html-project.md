@@ -1,7 +1,7 @@
 ---
-title: 'Start a new HTML/CSS Project'
-description: 'Build and publish the most basic HTML/CSS website you can build'
-technologies: ['html', 'css', 'python','javascript']
+Title: 'Start a new HTML/CSS Project'
+Description: 'Build and publish the most basic HTML/CSS website you can build'
+Technologies: ['html', 'css', 'python','javascript']
 ---
 
 The most basic template for any 4Geeks Academy Student, ideal for starting your first HTML/CSS website.
@@ -25,7 +25,7 @@ Create a `index.html` file with the [basic HTML structure](https://4geeks.com/le
 pip install flask && python server.py
 ```
 
-- You can create as many HTML files you want
+- You can create as many HTML files you want.
 - You can also create CSS files and you can import them onto your website using a `<link>` tag placed between the `<head></head>` tags, like this:
 
 ```html
