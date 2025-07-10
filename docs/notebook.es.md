@@ -5,7 +5,7 @@ technologies: ['python', 'jupyter-notebook', 'google-colab']
 ---
 
 
-## ¿Qué es un Python notebook y cómo Funciona?
+## ¿Qué es un Python notebook y cómo funciona?
 Un **Python notebook** (como Jupyter Notebook o Google Colab) es un entorno interactivo donde puedes escribir y ejecutar código en **celdas**.
 
 A diferencia de los archivos de código tradicionales (`.py` en Python, por ejemplo), donde todo el código se ejecuta de arriba hacia abajo en un solo archivo, en un notebook **puedes ejecutar diferentes partes del código en distintos momentos y en cualquier orden**.
