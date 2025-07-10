@@ -1,3 +1,10 @@
+---
+title: 'Despliegue en Vercel'
+description: 'Aprende cómo publicar fácilmente tu aplicación Vite + React en Vercel con integración a GitHub, compilaciones automáticas y opciones de configuración personalizadas.'
+technologies: ['vite', 'react', 'despliegue', 'vercel', 'frontend']
+---
+
+
 # Guía de Despliegue a Vercel
 
 Este archivo te guiará a través de los pasos para desplegar tu aplicación React en Vercel utilizando Vite. Sigue estos pasos para asegurar que tu proyecto se despliegue correctamente.
