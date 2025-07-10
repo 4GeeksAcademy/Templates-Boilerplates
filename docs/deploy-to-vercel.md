@@ -1,6 +1,6 @@
 ---
 title: 'Deploy to Vercel'
-description: 'Publish your Vite + React app to Vercel for free'
+description: 'Learn how to easily publish your Vite + React application to Vercel with GitHub integration, automatic builds, and custom configuration options.'
 technologies: ['vite', 'react', 'deployment', 'vercel', 'frontend']
 ---
 
