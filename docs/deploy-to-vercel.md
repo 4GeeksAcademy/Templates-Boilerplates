@@ -1,3 +1,10 @@
+---
+title: 'Deploy to Vercel'
+description: 'Publish your Vite + React app to Vercel for free'
+technologies: ['vite', 'react', 'deployment', 'vercel', 'frontend']
+---
+
+
 # Deployment Guide to Vercel
 
 This file will guide you through the steps to deploy your React application on Vercel using Vite. Follow these steps to ensure your project is deployed correctly.
