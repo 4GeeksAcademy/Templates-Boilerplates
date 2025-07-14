@@ -9,7 +9,7 @@ technologies: ['python', 'flask']
 
 ## How to Start coding?
 
-Starting with the [flast-rest-hello](https://github.com/4GeeksAcademy/flask-rest-hello) boilerplate, you can find an example API working with a database. All your application code should be written inside the `./src/` folder.
+Starting with the [flask-rest-hello](https://github.com/4GeeksAcademy/flask-rest-hello) boilerplate, you can find an example API working with a database. All your application code should be written inside the `./src/` folder.
 
 - src/app.py: It's where the app initializes, in small API's you can also code your different endpoints here, please be advised that coding the endpoints here is only recommended if there is no `routes.py` file in the project already.
 - src/routes.py (optional): If your project has a `src/routes.py` file, here is where you must code to add your endpoints.
