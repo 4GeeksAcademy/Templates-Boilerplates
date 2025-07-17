@@ -134,7 +134,7 @@ Puede acceder a su administrador de flask añadiendo `/admin` al final de su API
 
 Si su API host es `https://8000-blabla-us33.gitpod.io` entonces usted puede acceder a su base de datos admin así: `https://8000-blabla-us33.gitpod.io/admin`
 
-> Aquí hay un video de 8 minutos explicando el [Flask Admin](https://www.youtube.com/watch?v=ysdShEL1HMM).
+> Aquí hay un video de 8 minutos explicando el [Flask Admin](https://www.youtube.com/watch?v=G1FBSYJ45Ww).
 
 ### Añadiendo tus modelos a tu admin de Flask
 
@@ -225,7 +225,7 @@ class Person(db.Model):
         }
 ```
 
-> 📝 Encontrará más información en [creación de modelos](/backend/database#creating-the-models) aquí.
+> 📝 Encontrará más información en [creación de modelos](https://4geeks.com/es/docs/start/iniciar-plantilla-postgresql-y-configuracion-de-la-base-de-datos#creating-the-models) aquí.
 
 ### Operaciones CRUD
 
