@@ -29,7 +29,7 @@ $ pipenv run migrate # (to create the database)
 $ pipenv run start # (to start the flask webserver)
 ```
 
-> ⚠️ Local installation may work, but you can also try installing it online through [4Geeks' Click and Learn](https://breathecode.herokuapp.com/start) on top of Github Codespaces or Gitpod.
+> ⚠️ Local installation may work, but you can also try installing it online through [4Geeks' Click and Learn](https://4geeks.com/click-and-learn) on top of Github Codespaces or Gitpod.
 
 ## Adding an endpoint
 
@@ -136,7 +136,7 @@ You can access your flask admin by adding `/admin` to the end of your API Host, 
 
 If your API host is `https://8000-blabla-us33.gitpod.io` then you can access your database admin like this: `https://8000-blabla-us33.gitpod.io/admin`
 
-> 🎥 Here is an 8 min video explaining the [Flask Admin](https://www.youtube.com/watch?v=ysdShEL1HMM).
+> 🎥 Here is an 15 min video explaining the [Flask Admin](https://www.youtube.com/watch?v=G1FBSYJ45Ww).
 
 ### Adding your models to your Flask admin
 
