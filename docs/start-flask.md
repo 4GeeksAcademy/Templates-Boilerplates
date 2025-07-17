@@ -227,7 +227,7 @@ class Person(db.Model):
         }
 ```
 
-> 📝 You can find more information on [creating models](/backend/database#creating-the-models) here.
+> 📝 You can find more information on [creating models](https://4geeks.com/docs/start/postgresql-template-starter#creating-the-models) here.
 
 ### CRUD Operations
 
