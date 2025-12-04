@@ -9,7 +9,7 @@
 [![build by developers](https://img.shields.io/twitter/follow/4geeksacademy?style=social&logo=twitter)](https://twitter.com/4geeksacademy)
 
 ```text
-🔥 Here you can find the documentation about these boilerplates: start.4geeksacademy.com
+🔥 Here you can find the documentation about these boilerplates : start.4geeksacademy.com
 ```
 
 - **Empty project**: Ideal for beginners, lightweight server.py to run HTML projects.  
@@ -27,7 +27,7 @@
 - **React.js Advanced**: Ideal for professional development, Minimum version for Flux + Context API implemented. One click deploy to several hostings free, documentation and video tutorials.  
 [Open Repository](https://github.com/4GeeksAcademy/react-hello-webapp)
 
-- **Flask API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Authentication, SQL Alchemy Integration, Pipenv, .env, One-Click deploy to Heroku (free hosting).  
+- **Flask API**: Ideal for professional backen development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Authentication, SQL Alchemy Integration, Pipenv, .env, One-Click deploy to Heroku (free hosting).  
 [Open Repository](https://github.com/4GeeksAcademy/flask-rest-hello)
 
 - **Full Stack: React + Flask API**: React Front-End and Python/Flask API backend, one click deploy to Heroku.  
