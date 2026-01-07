@@ -36,7 +36,7 @@
 
 ## Otros boilerplates obsoletos (⚠️ sin mantenimiento)
 
-- **Flask API + VanillaJS**: Boilerplate de Flask fusionado con el boilerplate de VanillaJS, para cualquiera interesado en publicar front-end y back-end en el mismo hosting y en un proyecto unificado.
+- **Flask API + VanillaJS**: Boilerplate de Flask fusionado con el boilerplate de VanillaJS, para cualquier interesado en publicar front-end y back-end en el mismo hosting y en un proyecto unificado.
 [Abrir repositorio](https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate)
 
 - **Django Rest**: Lo mínimo necesario para construir una API con Django, con un clic despliegue a Heroku (hosting gratuito), documentación y video tutoriales.
