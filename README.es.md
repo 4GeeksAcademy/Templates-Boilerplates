@@ -15,8 +15,14 @@
 - **Proyecto vacío**: Ideal para principiantes, servidor server.py liviano para ejecutar proyectos HTML.
 [Abrir repositorio](https://github.com/4GeeksAcademy/html-hello) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/html-hello.git)
 
-- **Vanilla JS**: Usa webpack sin frameworks front-end. Despliegue rápido. ES7. Requiere de muy poca configuración pero con un flujo de trabajo profesional. Ideal para comenzar con webpack.
-[Abrir repositorio](https://github.com/4GeeksAcademy/vanillajs-hello) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/vanillajs-hello)
+- **Proyecto de compañía** (Exclusivo para el programa de Ingeniería de IA): Proyecto transversal que desarrollarás a lo largo del curso.
+[Abrir repositorio](https://github.com/4GeeksAcademy/ai-engineering-company-project-monorepo)
+
+- **Typescript con Vite**: Usa Vite sin frameworks front-end. Despliegue rápido. Requiere muy poca configuración, pero con un flujo de trabajo profesional. Ideal para comenzar con Typescript en Vite.  
+[Abrir repositorio]([https://github.com/4GeeksAcademy/vanillajs-hello-vite](https://github.com/4GeeksAcademy/typescript-hello))
+
+- **Vanilla JS con Vite**: Usa Vite sin frameworks front-end. Despliegue rápido. Requiere muy poca configuración, pero con un flujo de trabajo profesional. Ideal para comenzar con Vite.  
+[Abrir repositorio](https://github.com/4GeeksAcademy/vanillajs-hello-vite)
 
 - **React.js**: Create React App tiene muchos archivos y casi no tiene utilidades. Con documentación y video tutoriales, despliega varios servidores con un solo comando. Ideal para cualquiera. 
 [Abrir repositorio](https://github.com/4GeeksAcademy/react-hello) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello.git)
@@ -27,14 +33,13 @@
 - **Full Stack: React + Flask API**: React Front-End con Python/Flask API backend, despliegue en un clic a Heroku.  
 [Abrir repositorio](https://github.com/4GeeksAcademy/react-flask-hello) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello.git)
 
-- **Flask API**: Ideal para desarrollo profesional, mínimo posible de boilerplate para construir una API con Flask. Arregla problemas comunes como CORS, Tests, manejo de errores, Autentificación, integración de SQL Alchemy, Pipenv, .env, despliegue a Heroku en un minuto (hosting gratuito).  
+- **Flask API**: Ideal para desarrollo profesional, mínimo posible de boilerplate para construir una API con Flask. Arregla problemas comunes como CORS, pruebas, manejo de errores, autenticación e integración con SQL Alchemy, Pipenv y .env, y despliegue a Heroku en un minuto (hosting gratuito).  
 [Abrir repositorio](https://github.com/4GeeksAcademy/flask-rest-hello) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/flask-rest-hello.git)
 
-- **Express API (with TypeScript)**: Construye APIs con Express y TypeScript. Usa TypeORM como ORM. listo para Heroku.  
-[Abrir repositorio](https://github.com/4GeeksAcademy/expressjs-rest-hello) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/expressjs-rest-hello.git)
-
-
 ## Otros boilerplates obsoletos (⚠️ sin mantenimiento)
+
+- **Express API (with TypeScript)**: Construye APIs con Express y TypeScript. Usa TypeORM como ORM. Listo para Heroku.  
+[Abrir repositorio](https://github.com/4GeeksAcademy/expressjs-rest-hello) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/expressjs-rest-hello.git)
 
 - **Flask API + VanillaJS**: Boilerplate de Flask fusionado con el boilerplate de VanillaJS, para cualquiera interesado en publicar front-end y back-end en el mismo hosting y en un proyecto unificado.
 [Abrir repositorio](https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate)

@@ -1,6 +1,7 @@
 ---
 title: 'Deploy to Render.com'
 description: 'Publish your website to Render.com for free'
+technologies: ['postgres', 'databases','flask','node','express','react']
 ---
 
 Deploying to Render.com (takes 7 minutes).

@@ -15,35 +15,51 @@
 - **Empty project**: Ideal for beginners, lightweight server.py to run HTML projects.  
 [Open Repository](https://github.com/4GeeksAcademy/html-hello)
 
-- **Vanilla JS**: Use webpack without front-end frameworks. Hot Deploy. ES7. Minimum configuration but professional workflow. Ideal for juniors starting on webpack.  
-[Open Repository](https://github.com/4GeeksAcademy/vanillajs-hello)
+- **Company project** (Exclusively for AI Engineering career program): Transversal project you will develop along the course
+[Open Repository](https://github.com/4GeeksAcademy/ai-engineering-company-project-monorepo)
 
-- **React.js**: Create React App comes with too many files and almost no utilities. With documentation and video tutorials, deploy to different servers in just one command. Ideal for anyone.  
-[Open Repository](https://github.com/4GeeksAcademy/react-hello)
+- **Typescript with Vite**: Use vite without front-end frameworks. Hot Deploy. ES7. Minimum configuration but professional workflow. Ideal for juniors starting with Typescript on Vite.  
+[Open Repository]([https://github.com/4GeeksAcademy/vanillajs-hello-vite](https://github.com/4GeeksAcademy/typescript-hello))
 
-- **React.js Advanced**: Ideal for professional development, Minimum version for Flux + Context API implemented. One click deploy to several hostings free, documentation and video tutorials.  
+- **Vanilla JS with Vite**: Use vite without front-end frameworks. Hot Deploy. ES7. Minimum configuration but professional workflow. Ideal for juniors starting on Vite.  
+[Open Repository](https://github.com/4GeeksAcademy/vanillajs-hello-vite)
+
+- **React.js**: Create React App has too many files and almost no utilities; this version is simplified. Ideal for beginners.  
+[Open Repository](https://github.com/4GeeksAcademy/react-hello-vite)
+
+- **React.js Advanced**: Ideal for professional development, Minimum version for Flux + Context API implemented. One click deploy to several hostings free, documentation, and video tutorials.  
 [Open Repository](https://github.com/4GeeksAcademy/react-hello-webapp)
 
-- **Full Stack: React + Flask API**: React Front-End and Python/Flask API backend, one click deploy to Heroku.  
+- **Python Project**: Beginner's starter template for Python.  
+[Open Repository](https://github.com/4GeeksAcademy/python-hello)
+
+- **Flask API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Authentication, SQL Alchemy Integration, Pipenv, .env, One-Click deploy to Heroku (free hosting).  
+[Open Repository](https://github.com/4GeeksAcademy/flask-rest-hello)
+
+- **Full Stack: React + Flask API**: React Front-End and Python/Flask API backend, one-click deploy to Heroku.  
 [Open Repository](https://github.com/4GeeksAcademy/react-flask-hello)
 
 - **Fast API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Fast API. Fixes common problems like CORS, Tests, Error Handling, Authentication, SQL Alchemy Integration, Pipenv, .env, One-Click deploy to Render.com and Heroku (free hosting).  
-[Open Repository](https://github.com/4GeeksAcademy/fastapi-rest-hello)
+[Open Repository](https://github.com/4GeeksAcademy/fastapi-hello)
 
-- **Express API (with TypeScript)**: Building API's with Express and TypeScript. Uses TypeORM as ORM. Heroku ready.  
-[Open Repository](https://github.com/4GeeksAcademy/expressjs-rest-hello)
 
 
 ## Other deprecated templates (⚠️ Unmaintained & Deprecated):
 
-- **Flask API**: Ideal for professional backend development, the minimum possible boilerplate for building API's with Flask. Fixes common problems like CORS, Tests, Error Handling, Authentication, SQL Alchemy Integration, Pipenv, .env, One-Click deploy to Heroku (free hosting).  
-[Open Repository](https://github.com/4GeeksAcademy/flask-rest-hello)
+- **Vanilla JS with Webpack**: Use webpack without front-end frameworks. Hot Deploy. ES7. Minimum configuration but professional workflow. Ideal for juniors starting on webpack.  
+[Open Repository](https://github.com/4GeeksAcademy/vanillajs-hello)
+
+- **React.js**: Create React App comes with too many files and almost no utilities. With documentation and video tutorials, deploy to different servers in just one command. Ideal for anyone.  
+[Open Repository](https://github.com/4GeeksAcademy/react-hello)
 
 - **Flask API + VanillaJS**: The Flask boilerplate merged with the VanillaJS boilerplate, for anyone interested in publishing front-end and back-end in the same hosting and one unified project.  
 [Open Repository](https://github.com/4GeeksAcademy/flask-api-vanillajs-boilerplate)
 
 - **Django Rest**: Smallest possible approach for building API's with django, one click deploy to Heroku (free hosting), documentation and video tutorials.  
 [Open Repository](https://github.com/4GeeksAcademy/django-rest-hello)
+
+- **Express API (with TypeScript)**: Building API's with Express and TypeScript. Uses TypeORM as ORM. Heroku ready.  
+[Open Repository](https://github.com/4GeeksAcademy/expressjs-rest-hello)
 
 - **Headless WordPress for Developers**: Heavy developer oriented boilerplate for WP, create API's similar to modern frameworks like Flask, Express, etc. MVC Implementation and bare minimum theme implementation. 100% command line integration and installation. No need for the WordPress admin.  
 [Open Repository](https://github.com/4GeeksAcademy/wordpress-hello)

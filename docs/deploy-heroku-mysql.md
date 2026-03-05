@@ -1,11 +1,14 @@
 ---
 title: 'Deploy to Heroku using MySQL'
 description: 'Publish your website to Heroku with a MySQL database'
+technologies: ['mysql', 'databases','flask','node','express','react']
 ---
 
-> Deploying to Heroku (takes 7 minutes)
+> Deploying to Heroku (takes 7 minutes)  
 
-This template is 100% compatible with Heroku, just make sure to understand and execute the following steps:
+Our templates are% compatible with Heroku, just make sure to understand and execute the following steps:
+
+## Get ready
 
 1. Install Heroku (if you don't have it yet)
 ```bash
@@ -22,8 +25,7 @@ $ heroku login -i
 $ heroku create <your_application_name>
 ```
 
-4. Commit and push to Heroku
-Make sure you have committed your changes and push to Heroku
+4. Commit and push to Heroku. Make sure you have committed your changes and push to Heroku
 ```bash
 $ git push heroku master
 ```
