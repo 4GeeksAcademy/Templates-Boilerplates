@@ -94,13 +94,7 @@ We are basically querying the database to get the user with that given ID and ma
 
 ### C) Other validation examples
 
-In the following file [🔥🔥🔥 you can find more validation examples.](/other/express/example-actions) 
-
-## Authentication with JWT
-
-We strongly recommend using express-jwt and jsonwebtoken libraries for authentication.
-
-The authentication can be split into 4 steps and [🔥🔥🔥 here is a very detailed explanation on how to implement it with express and typescript.](/other/express/jwt-authentication)
+In the following file [🔥🔥🔥 you can find more validation examples.](https://4geeks.com/docs/start/express-example-actions) 
 
 ## Database Query (Get information)
 
@@ -146,7 +140,7 @@ userRepository.findOne(1, {
 
 ### More advanced queries
 
-[🔥🔥🔥 Click here for more advanced query examples](/other/express/query)
+[🔥🔥🔥 Click here for more advanced query examples](https://4geeks.com/docs/start/express-query)
 
 ## Database CRUD operations
 
@@ -180,7 +174,7 @@ Assuming you want to update the user with the ID=1 and set his/her name to Rizzr
 await repository.update(1, { firstName: "Rizzrak" });
 ```
 
-[🔥🔥🔥 Here you can find other example of more complex CRUD operations.](/other/express/crud)
+[🔥🔥🔥 Here you can find other example of more complex CRUD operations.](https://4geeks.com/docs/start/express-crud)
 
 ## Migrations (only for production environment)
 
@@ -217,3 +211,6 @@ Type "help" for help.
 postgres=#
 ```
 
+## How to implement a JWT schema on my API with Express?
+
+> [In this article you will find the details about how to implement this schema on your Express API](https://4geeks.com/lesson/what-is-jwt-and-how-to-implement-with-express)
