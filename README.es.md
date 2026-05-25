@@ -24,7 +24,7 @@
 - **Vanilla JS con Vite**: Usa Vite sin frameworks front-end. Despliegue rápido. Requiere muy poca configuración, pero con un flujo de trabajo profesional. Ideal para comenzar con Vite.  
 [Abrir repositorio](https://github.com/4GeeksAcademy/vanillajs-hello-vite)
 
-- **React.js**: Create React App tiene muchos archivos y casi no tiene utilidades. Con documentación y video tutoriales, despliega varios servidores con un solo comando. Ideal para cualquiera. 
+- **React.js**: Create React App tiene muchos archivos y casi no tiene utilidades. Con documentación y videotutoriales, despliega varios servidores con un solo comando. Ideal para cualquiera. 
 [Abrir repositorio](https://github.com/4GeeksAcademy/react-hello) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello.git)
 
 - **React.js Avanzado**: Ideal para desarrollo profesional, versión de Flux + Context API mínima implementada. En un clic despliega varios hostings gratuitos, documentación y video tutoriales. 
