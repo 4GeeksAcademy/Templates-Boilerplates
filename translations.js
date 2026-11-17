@@ -216,15 +216,19 @@ class LanguageManager {
     // Update page language attribute
     document.documentElement.lang = lang;
     
-    // Update page title
-    const pageTitle = this.currentLanguage === 'en' 
-      ? 'TrackFlow - Warehouse Management & Last-Mile Delivery'
-      : 'TrackFlow - Gestión de Almacenes y Entregas de Última Milla';
-    document.title = pageTitle;
+    // Pages with their own title (data-en / data-es on <title>) keep it; the landing uses the default
+    const titleEl = document.querySelector('title[data-en][data-es]');
+    if (titleEl) {
+      document.title = titleEl.getAttribute(`data-${lang}`);
+    } else {
+      document.title = this.currentLanguage === 'en'
+        ? 'TrackFlow - Warehouse Management & Last-Mile Delivery'
+        : 'TrackFlow - Gestión de Almacenes y Entregas de Última Milla';
+    }
 
-    // Update meta description
+    // Update meta description (landing page only; other pages set their own)
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
+    if (metaDesc && document.body.dataset.page !== 'form') {
       metaDesc.setAttribute('content', 
         this.currentLanguage === 'en'
           ? 'TrackFlow - Warehouse management and last-mile delivery solutions for e-commerce'
