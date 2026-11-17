@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TrackFlow cookie policy">
+    <title>Cookie Policy - TrackFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html[lang="es"] [data-lang="en"] { display: none; }
+        html[lang="en"] [data-lang="es"] { display: none; }
+    </style>
+    <script>
+        // Language preference shared with the landing page (key used by translations.js)
+        (function () {
+            var saved = localStorage.getItem('trackflow-language');
+            if (saved === 'es' || saved === 'en') document.documentElement.lang = saved;
+        })();
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+    <header class="bg-white shadow-md">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+            <a href="index.html" class="text-xl font-bold text-blue-700">TrackFlow</a>
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-sm font-medium text-blue-700 hover:underline">
+                    <span data-lang="en">← Back to home</span><span data-lang="es">← Volver al inicio</span>
+                </a>
+                <button id="lang-toggle" type="button" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-3 py-1.5 text-sm rounded-lg">
+                    <span id="lang-text">ES</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-10 space-y-6 leading-relaxed">
+        <div data-lang="en" class="space-y-6">
+            <h1 class="text-3xl font-bold">Cookie Policy – TrackFlow</h1>
+            <section class="space-y-2">
+                <h2 class="text-xl font-semibold">1. Data controller</h2>
+                <p>Legal controller is Trackflow.</p>
+            </section>
+            <section class="space-y-2">
+                <h2 class="text-xl font-semibold">Pending content</h2>
+                <p>The full text of the cookie policy is not yet available on this page.</p>
+            </section>
+        </div>
+
+        <div data-lang="es" class="space-y-6">
+            <h1 class="text-3xl font-bold">Política de Cookies – TrackFlow</h1>
+            <section class="space-y-2">
+                <h2 class="text-xl font-semibold">1. Responsable del tratamiento</h2>
+                <p>Responsable legal es Trackflow.</p>
+            </section>
+            <section class="space-y-2">
+                <h2 class="text-xl font-semibold">Contenido pendiente</h2>
+                <p>El texto completo de la política de cookies aún no está disponible en esta página.</p>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            var toggle = document.getElementById('lang-toggle');
+            var label = document.getElementById('lang-text');
+            function sync() {
+                label.textContent = document.documentElement.lang === 'en' ? 'ES' : 'EN';
+            }
+            toggle.addEventListener('click', function () {
+                var next = document.documentElement.lang === 'en' ? 'es' : 'en';
+                document.documentElement.lang = next;
+                localStorage.setItem('trackflow-language', next);
+                sync();
+            });
+            sync();
+        })();
+    </script>
+</body>
+</html>

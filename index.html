@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TrackFlow - Professional warehouse management and last-mile delivery solutions for e-commerce brands. Serving fashion, electronics, and cosmetics industries in USA and Spain.">
+    <meta name="keywords" content="warehouse management, last-mile delivery, logistics solutions, e-commerce logistics, reverse logistics, inventory management">
+    <meta name="author" content="TrackFlow">
+    <meta name="theme-color" content="#0066cc">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trackflow.com">
+    <meta property="og:title" content="TrackFlow - Warehouse Management & Last-Mile Delivery">
+    <meta property="og:description" content="Professional logistics solutions for e-commerce. Warehouse management, last-mile delivery, and reverse logistics.">
+    <meta property="og:image" content="https://trackflow.com/og-image.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://trackflow.com">
+    <meta name="twitter:title" content="TrackFlow - Logistics Solutions for E-commerce">
+    <meta name="twitter:description" content="Warehouse management and last-mile delivery solutions.">
+    <meta name="twitter:image" content="https://trackflow.com/twitter-image.jpg">
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    
+    <!-- Alternate language links -->
+    <link rel="alternate" hreflang="en" href="https://trackflow.com">
+    <link rel="alternate" hreflang="es" href="https://trackflow.com/es">
+    <link rel="alternate" hreflang="x-default" href="https://trackflow.com">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0066cc',
+                            600: '#0052a3',
+                            700: '#003d7a'
+                        },
+                        secondary: {
+                            100: '#b3ecff',
+                            300: '#4de4ff',
+                            500: '#00d4ff',
+                            600: '#00a8cc',
+                            700: '#007d99'
+                        },
+                        dark: {
+                            50: '#f8f9fa',
+                            800: '#1a1f3a',
+                            900: '#0a0e27',
+                            950: '#080b1f'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Schema.org - Main Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TrackFlow",
+      "alternateName": ["TrackFlow Logistics", "TrackFlow Tech"],
+      "description": "Professional warehouse management and last-mile delivery solutions for e-commerce brands in the United States and Spain. Specializing in fashion, electronics, and cosmetics industries with over 15 years of expertise.",
+      "url": "https://trackflow.com",
+      "logo": "https://trackflow.com/logo.png",
+      "image": "https://trackflow.com/og-image.jpg",
+      "foundingDate": "2009",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Los Angeles, California"
+      },
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 130
+      },
+      "knowsAbout": [
+        "Warehouse Management",
+        "Last-Mile Delivery",
+        "Reverse Logistics",
+        "Inventory Management",
+        "E-commerce Logistics",
+        "Supply Chain Management"
+      ],
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Los Angeles Warehouse",
+          "addressCountry": "US",
+          "addressLocality": "Los Angeles",
+          "addressRegion": "California",
+          "postalCode": "90001",
+          "telephone": "+1-213-555-0147",
+          "email": "sales@trackflow.com"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Zaragoza Warehouse",
+          "addressCountry": "ES",
+          "addressLocality": "Zaragoza",
+          "addressRegion": "Aragón",
+          "postalCode": "50001",
+          "telephone": "+34-976-555-0147",
+          "email": "ventas@trackflow.com"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "Sales",
+          "telephone": "+1-213-555-0147",
+          "email": "sales@trackflow.com",
+          "availableLanguage": ["en", "es"],
+          "areaServed": "US"
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "Ventas",
+          "telephone": "+34-976-555-0147",
+          "email": "ventas@trackflow.com",
+          "availableLanguage": ["es", "en"],
+          "areaServed": "ES"
+        }
+      ],
+      "sameAs": [
+        "https://linkedin.com/company/trackflow",
+        "https://twitter.com/trackflow",
+        "https://facebook.com/trackflow"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "Spain"
+        }
+      ],
+      "mainEntity": {
+        "@type": "LocalBusiness",
+        "name": "TrackFlow",
+        "hasMap": "https://maps.google.com/?q=trackflow",
+        "priceRange": "$$"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "TrackFlow Founding Team"
+      },
+      "slogan": "Logistics that scales with your e-commerce"
+    }
+    </script>
+
+    <!-- JSON-LD Schema.org - Services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "TrackFlow",
+      "description": "E-commerce logistics and warehouse management solutions",
+      "url": "https://trackflow.com",
+      "hasOfferingDetails": [
+        {
+          "@type": "Service",
+          "name": "Warehouse Management",
+          "description": "Professional storage, picking, packing, and real-time inventory management across multiple warehouses in Los Angeles and Zaragoza.",
+          "provider": {
+            "@type": "Organization",
+            "name": "TrackFlow"
+          },
+          "areaServed": ["US", "ES"],
+          "serviceType": "Warehouse Management",
+          "image": "https://trackflow.com/warehouse.jpg"
+        },
+        {
+          "@type": "Service",
+          "name": "Last-Mile Delivery",
+          "description": "Unified shipment tracking with a network of certified carriers in both United States and Spain. Incident and returns management included.",
+          "provider": {
+            "@type": "Organization",
+            "name": "TrackFlow"
+          },
+          "areaServed": ["US", "ES"],
+          "serviceType": "Delivery Service",
+          "image": "https://trackflow.com/delivery.jpg"
+        },
+        {
+          "@type": "Service",
+          "name": "Reverse Logistics",
+          "description": "Complete returns management with inspection, refurbishment, and integration with your sales platform.",
+          "provider": {
+            "@type": "Organization",
+            "name": "TrackFlow"
+          },
+          "areaServed": ["US", "ES"],
+          "serviceType": "Reverse Logistics",
+          "image": "https://trackflow.com/reverse-logistics.jpg"
+        },
+        {
+          "@type": "Service",
+          "name": "Visibility & Tracking",
+          "description": "Full visibility of inventory and shipments with proprietary technology platform.",
+          "provider": {
+            "@type": "Organization",
+            "name": "TrackFlow"
+          },
+          "areaServed": ["US", "ES"],
+          "serviceType": "Tracking Service"
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD Schema.org - Aggregate Rating (Optional) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TrackFlow",
+      "url": "https://trackflow.com",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Schema.org - FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What services does TrackFlow offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TrackFlow offers warehouse management, last-mile delivery, reverse logistics, and complete visibility and tracking solutions for e-commerce businesses in the United States and Spain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is TrackFlow located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TrackFlow has two main locations: Los Angeles, California, USA and Zaragoza, Spain. We provide nationwide coverage in the United States and peninsular plus island coverage in Spain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What industries does TrackFlow specialize in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TrackFlow specializes in warehouse management and last-mile delivery for fashion, electronics, and cosmetics e-commerce brands."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long has TrackFlow been in business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TrackFlow was founded in 2009 and has over 15 years of expertise in logistics and e-commerce solutions."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD Schema.org - Breadcrumb Navigation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://trackflow.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://trackflow.com#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Coverage",
+          "item": "https://trackflow.com#coverage"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Contact",
+          "item": "https://trackflow.com#contact"
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD Schema.org - Organization Benefits/Features -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TrackFlow",
+      "url": "https://trackflow.com",
+      "knowsLanguage": ["en", "es"],
+      "employee": {
+        "@type": "Person",
+        "name": "TrackFlow Team",
+        "jobTitle": "Logistics Professionals"
+      },
+      "award": [
+        {
+          "@type": "Award",
+          "name": "Binational Operation",
+          "description": "The only operator with its own infrastructure in the United States and Spain"
+        },
+        {
+          "@type": "Award",
+          "name": "130+ Professionals",
+          "description": "Dedicated to your logistics success"
+        },
+        {
+          "@type": "Award",
+          "name": "Proprietary Technology",
+          "description": "Full visibility of inventory and operations"
+        },
+        {
+          "@type": "Award",
+          "name": "E-commerce Specialists",
+          "description": "15+ years serving fashion, electronics, and cosmetics brands"
+        }
+      ],
+      "potentialAction": {
+        "@type": "CommunicateAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://trackflow.com#form",
+          "actionPlatform": ["DesktopWebPlatform", "MobileWebPlatform"]
+        },
+        "description": "Request information about TrackFlow services"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Schema.org - WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "TrackFlow - Warehouse Management & Last-Mile Delivery",
+      "url": "https://trackflow.com",
+      "description": "Professional warehouse management and last-mile delivery solutions for e-commerce brands. Serving fashion, electronics, and cosmetics industries in USA and Spain.",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "TrackFlow"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TrackFlow",
+        "url": "https://trackflow.com"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "TrackFlow",
+        "url": "https://trackflow.com"
+      },
+      "image": "https://trackflow.com/og-image.jpg",
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-11-14"
+    }
+    </script>
+
+    <!-- JSON-LD Schema.org - Organization Contact Points (Extended) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TrackFlow",
+      "url": "https://trackflow.com",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "Customer Service",
+          "telephone": "+1-213-555-0147",
+          "email": "sales@trackflow.com",
+          "areaServed": "US",
+          "availableLanguage": "en",
+          "contactOption": ["TollFree", "HasTelephoneSupport"]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "Servicio al Cliente",
+          "telephone": "+34-976-555-0147",
+          "email": "ventas@trackflow.com",
+          "areaServed": "ES",
+          "availableLanguage": "es",
+          "contactOption": ["HasTelephoneSupport"]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-dark-50 text-dark-900">
+    <!-- Encabezado Principal -->
+    <header role="banner" class="sticky top-0 z-50 bg-white shadow-md">
+        <nav role="navigation" aria-label="Main Navigation" class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+            <div class="flex justify-between items-center gap-4">
+                <!-- Logo -->
+                <a href="#home" class="text-xl sm:text-2xl font-bold text-primary-500 hover:text-primary-600 transition-colors flex-shrink-0" aria-label="TrackFlow Home">
+                    <span class="font-bold">Track</span>Flow
+                </a>
+
+                <!-- Navigation Links - Hidden on mobile, visible on md+ -->
+                <ul class="hidden md:flex gap-4 lg:gap-8 flex-1 justify-center" role="menubar">
+                    <li role="none"><a href="#home" class="text-sm lg:text-base font-medium text-dark-900 hover:text-primary-500 transition-colors" role="menuitem" aria-current="page" data-en="Home" data-es="Inicio">Home</a></li>
+                    <li role="none"><a href="#services" class="text-sm lg:text-base font-medium text-dark-900 hover:text-primary-500 transition-colors" role="menuitem" data-en="Services" data-es="Servicios">Services</a></li>
+                    <li role="none"><a href="#coverage" class="text-sm lg:text-base font-medium text-dark-900 hover:text-primary-500 transition-colors" role="menuitem" data-en="Coverage" data-es="Cobertura">Coverage</a></li>
+                    <li role="none"><a href="#contact" class="text-sm lg:text-base font-medium text-dark-900 hover:text-primary-500 transition-colors" role="menuitem" data-en="Contact" data-es="Contacto">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button - visible only on small screens -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-dark-900 hover:text-primary-500 transition-colors" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu" aria-pressed="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Language Selector -->
+                <div class="flex-shrink-0">
+                    <button 
+                        id="lang-toggle" 
+                        class="bg-primary-500 hover:bg-primary-600 text-white font-semibold px-3 sm:px-4 py-2 text-sm sm:text-base rounded-lg transition-all hover:scale-105 active:scale-95"
+                        aria-label="Toggle language"
+                        aria-pressed="false"
+                        title="Click to change language"
+                    >
+                        <span id="lang-text">ES</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu - Hidden by default, shown on mobile when toggled -->
+            <ul id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg flex flex-col gap-2 p-4 border-t border-gray-200 mt-2" role="menu">
+                <li role="none"><a href="#home" class="block px-4 py-2 text-dark-900 hover:text-primary-500 hover:bg-primary-50 rounded transition-colors" role="menuitem" aria-current="page" data-en="Home" data-es="Inicio">Home</a></li>
+                <li role="none"><a href="#services" class="block px-4 py-2 text-dark-900 hover:text-primary-500 hover:bg-primary-50 rounded transition-colors" role="menuitem" data-en="Services" data-es="Servicios">Services</a></li>
+                <li role="none"><a href="#coverage" class="block px-4 py-2 text-dark-900 hover:text-primary-500 hover:bg-primary-50 rounded transition-colors" role="menuitem" data-en="Coverage" data-es="Cobertura">Coverage</a></li>
+                <li role="none"><a href="#contact" class="block px-4 py-2 text-dark-900 hover:text-primary-500 hover:bg-primary-50 rounded transition-colors" role="menuitem" data-en="Contact" data-es="Contacto">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main role="main" class="pt-8 md:pt-12">
+        <!-- Sección Hero/Home -->
+        <section id="home" class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-24 max-w-6xl mx-auto min-h-[500px] sm:min-h-[600px]" aria-labelledby="hero-title">
+            <div class="flex flex-col justify-center order-2 lg:order-1">
+                <h1 id="hero-title" class="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6 text-dark-900" data-en="Logistics that scales with your e-commerce" data-es="Logística que escala con tu e-commerce">Logistics that scales with your e-commerce</h1>
+                <p class="text-sm sm:text-base lg:text-lg text-gray-700 mb-6 sm:mb-8 leading-relaxed" data-en="Warehouse management, last-mile delivery and reverse logistics in the United States and Spain. Over 15 years helping fashion, electronics and cosmetics brands grow without worrying about operations." data-es="Gestión de almacenes, entregas de última milla y logística inversa en Estados Unidos y España. Más de 15 años ayudando a marcas de moda, electrónica y cosmética a crecer sin preocuparse por la operación.">Warehouse management, last-mile delivery and reverse logistics in the United States and Spain. Over 15 years helping fashion, electronics and cosmetics brands grow without worrying about operations.</p>
+                <a href="#form" class="inline-block bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 sm:py-4 px-8 sm:px-10 text-sm sm:text-base rounded-lg transition-all hover:scale-105 hover:shadow-lg transform hover:-translate-y-1 w-fit" data-en="Request Information" data-es="Solicitar Información" aria-label="Go to contact form">Request Information</a>
+            </div>
+            <div class="order-1 lg:order-2">
+                <figure class="rounded-lg overflow-hidden shadow-xl">
+                    <img 
+                        src="imagen-hero.jpg" 
+                        alt="TrackFlow modern warehouse facility with organized inventory management systems, logistics equipment, and professional warehouse staff coordinating e-commerce order fulfillment operations in Los Angeles" 
+                        loading="lazy" 
+                        class="w-full h-auto"
+                        width="600"
+                        height="400"
+                    >
+                    <figcaption class="sr-only">TrackFlow warehouse operations showcasing professional logistics infrastructure for e-commerce fulfillment</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section id="services" class="bg-gradient-to-r from-blue-50 to-cyan-50 py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="services-title">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="services-title" class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 text-dark-900" data-en="Our Services" data-es="Nuestros Servicios">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12" role="list">
+                    <!-- Warehouse Management -->
+                    <article class="bg-white p-6 sm:p-8 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-2" role="listitem">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-primary-600" data-en="Warehouse Management" data-es="Gestión de Almacenes">Warehouse Management</h3>
+                        <ul class="space-y-3 sm:space-y-4" role="list">
+                            <li class="flex gap-3" role="listitem">
+                                <span class="text-primary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">✓</span>
+                                <span class="text-sm sm:text-base text-gray-700" data-en="Storage, picking and packing" data-es="Almacenamiento, picking y packing">Storage, picking and packing</span>
+                            </li>
+                            <li class="flex gap-3" role="listitem">
+                                <span class="text-primary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">✓</span>
+                                <span class="text-sm sm:text-base text-gray-700" data-en="Real-time inventory" data-es="Inventario en tiempo real">Real-time inventory</span>
+                            </li>
+                            <li class="flex gap-3" role="listitem">
+                                <span class="text-primary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">✓</span>
+                                <span class="text-sm sm:text-base text-gray-700" data-en="We operate warehouses in Los Angeles and Zaragoza" data-es="Operamos almacenes en Los Ángeles y Zaragoza">We operate warehouses in Los Angeles and Zaragoza</span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- Last-Mile Delivery -->
+                    <article class="bg-white p-6 sm:p-8 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-2" role="listitem">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-primary-600" data-en="Last-Mile Delivery" data-es="Entregas de Última Milla">Last-Mile Delivery</h3>
+                        <ul class="space-y-3 sm:space-y-4" role="list">
+                            <li class="flex gap-3" role="listitem">
+                                <span class="text-primary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">✓</span>
+                                <span class="text-sm sm:text-base text-gray-700" data-en="Network of certified carriers in both countries" data-es="Red de carriers certificados en ambos países">Network of certified carriers in both countries</span>
+                            </li>
+                            <li class="flex gap-3" role="listitem">
+                                <span class="text-primary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">✓</span>
+                                <span class="text-sm sm:text-base text-gray-700" data-en="Unified shipment tracking" data-es="Seguimiento unificado de envíos">Unified shipment tracking</span>
+                            </li>
+                            <li class="flex gap-3" role="listitem">
+                                <span class="text-primary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">✓</span>
+                                <span class="text-sm sm:text-base text-gray-700" data-en="Incident and returns management" data-es="Gestión de incidencias y devoluciones">Incident and returns management</span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- Reverse Logistics -->
+                    <article class="bg-white p-6 sm:p-8 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-2" role="listitem">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-primary-600" data-en="Reverse Logistics" data-es="Logística Inversa">Reverse Logistics</h3>
+                        <ul class="space-y-3 sm:space-y-4" role="list">
+                            <li class="flex gap-3" role="listitem">
+                                <span class="text-primary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">✓</span>
+                                <span class="text-sm sm:text-base text-gray-700" data-en="Complete returns management" data-es="Gestión completa de devoluciones">Complete returns management</span>
+                            </li>
+                            <li class="flex gap-3" role="listitem">
+                                <span class="text-primary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">✓</span>
+                                <span class="text-sm sm:text-base text-gray-700" data-en="Inspection and refurbishment" data-es="Inspección y reacondicionamiento">Inspection and refurbishment</span>
+                            </li>
+                            <li class="flex gap-3" role="listitem">
+                                <span class="text-primary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">✓</span>
+                                <span class="text-sm sm:text-base text-gray-700" data-en="Integration with your sales platform" data-es="Integración con tu plataforma de ventas">Integration with your sales platform</span>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Formulario de Registro -->
+        <section id="form" class="bg-white py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="form-title">
+            <div class="max-w-2xl mx-auto">
+                <h2 id="form-title" class="text-3xl sm:text-4xl font-bold text-center mb-3 sm:mb-4 text-dark-900" data-en="Partner with TrackFlow" data-es="Asociarse con TrackFlow">Partner with TrackFlow</h2>
+                <p class="text-center text-gray-600 mb-8 sm:mb-12 text-sm sm:text-base lg:text-lg" data-en="Tell us about your e-commerce business and we'll create a custom logistics solution" data-es="Cuéntanos sobre tu negocio de e-commerce y crearemos una solución logística personalizada">Tell us about your e-commerce business and we'll create a custom logistics solution</p>
+                
+                <form id="leadForm" method="POST" action="#" novalidate aria-label="TrackFlow partnership form" class="space-y-6">
+                    <!-- Personal Information -->
+                    <fieldset class="space-y-4" role="group" aria-labelledby="personal-info-legend">
+                        <legend id="personal-info-legend" class="sr-only" data-en="Personal Information" data-es="Información Personal">Personal Information</legend>
+                        
+                        <div>
+                            <label for="nombre" class="block text-xs sm:text-sm font-semibold text-dark-900 mb-2" data-en="Full Name" data-es="Nombre Completo">Full Name</label>
+                            <input 
+                                type="text" 
+                                id="nombre" 
+                                name="nombre" 
+                                required 
+                                placeholder="John Doe"
+                                aria-required="true"
+                                aria-describedby="nombre-error"
+                                aria-invalid="false"
+                                class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
+                            >
+                            <span id="nombre-error" class="text-sm text-red-600 mt-1 block hidden" role="alert" aria-live="assertive"></span>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-xs sm:text-sm font-semibold text-dark-900 mb-2" data-en="Business Email" data-es="Correo Empresarial">Business Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                placeholder="john@ecommerce.com"
+                                aria-required="true"
+                                aria-describedby="email-error"
+                                aria-invalid="false"
+                                class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
+                            >
+                            <span id="email-error" class="text-sm text-red-600 mt-1 block hidden" role="alert" aria-live="assertive"></span>
+                        </div>
+
+                        <div>
+                            <label for="telefono" class="block text-xs sm:text-sm font-semibold text-dark-900 mb-2" data-en="Phone Number" data-es="Número de Teléfono">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="telefono" 
+                                name="telefono" 
+                                placeholder="+1-213-555-0147"
+                                aria-describedby="telefono-help"
+                                class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
+                            >
+                            <small id="telefono-help" class="text-xs text-gray-500 mt-1 block" data-en="International format" data-es="Formato internacional">International format</small>
+                        </div>
+                    </fieldset>
+
+                    <!-- Business Information -->
+                    <fieldset class="space-y-4" role="group" aria-labelledby="business-info-legend">
+                        <legend id="business-info-legend" class="sr-only" data-en="Business Information" data-es="Información Empresarial">Business Information</legend>
+                        
+                        <div>
+                            <label for="empresa" class="block text-xs sm:text-sm font-semibold text-dark-900 mb-2" data-en="Company Name" data-es="Nombre de la Empresa">Company Name</label>
+                            <input 
+                                type="text" 
+                                id="empresa" 
+                                name="empresa" 
+                                placeholder="Your E-commerce Brand"
+                                class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="cargo" class="block text-xs sm:text-sm font-semibold text-dark-900 mb-2" data-en="Your Role" data-es="Tu Puesto">Your Role</label>
+                            <input 
+                                type="text" 
+                                id="cargo" 
+                                name="cargo" 
+                                placeholder="Operations Manager"
+                                class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="sector" class="block text-xs sm:text-sm font-semibold text-dark-900 mb-2" data-en="Industry" data-es="Sector">Industry</label>
+                            <select id="sector" name="sector" aria-describedby="sector-help" role="combobox" aria-expanded="false" class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition">
+                                <option value="">Select Industry</option>
+                                <option data-en="Fashion" data-es="Moda">Fashion</option>
+                                <option data-en="Electronics" data-es="Electrónica">Electronics</option>
+                                <option data-en="Cosmetics" data-es="Cosméticos">Cosmetics</option>
+                                <option data-en="Other" data-es="Otro">Other</option>
+                            </select>
+                            <small id="sector-help" class="text-xs text-gray-500 mt-1 block" data-en="What industry is your business in?" data-es="¿En qué sector opera tu empresa?">What industry is your business in?</small>
+                        </div>
+                    </fieldset>
+
+                    <!-- Location -->
+                    <fieldset class="space-y-4" role="group" aria-labelledby="location-legend">
+                        <legend id="location-legend" class="sr-only" data-en="Location" data-es="Ubicación">Location</legend>
+                        
+                        <div>
+                            <label for="pais" class="block text-xs sm:text-sm font-semibold text-dark-900 mb-2" data-en="Country" data-es="País">Country</label>
+                            <select id="pais" name="pais" aria-describedby="pais-help" role="combobox" aria-expanded="false" class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition">
+                                <option value="">Select Country</option>
+                                <option data-en="United States" data-es="Estados Unidos">United States</option>
+                                <option data-en="Spain" data-es="España">Spain</option>
+                                <option data-en="Other" data-es="Otro">Other</option>
+                            </select>
+                            <small id="pais-help" class="text-xs text-gray-500 mt-1 block" data-en="Where is your business located?" data-es="¿Dónde se encuentra tu empresa?">Where is your business located?</small>
+                        </div>
+                    </fieldset>
+
+                    <!-- Additional Information -->
+                    <fieldset class="space-y-4" role="group" aria-labelledby="additional-info-legend">
+                        <legend id="additional-info-legend" class="sr-only" data-en="Additional Information" data-es="Información Adicional">Additional Information</legend>
+                        
+                        <div>
+                            <label for="mensaje" class="block text-xs sm:text-sm font-semibold text-dark-900 mb-2" data-en="Tell us about your logistics needs" data-es="Cuéntanos sobre tus necesidades logísticas">Tell us about your logistics needs</label>
+                            <textarea 
+                                id="mensaje" 
+                                name="mensaje" 
+                                rows="5" 
+                                placeholder="Monthly order volume, shipping routes, specific requirements..."
+                                aria-describedby="mensaje-help"
+                                class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition resize-vertical"
+                            ></textarea>
+                            <small id="mensaje-help" class="text-xs text-gray-500 mt-1 block" data-en="Max 500 characters" data-es="Máximo 500 caracteres">Max 500 characters</small>
+                        </div>
+
+                        <!-- Checkboxes -->
+                        <fieldset class="space-y-3 pt-4" role="group" aria-labelledby="terms-legend">
+                            <legend id="terms-legend" class="sr-only" data-en="Agreement Checkboxes" data-es="Casillas de Acuerdo">Agreement Checkboxes</legend>
+                            
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input 
+                                    type="checkbox" 
+                                    id="terminos" 
+                                    name="terminos" 
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="terminos-error"
+                                    aria-checked="false"
+                                    class="w-5 h-5 cursor-pointer accent-primary-500"
+                                >
+                                <span class="text-xs sm:text-sm text-dark-900" data-en="I agree to the terms and conditions" data-es="Acepto los términos y condiciones">I agree to the terms and conditions</span>
+                            </label>
+                            <span id="terminos-error" class="text-sm text-red-600 block hidden" role="alert" aria-live="assertive"></span>
+
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input 
+                                    type="checkbox" 
+                                    id="privacidad" 
+                                    name="privacidad"
+                                    aria-checked="false"
+                                    class="w-5 h-5 cursor-pointer accent-primary-500"
+                                >
+                                <span class="text-xs sm:text-sm text-dark-900" data-en="I have read and accept the privacy policy" data-es="He leído y acepto la política de privacidad">I have read and accept the privacy policy</span>
+                            </label>
+
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input 
+                                    type="checkbox" 
+                                    id="newsletter" 
+                                    name="newsletter"
+                                    aria-checked="false"
+                                    class="w-5 h-5 cursor-pointer accent-primary-500"
+                                >
+                                <span class="text-xs sm:text-sm text-dark-900" data-en="Send me industry insights and company updates" data-es="Enviarme información del sector y actualizaciones de la empresa">Send me industry insights and company updates</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- reCAPTCHA -->
+                    <div class="flex justify-center py-4">
+                        <div class="g-recaptcha" data-sitekey="TU_SITE_KEY_AQUI"></div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6">
+                        <button type="submit" class="flex-1 bg-primary-500 hover:bg-primary-600 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-base rounded-lg transition-all hover:shadow-lg transform hover:-translate-y-1" data-en="Send Application" data-es="Enviar Solicitud" aria-label="Submit partnership application">
+                            Send Application
+                        </button>
+                        <button type="reset" class="flex-1 bg-gray-100 hover:bg-gray-200 text-dark-900 font-semibold py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-base rounded-lg border border-gray-300 transition-all" data-en="Clear" data-es="Limpiar" aria-label="Clear form">
+                            Clear
+                        </button>
+                    </div>
+
+                    <!-- Form Message -->
+                    <div id="form-message" class="rounded-lg p-4 hidden" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sección de Cobertura -->
+        <section id="coverage" class="bg-gray-50 py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="coverage-title">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="coverage-title" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-dark-900 mb-12 sm:mb-16" data-en="Coverage" data-es="Cobertura">Coverage</h2>
+
+                <!-- Coverage Grid: 2 Columns -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12" role="list">
+                    <!-- United States Coverage -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow" role="listitem">
+                        <div class="bg-gradient-to-r from-primary-600 to-primary-500 p-6 sm:p-8 text-white">
+                            <h3 class="text-2xl sm:text-3xl font-bold" data-en="United States" data-es="Estados Unidos">United States</h3>
+                        </div>
+                        <div class="p-6 sm:p-8">
+                            <ul class="space-y-3 sm:space-y-4" role="list">
+                                <li class="flex gap-3" role="listitem">
+                                    <span class="text-primary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">•</span>
+                                    <span class="text-sm sm:text-base text-gray-700" data-en="Warehouse in Los Angeles" data-es="Almacén en Los Ángeles">Warehouse in Los Angeles</span>
+                                </li>
+                                <li class="flex gap-3" role="listitem">
+                                    <span class="text-primary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">•</span>
+                                    <span class="text-sm sm:text-base text-gray-700" data-en="National coverage" data-es="Cobertura nacional">National coverage</span>
+                                </li>
+                                <li class="flex gap-3" role="listitem">
+                                    <span class="text-primary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">•</span>
+                                    <span class="text-sm sm:text-base text-gray-700" data-en="Carriers: UPS, FedEx, DHL" data-es="Carriers: UPS, FedEx, DHL">Carriers: UPS, FedEx, DHL</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Spain Coverage -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow" role="listitem">
+                        <div class="bg-gradient-to-r from-secondary-500 to-secondary-400 p-6 sm:p-8 text-white">
+                            <h3 class="text-2xl sm:text-3xl font-bold" data-en="Spain" data-es="España">Spain</h3>
+                        </div>
+                        <div class="p-6 sm:p-8">
+                            <ul class="space-y-3 sm:space-y-4" role="list">
+                                <li class="flex gap-3" role="listitem">
+                                    <span class="text-secondary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">•</span>
+                                    <span class="text-sm sm:text-base text-gray-700" data-en="Warehouse in Zaragoza" data-es="Almacén en Zaragoza">Warehouse in Zaragoza</span>
+                                </li>
+                                <li class="flex gap-3" role="listitem">
+                                    <span class="text-secondary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">•</span>
+                                    <span class="text-sm sm:text-base text-gray-700" data-en="Peninsular and island coverage" data-es="Cobertura peninsular e islas">Peninsular and island coverage</span>
+                                </li>
+                                <li class="flex gap-3" role="listitem">
+                                    <span class="text-secondary-500 font-bold text-lg flex-shrink-0" aria-hidden="true">•</span>
+                                    <span class="text-sm sm:text-base text-gray-700" data-en="Carriers: MRW, SEUR, DHL" data-es="Carriers: MRW, SEUR, DHL">Carriers: MRW, SEUR, DHL</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Por qué TrackFlow (4 Beneficios) -->
+        <section id="why-trackflow" class="bg-white py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="why-trackflow-title">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="why-trackflow-title" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-dark-900 mb-12 sm:mb-16" data-en="Why TrackFlow" data-es="Por qué TrackFlow">Why TrackFlow</h2>
+
+                <!-- Benefits Grid: 4 Columns -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8" role="list">
+                    <!-- Benefit 1: Binational Operation -->
+                    <article class="bg-gradient-to-br from-primary-50 to-blue-50 p-6 sm:p-8 rounded-xl border border-primary-200 hover:shadow-lg transition-all" role="listitem">
+                        <div class="text-4xl sm:text-5xl font-bold text-primary-600 mb-4" aria-hidden="true">🌎</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 mb-3" data-en="Binational Operation" data-es="Operación Binacional">Binational Operation</h3>
+                        <p class="text-sm sm:text-base text-gray-700 leading-relaxed" data-en="The only operator with its own infrastructure in the United States and Spain" data-es="El único operador con infraestructura propia en Estados Unidos y España">The only operator with its own infrastructure in the United States and Spain</p>
+                    </article>
+
+                    <!-- Benefit 2: Team -->
+                    <article class="bg-gradient-to-br from-secondary-50 to-cyan-50 p-6 sm:p-8 rounded-xl border border-secondary-200 hover:shadow-lg transition-all" role="listitem">
+                        <div class="text-4xl sm:text-5xl font-bold text-secondary-600 mb-4" aria-hidden="true">👥</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 mb-3" data-en="+130 Professionals" data-es="+130 Profesionales">+130 Professionals</h3>
+                        <p class="text-sm sm:text-base text-gray-700 leading-relaxed" data-en="Dedicated to your logistics" data-es="Dedicados a tu logística">Dedicated to your logistics</p>
+                    </article>
+
+                    <!-- Benefit 3: Technology -->
+                    <article class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 sm:p-8 rounded-xl border border-blue-200 hover:shadow-lg transition-all" role="listitem">
+                        <div class="text-4xl sm:text-5xl font-bold text-blue-600 mb-4" aria-hidden="true">🔧</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 mb-3" data-en="Proprietary Technology" data-es="Tecnología Propia">Proprietary Technology</h3>
+                        <p class="text-sm sm:text-base text-gray-700 leading-relaxed" data-en="Full visibility of your inventory" data-es="Visibilidad total de tu inventario">Full visibility of your inventory</p>
+                    </article>
+
+                    <!-- Benefit 4: E-commerce Specialization -->
+                    <article class="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 sm:p-8 rounded-xl border border-indigo-200 hover:shadow-lg transition-all" role="listitem">
+                        <div class="text-4xl sm:text-5xl font-bold text-indigo-600 mb-4" aria-hidden="true">🎯</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 mb-3" data-en="E-commerce Specialization" data-es="Especialización E-commerce">E-commerce Specialization</h3>
+                        <p class="text-sm sm:text-base text-gray-700 leading-relaxed" data-en="Fashion, electronics and cosmetics" data-es="Moda, electrónica y cosmética">Fashion, electronics and cosmetics</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contact" class="bg-gradient-to-br from-dark-900 to-dark-800 py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-title">
+            <div class="max-w-5xl mx-auto">
+                <h2 id="contact-title" class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-white" data-en="Contact" data-es="Contacto">Contact</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-12" role="list">
+                    <!-- Email -->
+                    <article class="bg-dark-800 border border-secondary-500/30 rounded-xl p-6 sm:p-8 hover:border-secondary-500 transition-colors text-center" role="listitem">
+                        <div class="text-4xl sm:text-5xl mb-4" aria-hidden="true">✉️</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-3" data-en="Email" data-es="Correo">Email</h3>
+                        <p>
+                            <a href="mailto:comercial@trackflow.com" class="text-primary-400 hover:text-primary-300 transition-colors font-semibold" aria-label="Send email to comercial@trackflow.com">comercial@trackflow.com</a>
+                        </p>
+                    </article>
+
+                    <!-- Los Angeles -->
+                    <article class="bg-dark-800 border border-secondary-500/30 rounded-xl p-6 sm:p-8 hover:border-secondary-500 transition-colors text-center" role="listitem">
+                        <div class="text-4xl sm:text-5xl mb-4" aria-hidden="true">🇺🇸</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-3" data-en="Los Angeles" data-es="Los Ángeles">Los Angeles</h3>
+                        <p>
+                            <a href="tel:+12135550147" class="text-primary-400 hover:text-primary-300 transition-colors font-semibold" aria-label="Call Los Angeles office at +1 213 555 0147">+1 213 555 0147</a>
+                        </p>
+                    </article>
+
+                    <!-- Zaragoza -->
+                    <article class="bg-dark-800 border border-secondary-500/30 rounded-xl p-6 sm:p-8 hover:border-secondary-500 transition-colors text-center" role="listitem">
+                        <div class="text-4xl sm:text-5xl mb-4" aria-hidden="true">🇪🇸</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-3" data-en="Zaragoza" data-es="Zaragoza">Zaragoza</h3>
+                        <p>
+                            <a href="tel:+34976123456" class="text-primary-400 hover:text-primary-300 transition-colors font-semibold" aria-label="Call Zaragoza office at +34 976 123 456">+34 976 123 456</a>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer role="contentinfo" class="bg-dark-900 border-t border-secondary-500/20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <nav class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12" aria-label="Footer Navigation">
+                <section aria-labelledby="about-heading">
+                    <h3 id="about-heading" class="text-base sm:text-lg font-bold text-white mb-3 sm:mb-4" data-en="About TrackFlow" data-es="Acerca de TrackFlow">About TrackFlow</h3>
+                    <p class="text-secondary-300 text-sm leading-relaxed" data-en="Leading warehouse management and last-mile delivery solutions for e-commerce businesses" data-es="Soluciones líderes en gestión de almacenes y entregas de última milla para empresas de e-commerce">Leading warehouse management and last-mile delivery solutions for e-commerce businesses</p>
+                </section>
+
+                <section aria-labelledby="quicklinks-heading">
+                    <h3 id="quicklinks-heading" class="text-lg font-bold text-white mb-4" data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h3>
+                    <ul class="space-y-2" role="list">
+                        <li role="listitem"><a href="#home" class="text-secondary-300 hover:text-primary-400 transition-colors text-sm" data-en="Home" data-es="Inicio">Home</a></li>
+                        <li role="listitem"><a href="#services" class="text-secondary-300 hover:text-primary-400 transition-colors text-sm" data-en="Services" data-es="Servicios">Services</a></li>
+                        <li role="listitem"><a href="#form" class="text-secondary-300 hover:text-primary-400 transition-colors text-sm" data-en="Contact" data-es="Contacto">Contact</a></li>
+                    </ul>
+                </section>
+
+                <section aria-labelledby="legal-heading">
+                    <h3 id="legal-heading" class="text-lg font-bold text-white mb-4" data-en="Legal" data-es="Legal">Legal</h3>
+                    <ul class="space-y-2" role="list">
+                        <li role="listitem"><a href="#" class="text-secondary-300 hover:text-primary-400 transition-colors text-sm" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a></li>
+                        <li role="listitem"><a href="#" class="text-secondary-300 hover:text-primary-400 transition-colors text-sm" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a></li>
+                        <li role="listitem"><a href="#" class="text-secondary-300 hover:text-primary-400 transition-colors text-sm" data-en="Cookies" data-es="Cookies">Cookies</a></li>
+                    </ul>
+                </section>
+
+                <section aria-labelledby="social-heading">
+                    <h3 id="social-heading" class="text-lg font-bold text-white mb-4" data-en="Follow Us" data-es="Síguenos">Follow Us</h3>
+                    <ul class="space-y-2" role="list">
+                        <li role="listitem"><a href="https://linkedin.com/company/trackflow" class="text-secondary-300 hover:text-primary-400 transition-colors text-sm" aria-label="Visit TrackFlow on LinkedIn" data-en="LinkedIn" data-es="LinkedIn">LinkedIn</a></li>
+                    </ul>
+                </section>
+            </nav>
+
+            <div class="border-t border-secondary-500/20 pt-8">
+                <p class="text-center text-secondary-400 text-sm" data-en="© 2025 TrackFlow. All rights reserved." data-es="© 2025 TrackFlow. Todos los derechos reservados.">© 2025 TrackFlow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="translations.js" defer></script>
+    <script src="validation.js" defer></script>
+    
+    <!-- Mobile Menu Handler -->
+    <script defer>
+        // Mobile menu toggle functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'true');
+                    mobileMenuBtn.setAttribute('aria-pressed', 'true');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    mobileMenuBtn.setAttribute('aria-pressed', 'false');
+                }
+            });
+            
+            // Close menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    mobileMenuBtn.setAttribute('aria-pressed', 'false');
+                });
+            });
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (mobileMenu && !mobileMenu.contains(e.target) && e.target !== mobileMenuBtn) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn?.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn?.setAttribute('aria-pressed', 'false');
+            }
+        });
+    </script>
+</body>
+</html>
