@@ -9,74 +9,57 @@ const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
 
+// Only the public website files are served. Everything else in the repository
+// (AGENTS.md, CONTEXT.md, memory-bank/, .git/, data/, etc.) stays private.
+const PUBLIC_FILES = new Set([
+  '/index.html',
+  '/application.html',
+  '/privacy.html',
+  '/cookies.html',
+  '/terms.html',
+  '/validation.js',
+  '/translations.js',
+  '/imagen-hero.jpg'
+]);
+
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
-  '.css': 'text/css',
-  '.js': 'application/javascript',
-  '.json': 'application/json',
+  '.js': 'application/javascript; charset=utf-8',
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
-  '.png': 'image/png',
-  '.gif': 'image/gif',
-  '.svg': 'image/svg+xml',
-  '.webp': 'image/webp',
-  '.ico': 'image/x-icon',
-  '.woff': 'font/woff',
-  '.woff2': 'font/woff2',
-  '.ttf': 'font/ttf',
-  '.eot': 'application/vnd.ms-fontobject'
+  '.png': 'image/png'
 };
 
 const server = http.createServer((req, res) => {
-  let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
-
-  // Prevenir directory traversal
-  if (!filePath.startsWith(__dirname)) {
-    res.writeHead(403, { 'Content-Type': 'text/plain' });
-    res.end('Forbidden');
+  if (req.method !== 'GET' && req.method !== 'HEAD') {
+    res.writeHead(405, { 'Content-Type': 'text/plain; charset=utf-8', Allow: 'GET, HEAD' });
+    res.end('405 Method Not Allowed');
     return;
   }
 
-  fs.readFile(filePath, (err, data) => {
+  const { pathname } = new URL(req.url, 'http://localhost');
+  const requested = pathname === '/' ? '/index.html' : pathname;
+
+  if (!PUBLIC_FILES.has(requested)) {
+    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('404 Not Found');
+    return;
+  }
+
+  fs.readFile(path.join(__dirname, requested), (err, data) => {
     if (err) {
-      // Si no existe el archivo, servir index.html (SPA behavior)
-      if (err.code === 'ENOENT') {
-        fs.readFile(path.join(__dirname, 'index.html'), (err, data) => {
-          if (err) {
-            res.writeHead(500, { 'Content-Type': 'text/plain' });
-            res.end('500 Internal Server Error');
-            return;
-          }
-          res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-          res.end(data);
-        });
-      } else {
-        res.writeHead(500, { 'Content-Type': 'text/plain' });
-        res.end('500 Internal Server Error');
-      }
-    } else {
-      const ext = path.extname(filePath).toLowerCase();
-      const mimeType = MIME_TYPES[ext] || 'application/octet-stream';
-      res.writeHead(200, { 'Content-Type': mimeType });
-      res.end(data);
+      res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+      res.end('500 Internal Server Error');
+      return;
     }
+    const mimeType = MIME_TYPES[path.extname(requested).toLowerCase()] || 'application/octet-stream';
+    res.writeHead(200, { 'Content-Type': mimeType });
+    res.end(req.method === 'HEAD' ? undefined : data);
   });
 });
 
 server.listen(PORT, HOST, () => {
-  console.log(`
-╔════════════════════════════════════════════════════════════════╗
-║                                                                ║
-║        🚀 Servidor en ejecución                               ║
-║                                                                ║
-║  📍 URL: http://localhost:${PORT}${' '.repeat(Math.max(0, 41 - PORT.toString().length))}║
-║  🌐 Host: ${HOST}${' '.repeat(Math.max(0, 50 - HOST.length))}║
-║                                                                ║
-║  En Codespaces: El servidor será accesible automáticamente    ║
-║  Presiona Ctrl+C para detener el servidor                     ║
-║                                                                ║
-╚════════════════════════════════════════════════════════════════╝
-  `);
+  console.log(`TrackFlow web en ejecución: http://localhost:${PORT}`);
 });
 
 server.on('error', (err) => {

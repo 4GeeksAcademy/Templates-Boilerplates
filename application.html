@@ -162,6 +162,22 @@
             color: #7f1d1d;
         }
 
+        /* ---- Advertencia (no bloquea el formulario por sí sola) ---- */
+        .field-warning {
+            margin-top: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            border-left: 4px solid #b45309;
+            border-radius: 0.375rem;
+            background-color: #fffbeb;
+            color: #78350f;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+
+        .field-warning.hidden {
+            display: none !important;
+        }
+
         .error-message.show {
             display: block;
         }
@@ -244,6 +260,7 @@
         <header class="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-8 sm:py-10 md:py-12 px-4 sm:px-6 text-center">
             <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3">Solicitud de Servicios TrackFlow</h1>
             <p class="text-sm sm:text-base md:text-lg opacity-90">Complete el formulario para solicitar nuestros servicios de logística y fulfillment</p>
+            <a href="index.html" class="inline-block mt-4 text-sm font-semibold underline hover:opacity-80">← Volver al inicio</a>
         </header>
 
         <main class="py-6 sm:py-8 md:py-10 px-4 sm:px-6 md:px-8 lg:px-10">
@@ -448,6 +465,7 @@
                             </select>
                             <span class="field-hint block text-xs md:text-sm text-gray-600 mt-1" id="shipmentVolumeHint">Rango aproximado de tus envíos mensuales</span>
                             <span class="field-error hidden" id="shipmentVolumeError"></span>
+                            <div class="field-warning hidden" id="shipmentVolumeWarning" role="status" aria-live="polite"></div>
                         </div>
                     </fieldset>
                 </fieldset>
@@ -561,7 +579,7 @@
                                 maxlength="500"
                                 placeholder="Cuéntanos sobre tus necesidades específicas..."
                                 aria-describedby="commentsHint commentsCounter"
-                                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-sm md:text-base focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all resize-vertical min-h-24"
+                                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-sm md:text-base focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all resize-y min-h-[6rem]"
                             ></textarea>
                             <div class="flex justify-between items-center mt-2">
                                 <span class="field-hint text-xs md:text-sm text-gray-600" id="commentsHint">Máximo 500 caracteres</span>
@@ -590,6 +608,7 @@
                                 Acepto política de privacidad
                             </label>
                             <span class="field-hint block text-xs md:text-sm text-gray-600 mt-1" id="privacyHint">Debes aceptar la política para continuar</span>
+                            <a href="privacy.html" target="_blank" rel="noopener" class="inline-block mt-1 text-xs md:text-sm font-semibold text-indigo-700 underline hover:text-indigo-900">Leer la política de privacidad</a>
                             <span class="field-error hidden" id="privacyError"></span>
                         </div>
                     </div>

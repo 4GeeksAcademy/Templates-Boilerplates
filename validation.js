@@ -4,6 +4,9 @@
  * Validates fields on input, blur, and change events
  */
 
+// Briefing restriction: low monthly volume with a product type selected
+const LOW_VOLUME_WARNING = 'Para volúmenes menores a 100 envíos mensuales, nuestros servicios podrían no ser la solución más eficiente. ¿Seguro que quieres continuar?';
+
 class FormValidator {
   constructor() {
     this.form = document.getElementById('applicationForm');
@@ -56,6 +59,13 @@ class FormValidator {
       // Validate on blur for all fields
       field.addEventListener('blur', () => this.validateField(fieldName));
     });
+
+    // Low-volume warning depends on two fields; a reset clears both
+    ['shipmentVolume', 'productType'].forEach(id => {
+      document.getElementById(id)?.addEventListener('change', () => this.updateVolumeWarning());
+    });
+    this.form.addEventListener('reset', () => setTimeout(() => this.updateVolumeWarning(), 0));
+    this.updateVolumeWarning();
 
     // Special handling for radio/checkbox groups
     document.querySelectorAll('input[name="services"]').forEach(input => {
@@ -333,6 +343,23 @@ class FormValidator {
   }
 
   /**
+   * Show the low-volume warning when volume is "0-100" and a product type is selected.
+   * Returns true while the warning applies.
+   */
+  updateVolumeWarning() {
+    const warning = document.getElementById('shipmentVolumeWarning');
+    const volume = document.getElementById('shipmentVolume')?.value;
+    const productType = document.getElementById('productType')?.value;
+    const show = volume === '0-100' && Boolean(productType);
+
+    if (warning) {
+      warning.textContent = LOW_VOLUME_WARNING;
+      warning.classList.toggle('hidden', !show);
+    }
+    return show;
+  }
+
+  /**
    * Handle form submission
    */
   handleSubmit(e) {
@@ -369,6 +396,10 @@ class FormValidator {
     this.hideSuccessBanner();
     if (isValid) {
       this.hideErrorSummary();
+      // Low-volume restriction: the user must explicitly confirm before sending
+      if (this.updateVolumeWarning() && !window.confirm(LOW_VOLUME_WARNING)) {
+        return;
+      }
       this.submitForm();
       return;
     }

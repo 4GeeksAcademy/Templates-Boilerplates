@@ -5,7 +5,8 @@
 
 class LanguageManager {
   constructor() {
-    this.currentLanguage = this.getStoredLanguage() || 'en';
+    // Base language is Spanish (per the TrackFlow briefing); English is the enhancement
+    this.currentLanguage = this.getStoredLanguage() || 'es';
     this.languages = ['en', 'es'];
     this.translations = {
       en: {
@@ -198,6 +199,11 @@ class LanguageManager {
           }
         }
       }
+    });
+
+    // Translate image alternative text (data-alt-en / data-alt-es)
+    document.querySelectorAll('[data-alt-en][data-alt-es]').forEach(img => {
+      img.alt = img.getAttribute(`data-alt-${lang}`);
     });
 
     // Update page language attribute
