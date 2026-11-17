@@ -53,6 +53,13 @@ const LOW_VOLUME_WARNING = {
   es: 'Para volúmenes menores a 100 envíos mensuales, nuestros servicios podrían no ser la solución más eficiente. ¿Seguro que quieres continuar?'
 };
 
+// Tailwind utility classes for messages ("field-*" names are hooks used by the script)
+const ERROR_BASE = 'field-error mt-2 flex items-start gap-2 rounded-md border-l-4 px-3 py-2 text-sm leading-5';
+const ERROR_STYLE = 'border-red-600 bg-red-50 text-red-800';
+const WARNING_STYLE = 'border-amber-700 bg-amber-50 text-amber-900';
+const ICON_BASE = 'inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold text-white';
+const SUCCESS_BASE = 'field-success mt-2 flex items-center gap-1.5 rounded-md border-l-4 border-green-600 bg-green-50 px-3 py-1.5 text-sm font-semibold leading-5 text-green-800';
+
 const currentLang = () => (document.documentElement.lang === 'es' ? 'es' : 'en');
 
 function msg(key, ...args) {
@@ -341,7 +348,7 @@ class FormValidator {
     if (!el) {
       el = document.createElement('span');
       el.id = id;
-      el.className = 'field-success hidden';
+      el.className = `${SUCCESS_BASE} hidden`;
       el.setAttribute('role', 'status');
       errorElement.insertAdjacentElement('afterend', el);
     }
@@ -351,14 +358,14 @@ class FormValidator {
   showSuccessElement(errorElement) {
     const el = this.getSuccessElement(errorElement);
     el.textContent = msg('valid');
-    el.className = 'field-success';
+    el.className = SUCCESS_BASE;
   }
 
   hideSuccessElement(errorElement) {
     const el = document.getElementById(`${errorElement.id.replace(/Error$/, '')}Success`);
     if (el) {
       el.textContent = '';
-      el.className = 'field-success hidden';
+      el.className = `${SUCCESS_BASE} hidden`;
     }
   }
 
@@ -367,7 +374,7 @@ class FormValidator {
    */
   clearErrorElement(errorElement) {
     errorElement.replaceChildren();
-    errorElement.className = 'field-error hidden';
+    errorElement.className = `${ERROR_BASE} hidden`;
   }
 
   /**
@@ -381,24 +388,24 @@ class FormValidator {
     const [title, ...details] = text.split('|').map(part => part.trim()).filter(Boolean);
 
     errorElement.replaceChildren();
-    errorElement.className = `field-error ${isWarning ? 'field-error--warning' : 'field-error--error'}`;
+    errorElement.className = `${ERROR_BASE} ${isWarning ? WARNING_STYLE : ERROR_STYLE}`;
 
     const icon = document.createElement('span');
-    icon.className = 'field-error__icon';
+    icon.className = `${ICON_BASE} ${isWarning ? 'bg-amber-700' : 'bg-red-600'}`;
     icon.setAttribute('aria-hidden', 'true');
     icon.textContent = isWarning ? '!' : '×';
 
     const body = document.createElement('span');
-    body.className = 'field-error__body';
+    body.className = 'flex flex-col gap-0.5';
 
     const titleEl = document.createElement('span');
-    titleEl.className = 'field-error__title';
+    titleEl.className = 'font-semibold';
     titleEl.textContent = title || '';
     body.append(titleEl);
 
     details.forEach(detail => {
       const detailEl = document.createElement('span');
-      detailEl.className = 'field-error__detail';
+      detailEl.className = 'font-normal';
       detailEl.textContent = detail;
       body.append(detailEl);
     });
@@ -484,14 +491,14 @@ class FormValidator {
     summary.replaceChildren();
 
     const heading = document.createElement('p');
-    heading.className = 'field-summary__title';
+    heading.className = 'mb-2 text-base font-bold';
     heading.textContent = visibleErrors.length === 1
       ? msg('summaryOne')
       : msg('summaryMany', visibleErrors.length);
     summary.append(heading);
 
     const list = document.createElement('ul');
-    list.className = 'field-summary__list';
+    list.className = 'list-disc space-y-1 pl-5';
 
     visibleErrors.forEach(errorEl => {
       const fieldName = errorEl.id.replace(/Error$/, '');
@@ -504,6 +511,7 @@ class FormValidator {
       const targetId = jumpTargets[fieldName] || fieldName;
       link.href = `#${targetId}`;
       link.textContent = labelText;
+      link.className = 'font-semibold text-red-800 underline';
       // Move focus explicitly: a plain #hash jump does not reliably focus the field
       link.addEventListener('click', e => {
         e.preventDefault();
