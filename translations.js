@@ -5,8 +5,8 @@
 
 class LanguageManager {
   constructor() {
-    // Base language is Spanish (per the TrackFlow briefing); English is the enhancement
-    this.currentLanguage = this.getStoredLanguage() || 'es';
+    // Default language is English; the header button switches to Spanish (landing and form)
+    this.currentLanguage = this.getStoredLanguage() || 'en';
     this.languages = ['en', 'es'];
     this.translations = {
       en: {
@@ -175,6 +175,8 @@ class LanguageManager {
     this.saveLanguage(this.currentLanguage);
     this.applyLanguage(this.currentLanguage);
     this.updateHtmlLang();
+    // Lets other scripts (the form validator) re-render their messages
+    document.dispatchEvent(new CustomEvent('languagechange', { detail: { lang: this.currentLanguage } }));
   }
 
   /**
@@ -204,6 +206,11 @@ class LanguageManager {
     // Translate image alternative text (data-alt-en / data-alt-es)
     document.querySelectorAll('[data-alt-en][data-alt-es]').forEach(img => {
       img.alt = img.getAttribute(`data-alt-${lang}`);
+    });
+
+    // Translate input placeholders (data-placeholder-en / data-placeholder-es)
+    document.querySelectorAll('[data-placeholder-en][data-placeholder-es]').forEach(el => {
+      el.placeholder = el.getAttribute(`data-placeholder-${lang}`);
     });
 
     // Update page language attribute

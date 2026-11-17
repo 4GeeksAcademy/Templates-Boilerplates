@@ -1,11 +1,64 @@
 /**
- * Real-time Form Validation for TrackFlow Partnership Application
- * Context-aware error messages based on actual user input
- * Validates fields on input, blur, and change events
+ * Real-time form validation for the TrackFlow request form (#applicationForm in index.html).
+ * Messages follow the briefing and are shown in the page's current language (en / es).
+ * Validates fields on input, blur, and change events.
  */
 
+const MESSAGES = {
+  en: {
+    companyName: 'Company name must have at least 2 characters',
+    contactPerson: 'Enter first and last name of contact',
+    email: 'Enter a valid corporate email (example: name@company.com)',
+    phone: 'Phone must include country code (example: +1 213 555 0147)',
+    website: 'If you include website, it must be a valid URL',
+    country: 'Select main operating country',
+    productType: 'Select the type of product you handle',
+    shipmentVolume: 'Select estimated monthly volume',
+    commentsTooLong: (max, left) => `Comments cannot exceed ${max} characters (${left} remaining)`,
+    services: 'Select at least one service of interest',
+    otherPL: 'Indicate if you currently work with another logistics provider',
+    privacy: 'You must accept the privacy policy to continue',
+    summaryOne: 'Check this field before submitting:',
+    summaryMany: (n) => `Check these ${n} fields before submitting:`,
+    foundErrors: (n) => `We found ${n} ${n === 1 ? 'error' : 'errors'}. Check the marked fields and fix them.`,
+    valid: '✓ Valid',
+    thanks: 'Thank you for your interest in TrackFlow! We have received your request.',
+    serverError: '❌ Server error | Please try again later.'
+  },
+  es: {
+    companyName: 'El nombre de la empresa debe tener al menos 2 caracteres',
+    contactPerson: 'Ingresa nombre y apellido del contacto',
+    email: 'Ingresa un email corporativo válido (ejemplo: nombre@empresa.com)',
+    phone: 'El teléfono debe incluir código de país (ejemplo: +1 213 555 0147)',
+    website: 'Si incluyes sitio web, debe ser una URL válida',
+    country: 'Selecciona el país de operación principal',
+    productType: 'Selecciona el tipo de producto que manejas',
+    shipmentVolume: 'Selecciona el volumen mensual estimado',
+    commentsTooLong: (max, left) => `Los comentarios no pueden exceder ${max} caracteres (quedan ${left})`,
+    services: 'Selecciona al menos un servicio de interés',
+    otherPL: 'Indica si actualmente trabajas con otro proveedor logístico',
+    privacy: 'Debes aceptar la política de privacidad para continuar',
+    summaryOne: 'Revisa este campo antes de enviar:',
+    summaryMany: (n) => `Revisa estos ${n} campos antes de enviar:`,
+    foundErrors: (n) => `Encontramos ${n} ${n === 1 ? 'error' : 'errores'}. Revisa los campos marcados y corrígelos.`,
+    valid: '✓ Validación correcta',
+    thanks: '¡Gracias por tu interés en TrackFlow! Hemos recibido tu solicitud.',
+    serverError: '❌ Error en el servidor | Por favor, intenta de nuevo más tarde.'
+  }
+};
+
 // Briefing restriction: low monthly volume with a product type selected
-const LOW_VOLUME_WARNING = 'Para volúmenes menores a 100 envíos mensuales, nuestros servicios podrían no ser la solución más eficiente. ¿Seguro que quieres continuar?';
+const LOW_VOLUME_WARNING = {
+  en: 'For volumes under 100 monthly shipments, our services might not be the most efficient solution. Are you sure you want to continue?',
+  es: 'Para volúmenes menores a 100 envíos mensuales, nuestros servicios podrían no ser la solución más eficiente. ¿Seguro que quieres continuar?'
+};
+
+const currentLang = () => (document.documentElement.lang === 'es' ? 'es' : 'en');
+
+function msg(key, ...args) {
+  const value = MESSAGES[currentLang()][key];
+  return typeof value === 'function' ? value(...args) : value;
+}
 
 class FormValidator {
   constructor() {
@@ -75,6 +128,28 @@ class FormValidator {
     document.querySelectorAll('input[name="otherPL"]').forEach(input => {
       input.addEventListener('change', () => this.validateField('otherPL'));
     });
+
+    // When the language changes, re-render messages that are on screen
+    document.addEventListener('languagechange', () => this.refreshMessages());
+  }
+
+  /**
+   * Re-render visible error/success messages and the summary in the current language.
+   */
+  refreshMessages() {
+    this.allFields.forEach(fieldName => {
+      const errorEl = document.getElementById(`${fieldName}Error`);
+      const successEl = document.getElementById(`${fieldName}Success`);
+      const errorShown = errorEl && !errorEl.classList.contains('hidden');
+      const successShown = successEl && !successEl.classList.contains('hidden');
+      if (errorShown || successShown) this.validateField(fieldName);
+    });
+
+    const summary = document.getElementById('errorSummary');
+    if (summary && !summary.classList.contains('hidden')) {
+      this.showErrorSummary(Array.from(this.form.querySelectorAll('.field-error:not(.hidden)')), false);
+    }
+    this.updateVolumeWarning();
   }
 
   /**
@@ -89,7 +164,7 @@ class FormValidator {
 
   /**
    * Error message for a field, or '' when the value is valid.
-   * One specific message per field, as defined by the product spec.
+   * One specific message per field, as defined by the briefing.
    */
   getContextualErrorMessage(fieldName, value) {
     const raw = value ?? '';
@@ -97,24 +172,20 @@ class FormValidator {
 
     switch (fieldName) {
       case 'companyName':
-        return v.length >= 2 ? '' : 'El nombre de la empresa debe tener al menos 2 caracteres';
+        return v.length >= 2 ? '' : msg('companyName');
 
       case 'contactPerson': {
         const words = v.split(/\s+/).filter(w => w.length > 0);
-        return words.length >= 2 ? '' : 'Ingresa nombre y apellido del contacto';
+        return words.length >= 2 ? '' : msg('contactPerson');
       }
 
       case 'email':
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
-          ? ''
-          : 'Ingresa un email corporativo válido (ejemplo: nombre@empresa.com)';
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '' : msg('email');
 
       case 'phone': {
         // Spaces, hyphens and parentheses are allowed as separators: "+1 213 555 0147"
         const compact = v.replace(/[\s\-()]/g, '');
-        return /^\+\d{7,15}$/.test(compact)
-          ? ''
-          : 'El teléfono debe incluir código de país (ejemplo: +1 213 555 0147)';
+        return /^\+\d{7,15}$/.test(compact) ? '' : msg('phone');
       }
 
       case 'website': {
@@ -123,23 +194,21 @@ class FormValidator {
         if (/^https?:\/\//i.test(v)) {
           try { new URL(v); isUrl = true; } catch { isUrl = false; }
         }
-        return isUrl ? '' : 'Si incluyes sitio web, debe ser una URL válida';
+        return isUrl ? '' : msg('website');
       }
 
       case 'country':
-        return v ? '' : 'Selecciona el país de operación principal';
+        return v ? '' : msg('country');
 
       case 'productType':
-        return v ? '' : 'Selecciona el tipo de producto que manejas';
+        return v ? '' : msg('productType');
 
       case 'shipmentVolume':
-        return v ? '' : 'Selecciona el volumen mensual estimado';
+        return v ? '' : msg('shipmentVolume');
 
       case 'comments': {
         const max = 500;
-        return raw.length > max
-          ? `Los comentarios no pueden exceder ${max} caracteres (quedan ${Math.max(0, max - raw.length)})`
-          : '';
+        return raw.length > max ? msg('commentsTooLong', max, Math.max(0, max - raw.length)) : '';
       }
 
       case 'privacy':
@@ -157,38 +226,33 @@ class FormValidator {
   validateField(fieldName) {
     const field = document.getElementById(fieldName);
     const errorElement = document.getElementById(`${fieldName}Error`);
-    
+
     let isValid = true;
     let errorMessage = '';
 
     // Handle different field types
-    if (['services', 'otherPL'].includes(fieldName)) {
-      // For radio/checkbox groups, validate differently
-      const isGroup = fieldName === 'services' || fieldName === 'otherPL';
-      if (isGroup) {
-        const groupName = fieldName === 'services' ? 'services' : 'otherPL';
-        const checked = document.querySelector(`input[name="${groupName}"]:checked`);
-        if (!checked) {
-          isValid = false;
-          if (fieldName === 'services') {
-            errorMessage = 'Selecciona al menos un servicio de interés';
-          } else {
-            errorMessage = 'Indica si actualmente trabajas con otro proveedor logístico';
-          }
-        }
+    if (fieldName === 'services') {
+      if (!document.querySelector('input[name="services"]:checked')) {
+        isValid = false;
+        errorMessage = msg('services');
+      }
+    } else if (fieldName === 'otherPL') {
+      if (!document.querySelector('input[name="otherPL"]:checked')) {
+        isValid = false;
+        errorMessage = msg('otherPL');
       }
     } else if (fieldName === 'privacy') {
       // Privacy checkbox validation
       const privacyCheckbox = document.getElementById('privacy');
       if (privacyCheckbox && !privacyCheckbox.checked) {
         isValid = false;
-        errorMessage = 'Debes aceptar la política de privacidad para continuar';
+        errorMessage = msg('privacy');
       }
     } else {
       // For regular fields, use contextual validators
       const value = field ? field.value : '';
       errorMessage = this.getContextualErrorMessage(fieldName, value);
-      
+
       if (errorMessage) {
         isValid = false;
       }
@@ -286,7 +350,7 @@ class FormValidator {
 
   showSuccessElement(errorElement) {
     const el = this.getSuccessElement(errorElement);
-    el.textContent = '✓ Validación correcta';
+    el.textContent = msg('valid');
     el.className = 'field-success';
   }
 
@@ -307,7 +371,7 @@ class FormValidator {
   }
 
   /**
-   * Render a message such as "❌ Campo obligatorio | Detalle" as a styled block:
+   * Render a message such as "❌ Required field | Detail" as a styled block:
    * icon, bold title and one line per detail. Built with DOM nodes (no innerHTML).
    * "❌" = required/blocking error (red); "⚠️" = warning (amber).
    */
@@ -343,23 +407,6 @@ class FormValidator {
   }
 
   /**
-   * Show the low-volume warning when volume is "0-100" and a product type is selected.
-   * Returns true while the warning applies.
-   */
-  updateVolumeWarning() {
-    const warning = document.getElementById('shipmentVolumeWarning');
-    const volume = document.getElementById('shipmentVolume')?.value;
-    const productType = document.getElementById('productType')?.value;
-    const show = volume === '0-100' && Boolean(productType);
-
-    if (warning) {
-      warning.textContent = LOW_VOLUME_WARNING;
-      warning.classList.toggle('hidden', !show);
-    }
-    return show;
-  }
-
-  /**
    * Handle form submission
    */
   handleSubmit(e) {
@@ -377,19 +424,19 @@ class FormValidator {
     const servicesChecked = document.querySelector('input[name="services"]:checked');
     if (!servicesChecked) {
       isValid = false;
-      this.showFieldError('services', 'Selecciona al menos un servicio de interés');
+      this.showFieldError('services', msg('services'));
     }
 
     const otherPLChecked = document.querySelector('input[name="otherPL"]:checked');
     if (!otherPLChecked) {
       isValid = false;
-      this.showFieldError('otherPL', 'Indica si actualmente trabajas con otro proveedor logístico');
+      this.showFieldError('otherPL', msg('otherPL'));
     }
 
     const privacyChecked = document.getElementById('privacy')?.checked;
     if (!privacyChecked) {
       isValid = false;
-      this.showFieldError('privacy', 'Debes aceptar la política de privacidad para continuar');
+      this.showFieldError('privacy', msg('privacy'));
     }
 
     const formStatus = document.getElementById('formStatus');
@@ -397,7 +444,7 @@ class FormValidator {
     if (isValid) {
       this.hideErrorSummary();
       // Low-volume restriction: the user must explicitly confirm before sending
-      if (this.updateVolumeWarning() && !window.confirm(LOW_VOLUME_WARNING)) {
+      if (this.updateVolumeWarning() && !window.confirm(LOW_VOLUME_WARNING[currentLang()])) {
         return;
       }
       this.submitForm();
@@ -408,9 +455,8 @@ class FormValidator {
     const visibleErrors = Array.from(this.form.querySelectorAll('.field-error:not(.hidden)'));
     this.showErrorSummary(visibleErrors);
 
-    const pluralText = visibleErrors.length > 1 ? 'errores' : 'error';
     if (formStatus) {
-      formStatus.textContent = `Encontramos ${visibleErrors.length} ${pluralText}. Revisa los campos marcados y corrígelos.`;
+      formStatus.textContent = msg('foundErrors', visibleErrors.length);
     }
   }
 
@@ -430,7 +476,7 @@ class FormValidator {
    * Visible summary at the top of the form: one link per invalid field.
    * Each link jumps to the field (for groups, to their first option).
    */
-  showErrorSummary(visibleErrors) {
+  showErrorSummary(visibleErrors, moveFocus = true) {
     const summary = document.getElementById('errorSummary');
     if (!summary) return;
 
@@ -440,8 +486,8 @@ class FormValidator {
     const heading = document.createElement('p');
     heading.className = 'field-summary__title';
     heading.textContent = visibleErrors.length === 1
-      ? 'Revisa este campo antes de enviar:'
-      : `Revisa estos ${visibleErrors.length} campos antes de enviar:`;
+      ? msg('summaryOne')
+      : msg('summaryMany', visibleErrors.length);
     summary.append(heading);
 
     const list = document.createElement('ul');
@@ -451,7 +497,7 @@ class FormValidator {
       const fieldName = errorEl.id.replace(/Error$/, '');
       const label = document.querySelector(`label[for="${fieldName}"]`)
         || document.getElementById(`${fieldName}Label`);
-      const labelText = label ? label.textContent.replace(/\((Obligatorio|Opcional)\)/g, '').replace(/\s+/g, ' ').trim() : fieldName;
+      const labelText = label ? label.textContent.replace(/\((Obligatorio|Opcional|Required|Optional)\)/g, '').replace(/\s+/g, ' ').trim() : fieldName;
 
       const item = document.createElement('li');
       const link = document.createElement('a');
@@ -473,8 +519,27 @@ class FormValidator {
 
     summary.append(list);
     summary.classList.remove('hidden');
-    summary.focus();
-    summary.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (moveFocus) {
+      summary.focus();
+      summary.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  /**
+   * Show the low-volume warning when volume is "0-100" and a product type is selected.
+   * Returns true while the warning applies.
+   */
+  updateVolumeWarning() {
+    const warning = document.getElementById('shipmentVolumeWarning');
+    const volume = document.getElementById('shipmentVolume')?.value;
+    const productType = document.getElementById('productType')?.value;
+    const show = volume === '0-100' && Boolean(productType);
+
+    if (warning) {
+      warning.textContent = LOW_VOLUME_WARNING[currentLang()];
+      warning.classList.toggle('hidden', !show);
+    }
+    return show;
   }
 
   hideSuccessBanner() {
@@ -504,7 +569,7 @@ class FormValidator {
       const data = Object.fromEntries(formData);
 
       // In production, send to backend
-      console.log('✓ Formulario válido. Datos:', data);
+      console.log('✓ Form valid. Data:', data);
 
       // Show success message (the element starts with Tailwind's "hidden" class)
       if (successMessage) {
@@ -514,7 +579,7 @@ class FormValidator {
       }
 
       if (formStatus) {
-        formStatus.textContent = '¡Gracias por tu interés en TrackFlow! Hemos recibido tu solicitud.';
+        formStatus.textContent = msg('thanks');
       }
 
       // Reset form after delay
@@ -524,7 +589,7 @@ class FormValidator {
         if (formStatus) {
           formStatus.textContent = '';
         }
-        
+
         // Reset error states
         this.allFields.forEach(fieldName => {
           const field = document.getElementById(fieldName);
@@ -536,10 +601,10 @@ class FormValidator {
       }, 3000);
 
     } catch (error) {
-      console.error('Error al enviar formulario:', error);
-      
+      console.error('Error sending form:', error);
+
       if (formStatus) {
-        formStatus.textContent = '❌ Error en el servidor | Por favor, intenta de nuevo más tarde.';
+        formStatus.textContent = msg('serverError');
       }
     }
   }
