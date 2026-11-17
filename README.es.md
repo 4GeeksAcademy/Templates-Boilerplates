@@ -50,6 +50,6 @@
 - **Headless WordPress para Desarrolladores**: Boilerplate para WP orientado a desarrolladores, crear una API similar a los frameworks modernos como Flask, Express, etc. Implementación MVC e implementación mínima de theme. Integración 100% de la línea de comando e instalación. No se necesita el WordPress admin.  
 [Abrir repositorio](https://github.com/4GeeksAcademy/wordpress-hello) o [Ábrelo con Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/wordpress-hello.git)
 
-### Contribuidores
+## Contribuidores 
 
 Esta y otras plantillas son usadas para [aprender a programar](https://4geeksacademy.com/es/aprender-a-programar/aprender-a-programar-desde-cero) por parte de los alumnos de 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) realizado por [Alejandro Sánchez](https://twitter.com/alesanchezr) y muchos otros contribuyentes. Conoce más sobre nuestros [Cursos de Programación](https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es) para convertirte en [Full Stack Developer](https://4geeksacademy.com/es/desarrollador-full-stack/desarrollador-full-stack), o [Data Science Bootcamp](https://4geeksacademy.com/es/coding-bootcamps/curso-datascience-machine-learning).
