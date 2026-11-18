@@ -1,9 +1,1 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://4geeks.com/docs/start",
-      "permanent": true
-    }
-  ]
-}
+{}

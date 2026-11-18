@@ -1,0 +1,22 @@
+{
+  "name": "ai-engineering-company-project",
+  "version": "1.0.0",
+  "description": "Landing page con formulario de registro de leads",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "preview": "node server.js"
+  },
+  "keywords": [
+    "landing-page",
+    "leads",
+    "registration",
+    "form"
+  ],
+  "author": "4Geeks Academy",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

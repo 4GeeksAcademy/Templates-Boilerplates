@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Request information - TrackFlow" data-es="Solicitar información - TrackFlow">Request information - TrackFlow</title>
+    <meta name="description" content="Request information about TrackFlow warehouse management, last-mile delivery and reverse logistics.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0066cc">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TrackFlow">
+        <meta property="og:title" content="TrackFlow - Warehouse Management & Last-Mile Delivery">
+    <meta property="og:description" content="Warehouse management, last-mile deliveries and reverse logistics in the United States and Spain.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#b3d4fb',
+                            300: '#7fb6f5',
+                            400: '#3d8fe6',
+                            500: '#0066cc',
+                            600: '#0052a3',
+                            700: '#003d7a'
+                        },
+                        secondary: {
+                            50: '#e6fbff',
+                            100: '#b3ecff',
+                            200: '#80e9ff',
+                            300: '#4de4ff',
+                            400: '#1ac4ea',
+                            500: '#00d4ff',
+                            600: '#00a8cc',
+                            700: '#007d99'
+                        },
+                        dark: {
+                            50: '#f8f9fa',
+                            800: '#1a1f3a',
+                            900: '#0a0e27',
+                            950: '#080b1f'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-dark-900 antialiased" data-page="form">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:rounded focus:text-primary-600 focus:font-semibold focus:shadow-lg" data-en="Skip to content" data-es="Saltar al contenido">Skip to content</a>
+
+    <!-- Encabezado -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav aria-label="Navegación principal" class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+            <div class="flex justify-between items-center gap-4">
+                <a href="index.html#home" class="text-xl sm:text-2xl font-bold text-primary-500 hover:text-primary-600 transition-colors">Track<span class="text-dark-900">Flow</span></a>
+
+                <ul class="hidden md:flex gap-4 lg:gap-8 flex-1 justify-center">
+                    <li><a href="index.html#home" class="font-medium text-dark-900 hover:text-primary-500 transition-colors" data-en="Home" data-es="Inicio">Home</a></li>
+                    <li><a href="index.html#services" class="font-medium text-dark-900 hover:text-primary-500 transition-colors" data-en="Services" data-es="Servicios">Services</a></li>
+                    <li><a href="index.html#coverage" class="font-medium text-dark-900 hover:text-primary-500 transition-colors" data-en="Coverage" data-es="Cobertura">Coverage</a></li>
+                    <li><a href="index.html#contact" class="font-medium text-dark-900 hover:text-primary-500 transition-colors" data-en="Contact" data-es="Contacto">Contact</a></li>
+                </ul>
+
+                <div class="flex items-center gap-2 flex-shrink-0">
+                    <button id="lang-toggle" type="button" class="bg-primary-500 hover:bg-primary-600 text-white font-semibold px-3 py-2 text-sm rounded-lg transition-colors" title="Cambiar idioma">
+                        <span id="lang-text">ES</span>
+                    </button>
+                    <button id="mobile-menu-btn" type="button" class="md:hidden p-2 text-dark-900 hover:text-primary-500 transition-colors" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <span class="sr-only" data-en="Open menu" data-es="Abrir menú">Open menu</span>
+                    </button>
+                </div>
+            </div>
+
+            <ul id="mobile-menu" class="hidden md:hidden gap-1 mt-3 pt-3 border-t border-gray-200">
+                <li><a href="index.html#home" class="block px-3 py-2 rounded text-dark-900 hover:text-primary-500 hover:bg-primary-50" data-en="Home" data-es="Inicio">Home</a></li>
+                <li><a href="index.html#services" class="block px-3 py-2 rounded text-dark-900 hover:text-primary-500 hover:bg-primary-50" data-en="Services" data-es="Servicios">Services</a></li>
+                <li><a href="index.html#coverage" class="block px-3 py-2 rounded text-dark-900 hover:text-primary-500 hover:bg-primary-50" data-en="Coverage" data-es="Cobertura">Coverage</a></li>
+                <li><a href="index.html#contact" class="block px-3 py-2 rounded text-dark-900 hover:text-primary-500 hover:bg-primary-50" data-en="Contact" data-es="Contacto">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="scroll-mt-24 pt-6">
+        <!-- Request information form -->
+        <section id="formulario" class="scroll-mt-24 bg-white py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="form-title">
+            <div class="max-w-3xl mx-auto">
+                <h2 id="form-title" class="text-3xl sm:text-4xl font-bold text-center mb-3 text-dark-900" data-en="Request information" data-es="Solicitar información">Request information</h2>
+                <p class="text-center text-gray-600 mb-10" data-en="Tell us about your e-commerce business and we will prepare a logistics proposal for you." data-es="Cuéntanos sobre tu negocio de e-commerce y prepararemos una propuesta logística para ti.">Tell us about your e-commerce business and we will prepare a logistics proposal for you.</p>
+
+                <div id="successMessage" class="hidden mb-6 p-5 md:p-6 bg-emerald-50 text-emerald-900 rounded-lg border-l-4 border-emerald-600 shadow-sm" role="status" tabindex="-1">
+                    <h3 class="text-lg md:text-xl font-bold mb-2" data-en="Thank you for your interest in TrackFlow!" data-es="¡Gracias por tu interés en TrackFlow!">Thank you for your interest in TrackFlow!</h3>
+                    <p class="mb-2 text-sm md:text-base" data-en="We have received your request. Our commercial team will review your information and contact you within the next 24-48 hours to schedule a call and learn about your logistics needs in detail." data-es="Hemos recibido tu solicitud. Nuestro equipo comercial revisará tu información y te contactará en las próximas 24-48 horas para agendar una llamada y conocer tus necesidades logísticas en detalle.">We have received your request. Our commercial team will review your information and contact you within the next 24-48 hours to schedule a call and learn about your logistics needs in detail.</p>
+                    <p class="text-sm md:text-base"><span data-en="If you have any urgent inquiry, write to us directly at" data-es="Si tienes alguna consulta urgente, escríbenos directamente a">If you have any urgent inquiry, write to us directly at</span> <a href="mailto:comercial@trackflow.com" class="font-semibold underline hover:text-emerald-700">comercial@trackflow.com</a></p>
+                </div>
+
+                <form id="applicationForm" name="applicationForm" novalidate aria-labelledby="form-title" class="space-y-6">
+                    <div id="formStatus" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+                    <div id="errorSummary" class="field-summary hidden mb-6 rounded-lg border border-red-300 border-l-[6px] border-l-red-600 bg-red-50 p-5 text-red-900" role="alert" tabindex="-1"></div>
+
+                    <p class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-md text-sm text-gray-700"><span data-en="Fields marked as (Required) must be completed to submit the form." data-es="Los campos marcados como (Obligatorio) deben completarse para enviar el formulario.">Fields marked as (Required) must be completed to submit the form.</span></p>
+
+                    <!-- Company -->
+                    <fieldset class="border-2 border-gray-200 rounded-lg p-5 md:p-6 space-y-5">
+                        <legend class="text-lg md:text-xl font-bold text-gray-800 px-2" data-en="Company information" data-es="Información de la empresa">Company information</legend>
+
+                        <div class="space-y-2">
+                            <label for="companyName" class="block font-semibold text-gray-700" data-en="Company name" data-es="Nombre de la empresa">Company name <span class="ml-1 font-normal text-red-600" data-en="(Required)" data-es="(Obligatorio)">(Required)</span></label>
+                            <input type="text" id="companyName" name="companyName" required minlength="2" maxlength="100" aria-required="true" aria-describedby="companyNameHint" aria-invalid="false"
+                                   placeholder="e.g. My Company Inc." data-placeholder-en="e.g. My Company Inc." data-placeholder-es="Ej: Mi Empresa S.A."
+                                   class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all">
+                            <span class="field-hint block text-xs md:text-sm text-gray-600 mt-1" id="companyNameHint" data-en="Minimum 2 characters" data-es="Mínimo 2 caracteres">Minimum 2 characters</span>
+                            <span class="field-error hidden" id="companyNameError"></span>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="contactPerson" class="block font-semibold text-gray-700" data-en="Contact person" data-es="Persona de contacto">Contact person <span class="ml-1 font-normal text-red-600" data-en="(Required)" data-es="(Obligatorio)">(Required)</span></label>
+                            <input type="text" id="contactPerson" name="contactPerson" required aria-required="true" aria-describedby="contactPersonHint" aria-invalid="false"
+                                   placeholder="e.g. John Doe" data-placeholder-en="e.g. John Doe" data-placeholder-es="Ej: Juan Pérez López"
+                                   class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all">
+                            <span class="field-hint block text-xs md:text-sm text-gray-600 mt-1" id="contactPersonHint" data-en="Minimum 2 words (first and last name)" data-es="Mínimo 2 palabras (nombre y apellido)">Minimum 2 words (first and last name)</span>
+                            <span class="field-error hidden" id="contactPersonError"></span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+                            <div class="space-y-2">
+                                <label for="email" class="block font-semibold text-gray-700" data-en="Corporate email" data-es="Email corporativo">Corporate email <span class="ml-1 font-normal text-red-600" data-en="(Required)" data-es="(Obligatorio)">(Required)</span></label>
+                                <input type="email" id="email" name="email" required aria-required="true" aria-describedby="emailHint" aria-invalid="false"
+                                       placeholder="name@company.com" data-placeholder-en="name@company.com" data-placeholder-es="correo@empresa.com"
+                                       class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all">
+                                <span class="field-hint block text-xs md:text-sm text-gray-600 mt-1" id="emailHint" data-en="Format: name@domain.com" data-es="Formato: correo@dominio.com">Format: name@domain.com</span>
+                                <span class="field-error hidden" id="emailError"></span>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="phone" class="block font-semibold text-gray-700" data-en="Phone" data-es="Teléfono">Phone <span class="ml-1 font-normal text-red-600" data-en="(Required)" data-es="(Obligatorio)">(Required)</span></label>
+                                <input type="tel" id="phone" name="phone" required aria-required="true" aria-describedby="phoneHint" aria-invalid="false"
+                                       placeholder="+1 213 555 0147" data-placeholder-en="+1 213 555 0147" data-placeholder-es="+34 600 000 000"
+                                       class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all">
+                                <span class="field-hint block text-xs md:text-sm text-gray-600 mt-1" id="phoneHint" data-en="Format: +[country code] [number]" data-es="Formato: +[código país] [número]">Format: +[country code] [number]</span>
+                                <span class="field-error hidden" id="phoneError"></span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="website" class="block font-semibold text-gray-700" data-en="Company website" data-es="Sitio web de la empresa">Company website <span class="text-xs text-gray-500 font-normal" data-en="(Optional)" data-es="(Opcional)">(Optional)</span></label>
+                            <input type="url" id="website" name="website" aria-describedby="websiteHint" aria-invalid="false"
+                                   placeholder="https://www.company.com" data-placeholder-en="https://www.company.com" data-placeholder-es="https://www.empresa.com"
+                                   class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all">
+                            <span class="field-hint block text-xs md:text-sm text-gray-600 mt-1" id="websiteHint" data-en="Format: https://www.domain.com" data-es="Formato: https://www.dominio.com">Format: https://www.domain.com</span>
+                            <span class="field-error hidden" id="websiteError"></span>
+                        </div>
+                    </fieldset>
+
+                    <!-- Operation and product -->
+                    <fieldset class="border-2 border-gray-200 rounded-lg p-5 md:p-6 space-y-5">
+                        <legend class="text-lg md:text-xl font-bold text-gray-800 px-2" data-en="Operation and product" data-es="Operación y producto">Operation and product</legend>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+                            <div class="space-y-2">
+                                <label for="country" class="block font-semibold text-gray-700" data-en="Main operating country" data-es="País de operación principal">Main operating country <span class="ml-1 font-normal text-red-600" data-en="(Required)" data-es="(Obligatorio)">(Required)</span></label>
+                                <select id="country" name="country" required aria-required="true" aria-describedby="countryHint" aria-invalid="false"
+                                        class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-white focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all">
+                                    <option value="" data-en="-- Select a country --" data-es="-- Selecciona un país --">-- Select a country --</option>
+                                    <option value="us" data-en="United States" data-es="Estados Unidos">United States</option>
+                                    <option value="es" data-en="Spain" data-es="España">Spain</option>
+                                    <option value="both" data-en="Both" data-es="Ambos">Both</option>
+                                    <option value="other" data-en="Other" data-es="Otro">Other</option>
+                                </select>
+                                <span class="field-hint block text-xs md:text-sm text-gray-600 mt-1" id="countryHint" data-en="Select your main country of operation" data-es="Selecciona tu país de operación">Select your main country of operation</span>
+                                <span class="field-error hidden" id="countryError"></span>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="productType" class="block font-semibold text-gray-700" data-en="Product type" data-es="Tipo de producto">Product type <span class="ml-1 font-normal text-red-600" data-en="(Required)" data-es="(Obligatorio)">(Required)</span></label>
+                                <select id="productType" name="productType" required aria-required="true" aria-describedby="productTypeHint" aria-invalid="false"
+                                        class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-white focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all">
+                                    <option value="" data-en="-- Select a type --" data-es="-- Selecciona un tipo --">-- Select a type --</option>
+                                    <option value="fashion" data-en="Fashion" data-es="Moda">Fashion</option>
+                                    <option value="electronics" data-en="Electronics" data-es="Electrónica">Electronics</option>
+                                    <option value="cosmetics" data-en="Cosmetics" data-es="Cosmética">Cosmetics</option>
+                                    <option value="food" data-en="Food" data-es="Alimentación">Food</option>
+                                    <option value="other" data-en="Other" data-es="Otro">Other</option>
+                                </select>
+                                <span class="field-hint block text-xs md:text-sm text-gray-600 mt-1" id="productTypeHint" data-en="Main category of your products" data-es="Categoría principal de tus productos">Main category of your products</span>
+                                <span class="field-error hidden" id="productTypeError"></span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="shipmentVolume" class="block font-semibold text-gray-700" data-en="Estimated monthly shipping volume" data-es="Volumen mensual estimado de envíos">Estimated monthly shipping volume <span class="ml-1 font-normal text-red-600" data-en="(Required)" data-es="(Obligatorio)">(Required)</span></label>
+                            <select id="shipmentVolume" name="shipmentVolume" required aria-required="true" aria-describedby="shipmentVolumeHint" aria-invalid="false"
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-white focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all">
+                                <option value="" data-en="-- Select a range --" data-es="-- Selecciona un rango --">-- Select a range --</option>
+                                <option value="0-100" data-en="0-100" data-es="0-100">0-100</option>
+                                <option value="101-500" data-en="101-500" data-es="101-500">101-500</option>
+                                <option value="501-2000" data-en="501-2000" data-es="501-2000">501-2000</option>
+                                <option value="2000+" data-en="2000+" data-es="2000+">2000+</option>
+                                <option value="unsure" data-en="Not sure" data-es="No estoy seguro">Not sure</option>
+                            </select>
+                            <span class="field-hint block text-xs md:text-sm text-gray-600 mt-1" id="shipmentVolumeHint" data-en="Approximate range of your monthly shipments" data-es="Rango aproximado de tus envíos mensuales">Approximate range of your monthly shipments</span>
+                            <span class="field-error hidden" id="shipmentVolumeError"></span>
+                            <div class="field-warning hidden mt-2 rounded-md border-l-4 border-amber-700 bg-amber-50 p-3 text-sm text-amber-900" id="shipmentVolumeWarning" role="status" aria-live="polite"></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Services and other information -->
+                    <fieldset class="border-2 border-gray-200 rounded-lg p-5 md:p-6 space-y-5">
+                        <legend class="text-lg md:text-xl font-bold text-gray-800 px-2" data-en="Services and additional information" data-es="Servicios e información adicional">Services and additional information</legend>
+
+                        <div class="space-y-3">
+                            <span id="servicesLabel" class="block font-semibold text-gray-700" data-en="Services of interest" data-es="Servicios de interés">Services of interest <span class="ml-1 font-normal text-red-600" data-en="(Required)" data-es="(Obligatorio)">(Required)</span></span>
+                            <div class="space-y-3" role="group" aria-labelledby="servicesLabel">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" id="storage" name="services" value="storage" class="w-5 h-5 accent-indigo-600 cursor-pointer">
+                                    <label for="storage" class="text-gray-700 cursor-pointer flex-1" data-en="Warehousing" data-es="Almacenaje">Warehousing</label>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" id="lastMile" name="services" value="lastMile" class="w-5 h-5 accent-indigo-600 cursor-pointer">
+                                    <label for="lastMile" class="text-gray-700 cursor-pointer flex-1" data-en="Last mile" data-es="Última milla">Last mile</label>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" id="reverseLogistics" name="services" value="reverseLogistics" class="w-5 h-5 accent-indigo-600 cursor-pointer">
+                                    <label for="reverseLogistics" class="text-gray-700 cursor-pointer flex-1" data-en="Reverse logistics" data-es="Logística inversa">Reverse logistics</label>
+                                </div>
+                            </div>
+                            <span class="field-hint block text-xs md:text-sm text-gray-600" data-en="Select at least one service" data-es="Selecciona al menos un servicio">Select at least one service</span>
+                            <span class="field-error hidden" id="servicesError"></span>
+                        </div>
+
+                        <div class="space-y-3">
+                            <span id="otherPLLabel" class="block font-semibold text-gray-700" data-en="Do you currently work with another 3PL?" data-es="¿Actualmente trabajas con otro 3PL?">Do you currently work with another 3PL? <span class="ml-1 font-normal text-red-600" data-en="(Required)" data-es="(Obligatorio)">(Required)</span></span>
+                            <div class="space-y-3" role="group" aria-labelledby="otherPLLabel">
+                                <div class="flex items-center gap-3">
+                                    <input type="radio" id="otherPLYes" name="otherPL" value="yes" required class="w-5 h-5 accent-indigo-600 cursor-pointer">
+                                    <label for="otherPLYes" class="text-gray-700 cursor-pointer flex-1" data-en="Yes" data-es="Sí">Yes</label>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <input type="radio" id="otherPLNo" name="otherPL" value="no" required class="w-5 h-5 accent-indigo-600 cursor-pointer">
+                                    <label for="otherPLNo" class="text-gray-700 cursor-pointer flex-1" data-en="No" data-es="No">No</label>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <input type="radio" id="otherPLEvaluating" name="otherPL" value="evaluating" required class="w-5 h-5 accent-indigo-600 cursor-pointer">
+                                    <label for="otherPLEvaluating" class="text-gray-700 cursor-pointer flex-1" data-en="Evaluating options" data-es="Estoy evaluando opciones">Evaluating options</label>
+                                </div>
+                            </div>
+                            <span class="field-error hidden" id="otherPLError"></span>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="comments" class="block font-semibold text-gray-700" data-en="Comments or specific needs" data-es="Comentarios o necesidades específicas">Comments or specific needs <span class="text-xs text-gray-500 font-normal" data-en="(Optional)" data-es="(Opcional)">(Optional)</span></label>
+                            <textarea id="comments" name="comments" rows="4" maxlength="500" aria-describedby="commentsHint commentsCounter"
+                                      placeholder="Tell us about your specific needs..." data-placeholder-en="Tell us about your specific needs..." data-placeholder-es="Cuéntanos sobre tus necesidades específicas..."
+                                      class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all resize-y min-h-[6rem]"></textarea>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="field-hint text-xs md:text-sm text-gray-600" id="commentsHint" data-en="Maximum 500 characters" data-es="Máximo 500 caracteres">Maximum 500 characters</span>
+                                <span class="field-hint text-xs md:text-sm text-gray-600 font-medium" id="commentsCounter">0 / 500</span>
+                            </div>
+                            <span class="field-error hidden" id="commentsError"></span>
+                        </div>
+                    </fieldset>
+
+                    <!-- Consent -->
+                    <fieldset class="border-2 border-gray-200 rounded-lg p-5 md:p-6">
+                        <legend class="text-lg md:text-xl font-bold text-gray-800 px-2" data-en="Consent" data-es="Consentimiento">Consent</legend>
+                        <div class="flex items-start gap-3 mt-3">
+                            <input type="checkbox" id="privacy" name="privacy" required aria-required="true" aria-describedby="privacyHint" aria-invalid="false" class="w-5 h-5 accent-indigo-600 cursor-pointer mt-1 flex-shrink-0">
+                            <div class="flex-1">
+                                <label for="privacy" class="block font-semibold text-gray-700 cursor-pointer" data-en="I accept the privacy policy" data-es="Acepto política de privacidad">I accept the privacy policy <span class="ml-1 font-normal text-red-600" data-en="(Required)" data-es="(Obligatorio)">(Required)</span></label>
+                                <a href="privacy.html" target="_blank" rel="noopener" class="inline-block mt-1 text-sm font-semibold text-indigo-700 underline hover:text-indigo-900" data-en="Read the privacy policy" data-es="Leer la política de privacidad">Read the privacy policy</a>
+                                <span class="field-hint block text-xs md:text-sm text-gray-600 mt-1" id="privacyHint" data-en="You must accept the policy to continue" data-es="Debes aceptar la política para continuar">You must accept the policy to continue</span>
+                                <span class="field-error hidden" id="privacyError"></span>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Actions -->
+                    <div class="flex flex-col sm:flex-row gap-3 pt-4">
+                        <button type="submit" class="flex-1 bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2" data-en="Send application" data-es="Enviar solicitud">Send application</button>
+                        <button type="reset" class="flex-1 bg-gray-100 hover:bg-gray-200 text-dark-900 font-semibold py-3 px-6 rounded-lg border border-gray-300 transition-colors" data-en="Clear" data-es="Limpiar">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark-950 border-t border-secondary-500/20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="text-secondary-300 text-sm" data-en="© 2025 TrackFlow. All rights reserved." data-es="© 2025 TrackFlow. Todos los derechos reservados.">© 2025 TrackFlow. All rights reserved.</p>
+            <a href="https://linkedin.com/company/trackflow" class="text-secondary-300 hover:text-white transition-colors text-sm font-semibold" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script src="translations.js" defer></script>
+    <script src="validation.js" defer></script>
+    <script defer>
+        // Menú móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        function setMenu(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            mobileMenuBtn.setAttribute('aria-expanded', String(open));
+        }
+        mobileMenuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+    </script>
+</body>
+</html>
